@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #faf9f6;
+  --ink: #1a1a1a;
+  --navy: #0b2545;
+  --muted: #6b7280;
+  --hairline: #e5e1d8;
+  --buy: #1f6f43;
+  --buy-bg: #e7f2ec;
+  --hold: #9a6b00;
+  --hold-bg: #f6eede;
+  --sell: #a4293a;
+  --sell-bg: #f7e9ea;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-navy: var(--navy);
+  --color-muted: var(--muted);
+  --color-hairline: var(--hairline);
+  --color-buy: var(--buy);
+  --color-buy-bg: var(--buy-bg);
+  --color-hold: var(--hold);
+  --color-hold-bg: var(--hold-bg);
+  --color-sell: var(--sell);
+  --color-sell-bg: var(--sell-bg);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-serif-display {
+  font-family: var(--font-serif), Georgia, serif;
 }

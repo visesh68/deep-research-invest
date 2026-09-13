@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Thesis — Deep Research for Investors
 
-## Getting Started
+Ask an investing question, get a cited equity research thesis rendered as a clean research note.
 
-First, run the development server:
+## How it works
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+question
+  → Groq llama-3.1-8b-instant   identify company/ticker + 4-6 research angles
+  → Tavily × N angles           concurrent web search (Promise.all)
+  → dedupe + number sources     one citation list across all angles
+  → Groq llama-3.3-70b-versatile  ONE synthesis call → structured thesis JSON
+  → React/CSS                   deterministic render, no further LLM calls
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Token efficiency is architectural: only one LLM call produces content. The report's
+formatting comes from rendering structured JSON, not from asking a model to write prose.
+Source snippets are capped and deduped before they reach the synthesis prompt, and the
+schema itself bounds output length (bullet counts, word limits).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Get free API keys (no credit card required for either):
+   - Tavily — https://tavily.com (1,000 credits/month free)
+   - Groq — https://console.groq.com (free tier)
+2. `cp .env.example .env.local` and fill in both keys.
+3. `npm install && npm run dev` → http://localhost:3000
 
-## Learn More
+Set `MOCK_RESEARCH=1` to run the UI against a fixture instead of live APIs (useful for
+demoing the layout without spending credits).
 
-To learn more about Next.js, take a look at the following resources:
+## Transcripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Every local run writes a full transcript to `transcripts/<timestamp>_<slug>.json`:
+both Groq prompts and raw responses, every Tavily query and result, per-call token
+usage and timings, and the final validated thesis.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Known limitation: transcript writing is disabled on Vercel (`process.env.VERCEL`),
+because the serverless filesystem is ephemeral. Transcript review happens against
+local `npm run dev` runs.
 
-## Deploy on Vercel
+## Deploy (Vercel free tier)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push to a Git remote, import the repo at vercel.com, or run `npx vercel`.
+2. Set `TAVILY_API_KEY` and `GROQ_API_KEY` in Project Settings → Environment Variables.
+3. Confirm Fluid Compute is enabled (Project Settings → Functions). Without it, Hobby
+   caps functions at 60s and a slow research run will 504; with it, the limit is 300s,
+   which `app/api/research/route.ts` requests via `export const maxDuration = 300`.
