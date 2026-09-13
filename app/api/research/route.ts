@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
   if (process.env.MOCK_RESEARCH === "1") {
     const { MOCK_THESIS } = await import("@/lib/mockThesis");
     await new Promise((r) => setTimeout(r, 2500));
-    return NextResponse.json({ thesis: MOCK_THESIS });
+    return NextResponse.json({ thesis: MOCK_THESIS, mock: true });
   }
 
   try {

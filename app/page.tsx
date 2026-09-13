@@ -20,6 +20,7 @@ export default function Home() {
   const [stage, setStage] = useState<Stage>("planning");
   const [elapsed, setElapsed] = useState(0);
   const [thesis, setThesis] = useState<Thesis | null>(null);
+  const [isMock, setIsMock] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const startedAt = useRef(0);
 
@@ -51,6 +52,7 @@ export default function Home() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? "Research failed.");
       setThesis(data.thesis);
+      setIsMock(Boolean(data.mock));
     } catch (err) {
       setError((err as Error).message);
     } finally {
@@ -91,6 +93,12 @@ export default function Home() {
 
       {thesis && (
         <div className="mt-12">
+          {isMock && (
+            <div className="mb-8 border border-hold bg-hold-bg px-4 py-3 text-[14px] text-hold">
+              <strong>Sample data.</strong> No API keys are configured, so this is a fixture
+              report — the figures and sources below are illustrative, not live research.
+            </div>
+          )}
           <ReportView thesis={thesis} />
         </div>
       )}

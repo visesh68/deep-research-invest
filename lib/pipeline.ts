@@ -5,8 +5,8 @@ import { runAllAngles } from "./tavily";
 import { mergeAndNumberSources } from "./sources";
 import { addUsage, createTranscript, finalizeTranscript, type RunTranscript } from "./transcript";
 
-const PLAN_MODEL = "llama-3.1-8b-instant";
-const SYNTHESIS_MODEL = "llama-3.3-70b-versatile";
+const PLAN_MODEL = "openai/gpt-oss-20b";
+const SYNTHESIS_MODEL = "openai/gpt-oss-120b";
 
 export class PipelineError extends Error {
   constructor(

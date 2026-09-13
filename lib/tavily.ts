@@ -25,6 +25,9 @@ export async function searchAngle(query: string): Promise<TavilyHit[]> {
       max_results: 5,
       include_answer: false,
       include_raw_content: false,
+      // Equity data goes stale fast; without this the model happily cites
+      // two-year-old quarterly figures as current.
+      time_range: "year",
     }),
   });
 

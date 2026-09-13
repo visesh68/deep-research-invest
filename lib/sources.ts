@@ -23,6 +23,11 @@ function truncate(text: string, max: number): string {
   return `${text.slice(0, max).trimEnd()}…`;
 }
 
+// Groq's free tier caps requests at 8k tokens/minute including the completion,
+// so the source block is bounded rather than passing through every hit.
+const MAX_SOURCES = 18;
+const SNIPPET_CHARS = 350;
+
 export function mergeAndNumberSources(byAngle: Record<string, TavilyHit[]>): {
   sourcesBlock: string;
   sources: Source[];
@@ -40,14 +45,16 @@ export function mergeAndNumberSources(byAngle: Record<string, TavilyHit[]>): {
     }
   }
 
-  const ordered = [...seen.values()].sort((a, b) => b.score - a.score);
+  const ordered = [...seen.values()]
+    .sort((a, b) => b.score - a.score)
+    .slice(0, MAX_SOURCES);
   const sources: Source[] = ordered.map((h, i) => ({
     id: i + 1,
     title: h.title,
     url: h.url,
   }));
   const sourcesBlock = ordered
-    .map((h, i) => `[${i + 1}] ${h.title} — ${h.url}\n${truncate(h.content, 500)}`)
+    .map((h, i) => `[${i + 1}] ${h.title} — ${h.url}\n${truncate(h.content, SNIPPET_CHARS)}`)
     .join("\n\n");
 
   return { sourcesBlock, sources };

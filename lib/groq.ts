@@ -35,6 +35,9 @@ export async function callGroq(opts: {
       model: opts.model,
       temperature: opts.temperature ?? 0.25,
       response_format: { type: "json_object" },
+      // Both calls are extraction/formatting rather than open-ended reasoning;
+      // low effort cuts roughly half the completion tokens per run.
+      reasoning_effort: "low",
       messages: [
         { role: "system", content: opts.system },
         { role: "user", content: opts.user },
