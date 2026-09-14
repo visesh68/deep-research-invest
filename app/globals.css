@@ -4,7 +4,7 @@
   /* Surfaces — light, warm, paper-like. A research note should read as a document. */
   --paper: #faf9f6;
   --paper-raised: #ffffff;
-  --paper-sunk: #f4f2ec;
+  --paper-sunk: #efece3;
 
   /* Ink */
   --ink: #14161a;
@@ -135,11 +135,13 @@ body {
 }
 
 .skeleton {
-  background-color: var(--paper-sunk);
+  /* Needs to read as absent content, not as a faint smudge: #efece3 against the
+     #faf9f6 ground is the floor at which the shape of the document is legible. */
+  background-color: #e9e5da;
   background-image: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.85) 50%,
+    rgba(255, 255, 255, 0.9) 50%,
     transparent 100%
   );
   background-size: 180% 100%;

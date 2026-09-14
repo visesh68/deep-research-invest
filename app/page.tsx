@@ -22,6 +22,63 @@ function formatAge(ms: number): string {
   return `${mins} minutes`;
 }
 
+const METHOD = [
+  {
+    n: "01",
+    title: "Decompose",
+    body: "The question is resolved to a company and ticker, then split into four to six targeted research angles.",
+  },
+  {
+    n: "02",
+    title: "Search in parallel",
+    body: "Every angle is searched concurrently against the live web, time-boxed to the last year so figures are current.",
+  },
+  {
+    n: "03",
+    title: "Synthesize once",
+    body: "Results are deduped and ranked, then a single pass writes the thesis. Every claim carries its source.",
+  },
+];
+
+/** Idle-state method strip. A research tool is judged on provenance, so the
+ *  method is stated up front rather than left implicit. */
+function HowItWorks() {
+  return (
+    <section className="no-print mt-14 border-t border-hairline pt-8">
+      <h2
+        className="reveal text-[10px] font-semibold tracking-[0.2em] text-muted-2 uppercase"
+        style={{ "--d": "260ms" } as React.CSSProperties}
+      >
+        Method
+      </h2>
+      <div className="mt-5 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-3">
+        {METHOD.map((m, i) => (
+          <div
+            key={m.n}
+            className="reveal"
+            style={{ "--d": `${320 + i * 80}ms` } as React.CSSProperties}
+          >
+            <div className="flex items-baseline gap-2">
+              <span className="nums text-[11px] font-medium text-muted-2">{m.n}</span>
+              <h3 className="font-serif-display text-[15px] font-semibold text-navy">
+                {m.title}
+              </h3>
+            </div>
+            <p className="mt-1.5 text-[13px] leading-relaxed text-muted">{m.body}</p>
+          </div>
+        ))}
+      </div>
+      <p
+        className="reveal mt-8 border-t border-hairline pt-4 text-[12px] text-muted-2"
+        style={{ "--d": "560ms" } as React.CSSProperties}
+      >
+        Generated research, not investment advice. Figures are drawn from public web
+        sources and should be verified against primary filings before use.
+      </p>
+    </section>
+  );
+}
+
 function Notice({
   tone,
   title,
@@ -129,6 +186,8 @@ export default function Home() {
         onSubmit={runResearch}
         loading={loading}
       />
+
+      {!loading && !thesis && !error && <HowItWorks />}
 
       {loading && (
         <>

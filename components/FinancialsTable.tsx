@@ -29,10 +29,16 @@ export default function FinancialsTable({ financials }: { financials: Financials
 
   return (
     <dl className="grid grid-cols-1 gap-px overflow-hidden rounded-sm bg-hairline sm:grid-cols-2">
-      {rows.map((r, i) => (
+      {rows.map((r, i) => {
+        // An odd count leaves a hole in the two-column grid, which renders as a bare
+        // grey block because the gap colour shows through. Let the last cell span.
+        const orphan = rows.length % 2 === 1 && i === rows.length - 1;
+        return (
         <div
           key={r.key}
-          className="reveal group flex items-baseline justify-between gap-4 bg-paper px-4 py-3.5 transition-colors duration-200 hover:bg-paper-raised"
+          className={`reveal group flex items-baseline justify-between gap-4 bg-paper px-4 py-3.5 transition-colors duration-200 hover:bg-paper-raised ${
+            orphan ? "sm:col-span-2" : ""
+          }`}
           style={{ "--i": i + 1 } as React.CSSProperties}
         >
           <dt className="text-[12px] tracking-[0.06em] text-muted uppercase">{r.label}</dt>
@@ -40,7 +46,8 @@ export default function FinancialsTable({ financials }: { financials: Financials
             {financials[r.key]}
           </dd>
         </div>
-      ))}
+        );
+      })}
     </dl>
   );
 }

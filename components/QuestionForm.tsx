@@ -40,7 +40,7 @@ export default function QuestionForm({
         <button
           type="submit"
           disabled={disabled}
-          className="relative shrink-0 overflow-hidden rounded-sm bg-navy px-6 py-2.5 text-[14px] font-medium text-white transition-all duration-200 hover:bg-navy-soft disabled:cursor-not-allowed disabled:opacity-35"
+          className="relative shrink-0 overflow-hidden rounded-sm bg-navy px-6 py-2.5 text-[14px] font-medium text-white transition-all duration-200 hover:bg-navy-soft disabled:cursor-not-allowed disabled:bg-paper-sunk disabled:text-muted"
         >
           <span className={loading ? "opacity-0" : "opacity-100"}>Research</span>
           {loading && (
