@@ -39,6 +39,10 @@ multiply completion tokens by roughly the section count and reintroduce every
 formatting-drift bug that a Zod schema currently makes impossible. This saving never
 appears in a before/after table because it was never paid.
 
+A run against production — the question, the three stages, and the rendered note:
+
+![Running a research question end to end](./docs/media/app-demo.gif)
+
 ---
 
 ## 2. Results
@@ -228,7 +232,10 @@ order and a create landing after its own update silently flattens the observatio
 duration.
 
 Trace ids match the local transcript `runId`, so a trace and a JSON file line up
-one-to-one.
+one-to-one. The trace below is run #15 in [`transcripts/`](./transcripts) — the same run,
+readable as raw JSON in the repo and as a trace tree in Langfuse:
+
+![The Langfuse trace for a run](./docs/media/langfuse-trace.gif)
 
 ---
 

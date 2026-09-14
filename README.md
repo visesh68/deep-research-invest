@@ -7,6 +7,18 @@ Ask an investing question, get a cited equity research thesis rendered as a clea
 **[Build writeup](./writeup.md)** — what the system does, and the optimization made at
 each stage with the measurement behind it.
 
+## Demo
+
+A live run against production — question in, progress through the three stages, then the
+rendered note with its cited footnotes:
+
+![Running a research question end to end](./docs/media/app-demo.gif)
+
+The same pipeline seen from Langfuse: one trace per run, the two Groq generations with
+their prompts and token usage, and every search as its own span.
+
+![The Langfuse trace for a run](./docs/media/langfuse-trace.gif)
+
 > Deployment Protection is off so the link can be shared freely. Each run spends
 > roughly 12 Tavily credits against a 1,000/month free tier — about 80 runs — so the
 > URL is a metered resource. Two things blunt that: identical questions are served
