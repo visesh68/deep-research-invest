@@ -2,20 +2,17 @@
 
 Ask an investing question, get a cited equity research thesis rendered as a clean research note.
 
-**Live:** https://deep-research-invest.vercel.app — **Vercel login required**
+**Live:** https://deep-research-invest.vercel.app (public — no login required)
 
-> Deployment Protection is set to "All Deployments", so the production domain, every
-> preview and the raw deployment URLs all sit behind Vercel SSO. `/api/research`
-> returns 401 to anyone outside the team, which is the point: each run spends roughly
-> 12 Tavily credits against a 1,000/month free tier, so an open URL is a metered
-> resource, not just a demo.
+> Deployment Protection is off so the link can be shared freely. Each run spends
+> roughly 12 Tavily credits against a 1,000/month free tier — about 80 runs — so the
+> URL is a metered resource. Two things blunt that: identical questions are served
+> from an in-process cache without touching either API, and the run itself is capped
+> at 6 searches.
 >
-> To share it without handing out team access, generate a Protection Bypass secret
-> (Project Settings → Deployment Protection) and append it as a query parameter or
-> send it as the `x-vercel-protection-bypass` header. That secret is a credential —
-> anyone holding it can spend the credits.
->
-> To open it up again: Project Settings → Deployment Protection → Disabled.
+> Rotate `TAVILY_API_KEY` and `GROQ_API_KEY` once the demo window closes. To gate it
+> again: Project Settings → Deployment Protection → All Deployments, or generate a
+> Protection Bypass secret to keep it shareable without granting team access.
 
 ## How it works
 
