@@ -1,0 +1,13 @@
+{
+  "runId": "408d606f-ebeb-4927-8b6e-9d2ce5b32d73",
+  "startedAt": "2026-09-13T16:29:49.452Z",
+  "question": "Is Nvidia (NVDA) a buy given current datacenter capex trends?",
+  "tavily": [],
+  "totalTokens": {
+    "prompt": 0,
+    "completion": 0,
+    "total": 0
+  },
+  "totalMs": 150,
+  "error": "Planning call failed: Groq API error 404: {\"error\":{\"message\":\"The model `llama-3.1-8b-instant` does not exist or you do not have access to it.\",\"type\":\"invalid_request_error\",\"code\":\"model_not_found\"}}\n"
+}

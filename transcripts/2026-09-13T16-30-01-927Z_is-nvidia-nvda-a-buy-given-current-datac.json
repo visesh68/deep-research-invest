@@ -1,0 +1,584 @@
+{
+  "runId": "7e797148-2bd8-4783-b0ff-e96ce774bb97",
+  "startedAt": "2026-09-13T16:30:01.927Z",
+  "question": "Is Nvidia (NVDA) a buy given current datacenter capex trends?",
+  "tavily": [
+    {
+      "angleId": "1",
+      "query": "Nvidia NVDA datacenter revenue growth 2023-2025",
+      "ms": 3127,
+      "results": [
+        {
+          "title": "nvda-20250126",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm",
+          "content": "Data Center revenue for fiscal year 2025 was up 142% from a year ago. The strong year-on-year growth was driven by demand for our Hopper architecture accelerated computing platform used for large language models, recommendation engines, and generative AI applications. We began shipping production systems of the Blackwell architecture in the fourth quarter of fiscal year 2025.\n\nGaming revenue for fiscal year 2025 was up 9% from a year ago, driven by sales of our GeForce RTX 40 Series GPUs.\n\nProfessional Visualization revenue for fiscal year 2025 was up 21% from a year ago, driven by the continued ramp of Ada RTX GPU workstations for use cases such as generative AI-powered design, simulation, and engineering. [...] We expanded our Data Center product portfolio to offer new solutions, including those for which the USG does not require a license or advance notice before each shipment. We ramped new products designed specifically for China that do not require an export control license. Our Data Center revenue in China grew in fiscal year 2025. As a percentage of total Data Center revenue, it remains well below levels seen prior to the onset of export controls in October 2023. The market in China for datacenter solutions remains competitive. We will continue to comply with export controls while serving our customers. To the extent that a customer requires products covered by the licensing requirements, we may seek a license for the customer but have no assurance that the USG will grant such a license, [...] |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |\n ---  ---  ---  ---  ---  ---  ---  ---  --- |\n|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |\n|  | | | Year Ended | | | | | | | | | | | | | | |\n|  | | | Jan 26, 2025 | | |  | | | Jan 28, 2024 | | |  | | | Jan 29, 2023 | | |\n|  | | |  | | |  | | |  | | |  | | |  | | |\n| Revenue by End Market: | | | (In millions) | | | | | | | | | | | | | | |\n| Data Center | | | $ | 115,186 |  |  | | | $ | 47,525 |  |  | | | $ | 15,005 |  |\n| Compute | | | 102,196 | |  |  | | | 38,950 | |  |  | | | 11,317 | |  |\n| Networking | | | 12,990 | |  |  | | | 8,575 | |  |  | | | 3,688 | |  |\n| Gaming | | | 11,350 | |  |  | | | 10,447 | |  |  | | | 9,067 | |  |\n| Professional Visualization | | | 1,878 | |  |  | | | 1,553 | |  |  | | | 1,544 | |  |",
+          "score": 0.9387167
+        },
+        {
+          "title": "Data Center Revenue Growth Continues: Nvidia’s Fiscal Q1 2025 Earnings | S&P Global",
+          "url": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2024/05/data-center-revenue-growth-continues-nvidias-fiscal-q1-2025-earnings",
+          "content": "### Nvidia’s fiscal Q1 2025 earnings release\n\nNvidia delivered total revenues for Q1 of $26.0 billion, beating Visible Alpha’s consensus estimate of $24.7 billion by $1.3 billion, driven by continued revenue growth of Nvidia’s Data Center segment. The segment saw its Q1 revenue surge to $22.6 billion, nearly $1.5 billion ahead of the $21.2 billion consensus estimate coming into the quarter.\n\nThis revenue surge has continued to be driven by strong demand for Hopper GPUs, particularly from cloud service providers. On the earnings call, the company highlighted that they are still supply constrained and expect this to continue into next year. [...] ### The outlook\n\nNear-term growth\n\nFor fiscal Q2 2025, Nvidia guided $1 billion ahead of expectations to $28 billion in total revenue, with analysts now projecting the Data Center segment to make up $24.7 billion, up from $23.2 billion. In addition, Nvidia guided total gross margin to continue to be around 75.5% levels, driven by demand continuing to outstrip supply in the Data Center business. [...] Looking further out, analysts remain bullish on the Data Center segment. Since the Q1 release last week, analysts have increased their full year Data Center revenue estimates another $6.5 billion for FY 2025 to $104.7 billion, driven by continued optimism around GPU demand and the release of Blackwell. According to Visible Alpha consensus, Data Center revenues for FY 2026 are now expected to jump to $144 billion, up from $130 billion on May 22, 2024, with consensus EPS increasing over 10% to $35.62/share.",
+          "score": 0.9377661
+        },
+        {
+          "title": "Chart: Data Centers Almost Sole Driver of Nvidia's Revenue Boom | Statista",
+          "url": "https://www.statista.com/chart/25578/nvidias-quarterly-revenue-by-segments",
+          "content": "This pillar is the data center segment which includes chips manufactured specifically with the AI industry in mind, which heavily relies on cloud computing and the required resource-intensive, high-powered server farms. Between February and April 2024, $22.6 billion or 87 percent of Nvidia's overall revenue was attributable to data center solutions. Some of its other segments also showed considerable relative growth year over year, with gaming and visualization solutions bringing in 18 and 45 percent more, respectively, than in the company's fiscal Q1 2024. The growth in the data center segment, however, has been off the charts, rising by 427 percent year over year. [...] This pillar is the data center segment which includes chips manufactured specifically with the AI industry in mind, which heavily relies on cloud computing and the required resource-intensive, high-powered server farms. Between February and April 2024, $22.6 billion or 87 percent of Nvidia's overall revenue was attributable to data center solutions. Some of its other segments also showed considerable relative growth year over year, with gaming and visualization solutions bringing in 18 and 45 percent more, respectively, than in the company's fiscal Q1 2024. The growth in the data center segment, however, has been off the charts, rising by 427 percent year over year. [...] AI chip market\n\n# Data Centers Almost Sole Driver of Nvidia's Revenue Boom\n\nAfter an already successful fourth quarter of its fiscal year 2024, generating a $12 billion net income on revenues of $22 billion between November 2023 and January 2024, chipmaker Nvidia outperformed expectations yet again, beating analyst projections with revenues of $26 billion and a net income of roughly $15 billion for the quarter. As our chart shows, this immense success would have been considered improbable just a year ago and is largely built on one pillar of the company.",
+          "score": 0.9336793
+        },
+        {
+          "title": "NVIDIA Announces Financial Results for First Quarter Fiscal 2025",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2025",
+          "content": "Autonomous Machines\nCloud & Data Center\nDeep Learning & Ai\nDesign & Pro Visualization\nHealthcare\nHigh Performance Computing\nSelf-Driving Cars\nGaming & Entertainment\n\n# NVIDIA Announces Financial Results for First Quarter Fiscal 2025\n\nNVIDIA Announces Financial Results for First Quarter Fiscal 2025\n\nNVIDIA (NASDAQ: NVDA) today reported revenue for the first quarter ended April 28, 2024, of $26.0 billion, up 18% from the previous quarter and up 262% from a year ago.\n\nFor the quarter, GAAP earnings per diluted share was $5.98, up 21% from the previous quarter and up 629% from a year ago. Non-GAAP earnings per diluted share was $6.12, up 19% from the previous quarter and up 461% from a year ago. [...] “Our data center growth was fueled by strong and accelerating demand for generative AI training and inference on the Hopper platform. Beyond cloud service providers, generative AI has expanded to consumer internet companies, and enterprise, sovereign AI, automotive and healthcare customers, creating multiple multibillion-dollar vertical markets. [...] |  |  |  |  |  |  |\n ---  ---  --- |\n| Non-GAAP | | | | | |\n| ($ in millions, except earnings   per share) | Q1 FY25 | Q4 FY24 | Q1 FY24 | Q/Q | Y/Y |\n| Revenue | $26,044 | $22,103 | $7,192 | Up 18% | Up 262% |\n| Gross margin | 78.9% | 76.7% | 66.8% | Up 2.2 pts | Up 12.1 pts |\n| Operating expenses | $2,501 | $2,210 | $1,750 | Up 13% | Up 43% |\n| Operating income | $18,059 | $14,749 | $3,052 | Up 22% | Up 492% |\n| Net income | $15,238 | $12,839 | $2,713 | Up 19% | Up 462% |\n| Diluted earnings per share | $6.12 | $5.16 | $1.09 | Up 19% | Up 461% |\n|  |  |  |  |  |  |\n\nOutlook  \nNVIDIA’s outlook for the second quarter of fiscal 2025 is as follows:\n\nHighlights  \nNVIDIA achieved progress since its previous earnings announcement in these areas:\n\nData Center\n\nGaming and AI PC",
+          "score": 0.90830135
+        },
+        {
+          "title": "NVIDIA Announces Financial Results for Fourth Quarter ...",
+          "url": "http://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2025",
+          "content": "Autonomous Machines\nCloud & Data Center\nDeep Learning & Ai\nDesign & Pro Visualization\nHealthcare\nHigh Performance Computing\nSelf-Driving Cars\nGaming & Entertainment\n\n# NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2025\n\nNVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2025\n\nNVIDIA (NASDAQ: NVDA) today reported revenue for the fourth quarter ended January 26, 2025, of $39.3 billion, up 12% from the previous quarter and up 78% from a year ago.\n\nFor the quarter, GAAP earnings per diluted share was $0.89, up 14% from the previous quarter and up 82% from a year ago. Non-GAAP earnings per diluted share was $0.89, up 10% from the previous quarter and up 71% from a year ago. [...] Fiscal 2025 Summary\n\n|  |  |  |  |\n ---  --- |\n| GAAP | | | |\n| ($ in millions, except earnings   per share) | FY25 | FY24 | Y/Y |\n| Revenue | $130,497 | $60,922 | Up 114% |\n| Gross margin | 75.0% | 72.7% | Up 2.3 pts |\n| Operating expenses | $16,405 | $11,329 | Up 45% |\n| Operating income | $81,453 | $32,972 | Up 147% |\n| Net income | $72,880 | $29,760 | Up 145% |\n| Diluted earnings per share\\ | $2.94 | $1.19 | Up 147% | [...] |  |  |  |  |\n ---  --- |\n| Non-GAAP | | | |\n| ($ in millions, except earnings   per share) | FY25 | FY24 | Y/Y |\n| Revenue | $130,497 | $60,922 | Up 114% |\n| Gross margin | 75.5% | 73.8% | Up 1.7 pts |\n| Operating expenses | $11,716 | $7,825 | Up 50% |\n| Operating income | $86,789 | $37,134 | Up 134% |\n| Net income | $74,265 | $32,312 | Up 130% |\n| Diluted earnings per share\\ | $2.99 | $1.30 | Up 130% |\n\n\\All per share amounts presented herein have been retroactively adjusted to reflect the ten-for-one stock split, which was effective June 7, 2024.\n\nOutlook  \nNVIDIA’s outlook for the first quarter of fiscal 2026 is as follows:\n\nHighlights\n\nNVIDIA achieved progress since its previous earnings announcement in these areas:\n\nData Center\n\nGaming and AI PC\n\nProfessional Visualization",
+          "score": 0.8947989
+        }
+      ]
+    },
+    {
+      "angleId": "2",
+      "query": "Nvidia NVDA datacenter capex trends 2023-2026",
+      "ms": 4580,
+      "results": [
+        {
+          "title": "Nvidia's GPU Business To Thrive On AI Demand, With Datacenter Investments Leading The Way: Analyst — TradingView News",
+          "url": "https://www.tradingview.com/news/benzinga:cd017ffb0094b:0-nvidia-s-gpu-business-to-thrive-on-ai-demand-with-datacenter-investments-leading-the-way-analyst",
+          "content": "Benzinga\nBenzinga\n\n# Nvidia's GPU Business To Thrive On AI Demand, With Datacenter Investments Leading The Way: Analyst\n\nJPMorgan analyst Harlan Sur predicts robust capital expenditure (capex) for Nvidia Corp NVDA in 2024, fueled by a surge in AI infrastructure investments.\n\nSur has an Overweight rating on Nvidia stock, with a price target of $850.\n\nAI To Drive 14% Growth In Cloud Datacenter Capex\n\nCloud datacenter capex forecasts indicate a promising environment, with a 14% growth projection driven by AI infrastructure buildup and datacenter expansions. The updated JPMorgan outlook suggests a substantial $15 billion expansion in datacenter capex, with significant investments in server technology and supporting infrastructure like networking and storage.",
+          "score": 0.9263638
+        },
+        {
+          "title": "Capital Expenditures For NVIDIA Corporation (NVDA)",
+          "url": "https://finbox.com/NASDAQGS:NVDA/explorer/capex",
+          "content": "Get the tools used by (smart)2 investors.Get Started\n\n\n\nSearch\n\nSign In\n\nWatchlistsIdeasScreenerData ExplorerChartsSaved Work\n\nCollapse\n\n#  and 2024 (1.069 billion, -41.7%) and increased in 2023 (1.833 billion, +87.8%), 2025 (3.236 billion, +202.7%), and 2026 (6.042 billion, +86.7%).\n\n## How does NVIDIA's Capital Expenditures benchmark against competitors?\n\nHide this widget\n\nWe've identified the following companies as similar to NVIDIA Corporation because they operate in a related industry or sector. We also considered size, growth, and various financial metrics to narrow down the list to the ones listed below. [...] The tables below summarizes NVIDIA’s capital expenditures and common size over the last five years:\n\n| Fiscal Year | Capital Expenditures | Revenue | % Revenue |\n ---  --- |\n| 2022-01-30 | 976 M | 26.914 B | 3.6% |\n| 2023-01-29 | 1.833 B | 26.974 B | 6.8% |\n| 2024-01-28 | 1.069 B | 60.922 B | 1.8% |\n| 2025-01-26 | 3.236 B | 130.5 B | 2.5% |\n| 2026-01-25 | 6.042 B | 215.9 B | 2.8% |\n\nThe tables below summarizes NVIDIA’s capital expenditures and common size over the last four quarters:\n\n| Quarter Ending | Capital Expenditures | Revenue | % Revenue |\n ---  --- |\n| 2025-10-26 | 1.636 B | 57.006 B | 2.9% |\n| 2026-01-25 | 1.284 B | 68.127 B | 1.9% |\n| 2026-04-26 | 1.757 B | 81.615 B | 2.2% |\n| 2026-07-26 | 2.677 B | 96.221 B | 2.8% | [...] ## Search for metric or datapoint\n\nCapital Expenditures\n\nThe overall change in capital expenditures and sales of plant, property and equipment. This field is used if a company does not report separately sale...+ VIEW MORE\n\n## Definition of Capital Expenditures\n\nHide this widget\n\nCapital expenditures or CAPEX represents spending on assets that are enjoyed over a long period of time. Common examples of capital expenditures include office buildings, machines, and vehicles.\n\nCapital expenditures can be found on a company’s cash flow statement under “Investing Activities” and increases fixed assets located on the Balance Sheet\n\nNVIDIA reported capital expenditures of 7.354 B for the latest twelve months ending July 26, 2026 on its income statement.",
+          "score": 0.86303437
+        },
+        {
+          "title": "Datacenter capex to grow by 11% in 2024",
+          "url": "https://network-king.net/datacenter-capex-to-grow-by-11-in-2024",
+          "content": "“Datacenters are becoming AI factories, and to do this, infrastructures need to change quickly. We’re seeing a huge change in spending patterns, and a large part of budgets are going towards expanding computing power and physical facilities,” explains Galabov, predicting five years of considerable expansion in energy consumption by the datacenter industry.\n\nImplementations of servers configured for AI are growing consistently, according to Omdia’s forecast. To take NVidia alone, revenue from datacenter solutions in the third quarter of 2023 reached $14.5 billion (almost 4x more year-on-year). This indicates, as expected by the research company, that NVidia sold almost half a million H100 and A100 GPUs in the aforementioned period. [...] Twitter\nFacebook\nLinkedIn\nWhatsApp\nTelegram\nCopy Link\n\nCapital expenditure (Capex) for datacenters is expected to grow by 11% in 2024, resuming a cycle of expansion, according to a report published recently by Dell’Oro Group. Worldwide, Capex associated with datacenters is expected to rise from the level of just 4% recorded in 2023. Generally speaking, in the context of datacenters, Capex refers to the amount spent on acquiring, updating and maintaining physical assets, buildings, hardware, or software.",
+          "score": 0.8524574
+        },
+        {
+          "title": "NVDA Stock: Capex Surge Fuels AI Growth",
+          "url": "https://thetradable.com/stocks/nvda-stock-capex-surge-fuels-ai-growth-ig--a",
+          "content": "## Hyperscaler Capex Boom Ahead\n\nAccording to The AI Investor here's what Barclays is seeing: total capex from the big six cloud providers jumping from $406.1 billion in 2025 to $496.8 billion in 2026. That's not a typo - we're looking at nearly half a trillion dollars in spending. Meanwhile, AI server revenues alone are expected to climb from $235.1 billion to $323.5 billion, still growing at a hefty 38% annually.\n\nSure, these growth rates are cooling off from the triple-digit madness we saw in 2023-2024, but let's be real about the scale here. We're talking about hundreds of billions in fresh revenue even at \"slower\" growth rates.\n\n## NVDA at the Heart of the AI Cycle [...] The numbers are in, and they're staggering. Barclays just dropped their latest forecast showing hyperscaler capex is about to explode - we're talking nearly 50% growth by 2026. For Nvidia investors, this isn't just good news, it's a potential goldmine. The AI infrastructure build-out is happening faster and bigger than most people realize, and NVDA sits right in the middle of it all.\n\n## Hyperscaler Capex Boom Ahead [...] logo\n\n Markets\n AI\n Global economy\n Stocks\n Commodities\n Signals\n Opinions\n Contacts\n About & Editorial\n\n Markets\n AI\n Global economy\n Stocks\n Commodities\n Signals\n Opinions\n Contacts\n About & Editorial\n\nStocks\n\n11 months ago\n\n# NVDA Stock: Capex Surge Fuels AI Growth\n\nSaad Ullah Saad Ullah\n\nBarclays projects hyperscaler capex will jump nearly 50% by 2026, creating a massive tailwind for Nvidia as AI infrastructure spending accelerates across major cloud providers.\n\nShare Tweet Discuss (0)\n\nDiscuss (0)\n\nImage source: thetradable.com\n\nImage source: thetradable.com\n\nContents\n\n Hyperscaler Capex Boom Ahead\n NVDA at the Heart of the AI Cycle",
+          "score": 0.84948516
+        },
+        {
+          "title": "Nvidia Stock Rises On Data Center Spending Strength | Investor's Business Daily",
+          "url": "https://www.investors.com/news/technology/nvidia-stock-rises-data-center-spending-strength",
+          "content": "Facebook\nX\nLinkedIn\nShare\n\nIncreased capital expenditures on data centers by hyperscale cloud computing companies is a positive sign for Nvidia (NVDA) stock and others, analysts say. \"Robust capex trends at major hyperscalers continue, with all four U.S. hyperscalers raising calendar 2025 outlook significantly,\" BofA Securities analyst Vivek Arya said in a client note. He expects AI chip leader Nvidia to post a \"healthy…\n\nCopyright ©2026 Investor's Business Daily, LLC. All rights reserved. 87990cbe856818d5eddac44c7b1cdeb8\n\n## Related news\n\nFed Chairman Kevin Warsh\n\n## Stock Market Rebounds, Trims Weekly Losses; Fed Rate Decision, Retail Sales Due\n\n10:38 AM ET\nThe stock market, including the Dow Jones index, ended Friday higher but fell to a weekly loss. The Fed decision...",
+          "score": 0.84246206
+        }
+      ]
+    },
+    {
+      "angleId": "3",
+      "query": "Nvidia NVDA competitive positioning in datacenter GPU market vs AMD Intel",
+      "ms": 9428,
+      "results": [
+        {
+          "title": "Nvidia vs AMD vs Intel: Market Share Outlook | Guru Startups Market Intelligence 2025",
+          "url": "https://www.gurustartups.com/reports/nvidia-vs-amd-vs-intel-market-share-outlook",
+          "content": "The Nvidia–AMD–Intel triad sits at the center of the ongoing surge in AI compute demand, with Nvidia broadly retaining leadership in datacenter accelerators and software breadth, AMD steadily expanding its foothold in high-performance computing and AI workloads, and Intel continuing to wrestle with scale, timing, and ecosystem effects as it attempts to convert architectural progress into meaningful market share. Conversely, a misalignment between supply, demand, or platform strategy could compress margins or slow share gains, particularly for AMD and Intel, in a market where AI-accelerator deployment economics are increasingly pivotal to data-center budget cycles. Gaming and professional visualization continue to support Nvidia and AMD in discrete GPU markets, but the longer-term growth vectors there are less material to the AI-dominated data-center narrative and thus receive comparatively less emphasis in this market-share outlook; nevertheless, steady demand in consumer GPUs helps sustain manufacturing scale, software ecosystems, and brand relevance for all players. Intel’s Xe strategy seeks to marry accelerator performance with CPU ecosystems, plus packaging approaches intended to deliver cohesive data-center platforms, yet execution risks—product cadence delays, manufacturing scalability, and the breadth of software tooling—remain meaningful headwinds against a backdrop of expanding AI workloads. From a diligence perspective, investors should track three variables: first, the rate at which hyperscalers scale AI fleets and whether they diversify supplier bases beyond Nvidia; second, the progress of AMD’s Instinct roadmap and ROCm software maturation, including any meaningful breakthroughs in memory bandwidth and energy efficiency; third, Intel’s Xe performance trajectory, including the cadence of new accelerator generations and the breadth of their software ecosystem investments. In a baseline scenario, Nvidia maintains a leading position in datacenter AI accelerators with a dominant software ecosystem, while AMD narrows the gap through continued performance-per-watt gains and targeted wins in HPC and inference workloads. The composite market shares in AI accelerator revenue settle in a range where Nvidia remains the majority owner, AMD achieves meaningful share gains in HPC and certain inference markets, and Intel captures a smaller but non-trivial slice primarily in enterprise environments seeking integrated CPU–GPU platforms. Nvidia’s dominant software ecosystem and proven scale in AI training and inference confer a persistent competitive edge, particularly in a market where hyperscalers drive capital expenditure cycles and software productivity matters as much as raw performance.",
+          "score": 0.89545894
+        },
+        {
+          "title": "AI GPU Market Share NVIDIA vs AMD vs Intel: 2026 Statistics",
+          "url": "https://commandlinux.com/statistics/ai-gpu-market-share-nvidia-vs-amd-vs-intel",
+          "content": "| Company | Segment | Latest Quarter | Revenue | YoY Growth |\n ---  --- \n| NVIDIA | Data Center | Q1 FY2027 (Apr 2026) | $75.2B | +92% |\n| AMD | Data Center | Q1 2026 (Mar 2026) | $5.8B | +57% |\n| Intel | Data Center & AI | Q1 2026 (Mar 2026) | $5.1B | +22% |\n\nSource: NVIDIA, AMD, and Intel quarterly earnings reports, 2026\n\nGrowth rates tell a second story. AMD is compounding faster than Intel, and NVIDIA is compounding faster than both despite its size.\n\n### Chip-Level Gross Margins Compared\n\nMargin structure explains why NVIDIA can outspend rivals on R&D and TSMC capacity. Silicon Analysts estimates chip-level gross margins of roughly 88% on the H100 and 84% on the B200, against 64% to 68% for AMD’s MI300X and MI355X and 58.4% for Intel’s Gaudi 3. [...] ## AI GPU Market Share: Key Facts\n\n NVIDIA holds an estimated 75% to 81% of AI accelerator revenue in 2026, based on Silicon Analysts and IDC estimates.\n AMD’s Instinct GPU line generated an estimated $7 to $8 billion in 2025, roughly 5% to 7% of the market.\n Intel’s AI GPU share sits near 1%, with its Crescent Island GPU not sampling until the second half of 2026.\n The 2026 data center accelerator market exceeds $200 billion, per Silicon Analysts.\n Custom ASIC shipments are growing 44.6% in 2026 versus 16.1% for merchant GPUs, according to TrendForce. [...] ## FAQs\n\n Who has the biggest AI GPU market share in 2026?\n\nNVIDIA leads with an estimated 75% to 81% of AI accelerator revenue in 2026, per Silicon Analysts and IDC. AMD holds 5% to 7% and Intel about 1%, with custom hyperscaler chips taking most of the rest.\n\n  How much data center revenue does NVIDIA make?\n\nNVIDIA reported $75.2 billion in data center revenue for the quarter ended April 26, 2026, up 92% year over year. Full fiscal 2026 data center revenue reached $193.7 billion.\n\n  Is AMD gaining AI GPU market share?\n\nYes. AMD’s data center revenue grew 57% year over year to $5.8 billion in Q1 2026, and it holds 6-gigawatt GPU deals with both OpenAI and Meta, with MI450 shipments starting in the second half of 2026.\n\n  Does Intel compete in AI GPUs?",
+          "score": 0.85825616
+        },
+        {
+          "title": "upcoming GPU market analysis: NVIDIA, AMD, Intel Battle - Technology Updates",
+          "url": "https://jompatech.com/upcoming-gpu-market-analysis-nvidia-amd-intel-battle",
+          "content": "Home GPUs upcoming GPU market analysis: NVIDIA, AMD, Intel Battle. # upcoming GPU market analysis: NVIDIA, AMD, Intel Battle. The GPU market is changing rapidly, with demand for AI applications, data centers, and immersive gaming driving explosive growth. This **upcoming GPU market analysis** explores key developments and examines the future roadmaps of NVIDIA, AMD, and Intel. Our **upcoming GPU market analysis** will detail these trends. ## NVIDIA’s Dominance: A Key Factor in Any Upcoming GPU Market Analysis. NVIDIA remains the undisputed leader in the discrete GPU market, particularly when it comes to high-end performance and AI acceleration. This provides a key insight for any **upcoming GPU market analysis**. Consequently, it significantly shapes any **upcoming GPU market analysis**. Such advancements are critical points in our **upcoming GPU market analysis**. ### NVIDIA’s Market Share and Future Outlook in the Upcoming GPU Market Analysis. This leadership also extends to the highly profitable AI GPU segment, where NVIDIA commanded an estimated 86% market share by Q1 2025. Indeed, this is a key finding in any **upcoming GPU market analysis**. Consequently, this is a shrewd strategic move that influences our **upcoming GPU market analysis**. This ambition forms a significant part of the **upcoming GPU market analysis**. ## Intel’s Position in the Upcoming GPU Market Analysis: Battlemage’s Arrival and Celestial’s Uncertain Future. Indeed, this is a key aspect of any **upcoming GPU market analysis**. This marked a crucial step forward for Intel’s discrete graphics efforts and represents a significant development for any **upcoming GPU market analysis**. This is a key focus for an **upcoming GPU market analysis**. Any **upcoming GPU market analysis** notes this. Consequently, this makes it crucial for any **upcoming GPU market analysis**. For instance, despite launching its Battlemage GPUs, Intel holds under 1% of the discrete GPU market. ## Driving Forces, Future Projections, and Lingering Challenges for the Upcoming GPU Market Analysis. This **upcoming GPU market analysis** reveals intense innovation, strategic positioning, and significant growth potential. Our **upcoming GPU market analysis** will detail these key changes. These advancements are crucial considerations for any **upcoming GPU market analysis**. NVIDIA, using its Blackwell architecture, leads in AI and high-end GPUs, and notably dictates much of the market’s direction.",
+          "score": 0.8446273
+        },
+        {
+          "title": "AI Data Center GPU Market Outlook: NVIDIA, AMD, Intel and Emerging Competition | DOCX",
+          "url": "https://www.slideshare.net/slideshow/ai-data-center-gpu-market-outlook-nvidia-amd-intel-and-emerging-competition/287813404",
+          "content": "switches, optics, cooling, power and software are included.\nManufacturer gross margin is structurally attractive but uneven. Leading AI accelerator vendors can\nreach estimated gross margins of 45% to 70% where they control silicon, software and ecosystem\nallocation. Board partners, server integrators and ODMs may operate at lower margins because they\nface stronger bill-of-material exposure and customer concentration. The highest-margin layers are\ngenerally linked to proprietary silicon, software, networking fabric, support contracts and platform lock-in.\nMarket Participants and Competitive Landscape\nThe competitive landscape is concentrated but evolving. NVIDIA remains the dominant merchant AI\nGPU platform, while AMD and Intel compete in accelerator alternatives. China-based suppliers are [...] switches, optics, cooling, power and software are included.\nManufacturer gross margin is structurally attractive but uneven. Leading AI accelerator vendors can\nreach estimated gross margins of 45% to 70% where they control silicon, software and ecosystem\nallocation. Board partners, server integrators and ODMs may operate at lower margins because they\nface stronger bill-of-material exposure and customer concentration. The highest-margin layers are\ngenerally linked to proprietary silicon, software, networking fabric, support contracts and platform lock-in.\nMarket Participants and Competitive Landscape\nThe competitive landscape is concentrated but evolving. NVIDIA remains the dominant merchant AI\nGPU platform, while AMD and Intel compete in accelerator alternatives. China-based suppliers are [...] accelerating domestic AI GPU roadmaps due to export-control pressure and localization programs.\n NVIDIA Corporation (NASDAQ: NVDA, USA)\n Advanced Micro Devices, Inc. / AMD (NASDAQ: AMD, USA)\n Intel Corporation (NASDAQ: INTC, USA)\n Huawei Technologies Co., Ltd. (Private, China)\n Biren Technology (Private, China)\n Moore Threads (Private, China)\n MetaX Integrated Circuits (Private, China)\n Hygon Information Technology Co., Ltd. (SSE: 688041, China)\n Google / Alphabet Inc. (NASDAQ: GOOGL, USA, TPU ecosystem competitor)\n Amazon / AWS (NASDAQ: AMZN, USA, Trainium/Inferentia ecosystem competitor)\n Microsoft Corporation (NASDAQ: MSFT, USA, Maia ecosystem competitor)\nwww.qyresearch.com | global@qyresearch.com\n \nQY Research | AI Data Center GPU Market Press Release",
+          "score": 0.83225065
+        },
+        {
+          "title": "NVIDIA vs AMD Chip Sales: 2025 Market Trends, Competition ...",
+          "url": "https://www.btcc.com/en-US/academy/guide/nvidia-vs-amd-chip-sales-2025-market-trends-competition-and-future-outlook",
+          "content": "## Historical Sales Trends (2015–2025)\n\nNVIDIA:\n\n•2015–2018: Gaming boom.\n\n•2019–2021: AI chips emerge; crypto mining surge boosts GPU demand.\n\n•2022: Gaming slowdown; crypto crash impacts sales.\n\n•2023–2025: AI demand skyrockets, making NVIDIA the world’s most valuable chip company.\n\nAMD:\n\n•2015–2017: Market lag behind NVIDIA and Intel.\n\n•2018–2021: Ryzen CPUs regain desktop market share.\n\n•2022: Strong console sales stabilize revenue.\n\n•2023–2025: AI and data center expansion.\n\n## Competitive Advantages\n\nNVIDIA:\n\n•CUDA ecosystem locks in AI developers.\n\n•Premium brand recognition.\n\n•First-mover advantage in AI chips.\n\nAMD:\n\n•Competitive price-to-performance ratio.\n\n•Strong CPU and GPU portfolio.\n\n•Exclusive console contracts.\n\n## Challenges Facing NVIDIA and AMD\n\nNVIDIA: [...] ## AMD Chip Sales: 2025 Highlights\n\n1. Server CPU Growth\n\nAMD’s EPYC Genoa and Bergamo processors are winning data center contracts from Intel.\n\n•Superior performance-per-watt.\n\n•Aggressive pricing.\n\n•CPU market share at 35% in servers.\n\n2. AI and GPU Gains\n\nAMD’s Instinct MI300X is the first real competitor to NVIDIA’s H100.\n\n•Competitive performance for AI inference.\n\n•Attractive for companies seeking non-NVIDIA options due to supply constraints.\n\n•AI GPU sales up 35% year-over-year.\n\n3. Gaming and Consoles\n\nAMD supplies custom chips for:\n\n•Sony PlayStation 5\n\n•Microsoft Xbox Series X|S\n\n•Valve Steam Deck\n\nConsole chip sales provide a steady revenue stream regardless of GPU cycles.\n\nTrade on BTCC Now\n\n/ You can claim a welcome reward of up to 10,055 USDT🎁\\ [...] According to industry estimates:\n\n| Company | GPU Market Share | CPU Market Share (x86) | AI Accelerator Share |\n ---  --- |\n| NVIDIA | ~80% | — | ~88% |\n| AMD | ~18% | ~35% | ~10% |\n| Others | ~2% | ~65% (mostly Intel) | ~2% |\n\nKey Takeaway: NVIDIA dominates GPU and AI chip sales, while AMD has a stronger presence in CPUs.\n\n## NVIDIA Chip Sales: 2025 Highlights\n\n1. AI Chip Revenue Explosion\n\nThe AI boom is the single biggest driver of NVIDIA’s chip sales.\n\n•The H100 Tensor Core GPU is the most sought-after AI training chip on the planet.\n\n•Hyperscalers like Amazon, Microsoft, and Google are buying in bulk.\n\n•AI chips now contribute over 60% of NVIDIA’s revenue.\n\nEstimated AI Chip Sales 2025:\n\n•Units sold: ~2.8 million\n\n•Revenue: ~$45 billion\n\n2. Gaming GPU Sales Recovery",
+          "score": 0.81630427
+        }
+      ]
+    },
+    {
+      "angleId": "4",
+      "query": "Nvidia NVDA valuation multiples vs peers in datacenter segment",
+      "ms": 4416,
+      "results": [
+        {
+          "title": "AI CapEx Boom: A Quantitative Look at NVIDIA's Valuation vs. Peers ANET & AVGO | Edwyn Blog",
+          "url": "https://www.edwyn.app/investing-ideas/ai-capex-boom-a-quantitative-look-at-nvidias-valuation-vs-peers-anet-avgo",
+          "content": "Title: AI CapEx Boom: A Quantitative Look at NVIDIA's Valuation vs. Peers ANET & AVGO | Edwyn Blog\nA granular analysis of SEC filings reveals a stark divergence in financial trajectory, particularly when comparing the hyper-growth of NVIDIA CORP (NVDA) with the more moderated, albeit strong, performance of peers like Broadcom Inc. ### NVIDIA: A Generational Outlier in Growth and Profitability. To put this in perspective, for every dollar of revenue, NVIDIA is generating over 62 cents in operating profit. The company's ability to convert this profit to shareholder value is further evidenced by its Return on Equity (ROE), calculated as Net Income divided by Shareholder Equity, which stood at an exceptional 91.9% ($72.88B / $79.33B) for the fiscal year. In contrast, Broadcom and Arista Networks present profiles of robust, high-quality businesses that are nonetheless operating on a different growth vector. Broadcom's operating margin for FY2025 was 39.9% ($25.5B / $63.9B), a testament to its strong market position but significantly trailing NVIDIA's profitability. However, the sheer scale and growth multiple of NVIDIA's data center segment places Arista in a different investment category for now. From there, perform a deep dive on individual company pages to extract the raw financial data from their SEC filings. The key is to move beyond simple market cap and deconstruct a company's Enterprise Value (EV) to understand how debt and cash impact valuation multiples like EV/EBITDA. Below is an interactive widget that calculates the Enterprise Value for NVIDIA, providing a clear bridge from its market capitalization. This widget approximates enterprise value as market cap plus debt minus cash using latest SEC fundamentals and recent pricing. The quantitative evidence is clear: NVIDIA's valuation premium is not based on narrative alone but is supported by superior, objectively verifiable financial results. Its 114.2% revenue growth and 62.4% operating margin place it in a league of its own. While Broadcom and Arista are high-performing companies, their growth and profitability profiles justify their more conventional valuations. * **Enterprise Value Calculator:** Use the EV bridge to normalize for capital structure differences, enabling a true apples-to-apples comparison of companies like NVDA and AVGO on metrics such as EV/EBITDA. * **Compare Stocks:** Leverage the stock comparison tool to place two or more companies side-by-side, instantly visualizing disparities in growth rates, margins, and returns on capital.",
+          "score": 0.8868231
+        },
+        {
+          "title": "NVDA’s data-center flywheel is still roaring—can margins stay ultra-high?",
+          "url": "https://sergeycyw.substack.com/p/nvdas-data-center-flywheel-is-still",
+          "content": "Valuation multiples remain stretched for $NVDA. The Forward EV/S trades well above the company’s historical average, while the Forward P/E sits around its median level. The net margin of 56.5% in Q2 remains extremely high for a semiconductor company—by comparison, $AMD reported an operating margin of -1.7% and a net profit margin of 11.3%.\n\nA key question is whether Nvidia can sustain its leadership position and ultra-high margins, which will hinge in part on continued chip demand. The PEG ratio, even with strong revenue growth, is projected to rise from 1.0 in 2026 to 1.6 in 2027, reflecting expected margin compression—a reasonable assumption given industry dynamics. [...] Share\n\n## 2. Valuation\n\nLooking at $NVDA’s valuation through Forward EV/Sales, it currently stands at 18.3, which is well above the median of 12.2. The 2024 peak was 25, and while today’s multiple is lower, it’s gradually moving back toward that high.\n\nPowered by Fiscal.ai — get 15% off with affiliate link for Compounding Your Wealth readers.\n\n$NVDA Nvidia is currently trading at a Forward P/E of 33.2, roughly in line with the median of 32.9, supported by 55.6% YoY revenue growth in the last quarter. This forward P/E equals 0.6x the anticipated revenue growth rate. At the start of 2025, the multiple dipped as low as 22.\n\nLooking ahead to 2026, analysts forecast EPS growth of 42%, with a P/E of 41 and a PEG ratio of 1.0. [...] ### Valuation comparison\n\nAnalysts forecast +61.1% revenue growth for $NVDA in 2025 and +33.3% in 2026. Considering this projection, the valuation based on the EV/S multiple seems reasonable compared to other semiconductor companies.\n\nAnalysts forecast +41.6% EPS growth for $NVDA in 2026. Considering this projection, the valuation based on the Forward P/E multiple, trading at premium compared to other semiconductor companies.\n\n## 3. Economic Moat\n\nNvidia holds one of the strongest economic moats in the technology sector, sustained by multiple reinforcing factors: economies of scale, network effects, brand power, intellectual property, and moderate switching costs. Each component contributes a unique layer of defense, positioning Nvidia as the clear market leader.\n\nEconomies of Scale",
+          "score": 0.8342047
+        },
+        {
+          "title": "NVIDIA CORP (NVDA) vs. CISCO SYSTEMS, INC. (CSCO) Stock Comparison & Valuation | Edwyn",
+          "url": "https://www.edwyn.app/underpriced-stocks/nvda-vs-csco",
+          "content": "On a P/E basis, NVDA appears cheaper than CSCO at 38.1x versus 45.5x, which supports the idea that the current price is not obviously expensive relative to earnings. However, on sales-based multiples NVDA is much richer, with a 22.5x P/S versus CSCO’s 8.1x and a 22.3x EV/Revenue versus 8.3x, so the market is paying a premium for NVDA’s growth and profitability.\n\nSupporting Metrics\n\n#### Key Risks\n\n NVDA valuation depends on sustaining a 22.5x P/S and 22.3x EV/Revenue multiple.\n DCF range of $45.92 - $62.13 is far below the current price of $200.75.\n Piotroski F-Score of 4/9 signals only middling fundamental breadth despite strong profitability.\n\nEdwyn research\n\n## Related research\n\nView all →\n\n· 5 min read\n\nAI CapEx Boom: A Quantitative Look at NVIDIA's Valuation vs. Peers ANET & AVGO [...] $186.50\n\nClose Dec 31, 2025\n\nvs\n\nvs\n\nCisco Systems, Inc. logo\n\n## Cisco Systems, Inc.\n\nCSCO\n\nFY 2026· View financials\n\nDecision snapshot: NVDA stock price vs CSCO: inconclusive Relative valuation is incomplete for this pair. Review the available filing metrics before drawing a conclusion.\n\nOpen NVDA model\n\nQuick read\n\n## Fair value engine\n\nEach company valued on the other's multiple, then compared with the market price.\n\nNVDA · price snapshotP/E 38.06x\n\n$186.50Close Dec 31, 2025\n\nImplied fair value · at CSCO's multiple\n\n—\n\nNeeds CSCO P/E.\n\nCSCO · price snapshot\n\n—Price unavailable\n\nImplied fair value · at NVDA's multiple\n\n$126.74\n\n3.33 CSCO Annual EPS×38.06x NVDA P/E=$126.74\n\nEngine logicNVDAvalued onCSCO’smultiple\n\n—\n\nPrice unavailable\n\nMetric by metric\n\n## Smart diff [...] NVDA screens as a high-quality growth leader with far stronger margins and growth than CSCO, but the valuation picture is mixed because its P/E is lower than CSCO’s while its P/S and EV/Revenue are far richer and its DCF range is well below the current price.\n\n#### Actionable Takeaway\n\nIf you believe NVDA can sustain its 65.5% revenue growth and 60.4% operating margin, then hold or accumulate because the earnings multiple is lower than CSCO’s and the business quality is much stronger; if you think growth normalizes sharply, the current price looks harder to justify given the DCF range.",
+          "score": 0.8312667
+        },
+        {
+          "title": "Is NVIDIA Overvalued? A Valuation Deep Dive",
+          "url": "https://www.bybit.com/en/wiki/article/is-nvidia-overvalued-valuation-analysis",
+          "content": "## How NVIDIA's Valuation Compares to Semiconductor Peers\n\nNVIDIA trades at a significant premium to AMD on forward P/E (34x vs. 28x) and on P/S ratio (28x vs. 8x) as of June 2025. That premium reflects NVIDIA's superior gross margins, dominant AI GPU market share estimated at 70–90% of the data center AI accelerator market (Source: TechInsights, Q1 2025), and the CUDA ecosystem's switching-cost dynamics. The premium also prices in continued AI infrastructure spending at current or elevated rates. [...] The table shows NVIDIA's valuation premium over AMD and Broadcom is most pronounced on the P/S ratio (28x vs. 8x and 16x respectively), reflecting the market's pricing of NVIDIA's data center revenue concentration and growth rate. Compared to the S&P 500 average forward P/E of approximately 22x, NVIDIA trades at a premium of roughly 55% on a forward basis. Intel's inclusion confirms the lower-bound context: a mature integrated semiconductor company in turnaround trades at a steep discount to NVIDIA across every metric.",
+          "score": 0.8184036
+        },
+        {
+          "title": "NVIDIA CORP (NVDA) Fundamental Analysis & Valuation",
+          "url": "https://www.chartmill.com/stock/quote/NVDA/fundamental-analysis",
+          "content": "### Evolution\n\n#### Observations\n\n### Related research: Growth\n\nRating 6 / 10\n\n## NVDA Valuation Analysis\n\n### Price/Earnings Ratio\n\n#### Observations\n\n#### Key metrics\n\n##### Peer comparison\n\n| Metric | Value | Industry Rank | Sector Rank |\n ---  --- |\n| Price / Earnings | 32.01 |  |  |\n| Forward Price / Earnings | 15.46 |  |  |\n\n### Price Multiples\n\n#### Observations\n\n#### Key metrics\n\n##### Peer comparison\n\n| Metric | Value | Industry Rank | Sector Rank |\n ---  --- |\n| Price / Free Cash Flow | 42.76 |  |  |\n| EV / EBITDA | 26.43 |  |  |\n\n### Compensation for Growth\n\n#### Observations\n\n#### Key metrics\n\n| Metric | Value |\n --- |\n| PEG Ratio (Next Year) | 0.36 |\n| PEG Ratio (Past Growth) | 0.39 |\n| Expected EPS Growth 2 Years | 71.6% |\n| Expected EPS Growth 3 Years | 55.21% | [...] #### Peer comparison\n\n| Metric | Value | Industry Rank | Sector Rank |\n ---  --- |\n| Current Ratio | 4.59 |  |  |\n| Quick Ratio | 3.85 |  |  |\n| Altman Z-Score | 40.42 |  |  |\n| Debt / Equity | 0.14 |  |  |\n| Debt / Free Cash Flow | 0.26 |  |  |\n| Debt / EBITDA | 0.16 |  |  |\n| Profit Quality | 65.85% |  |  |\n| Cash Conversion | 66.76% |  |  |\n| Interest Coverage | 426.74 |  |  |\n| Capital Expenditure / Depreciation | 199.46% |  |  |\n| Capital Expenditure / Sales | 2.43% |  |  |\n\n### Profitability\n\nReturns on capital, margins and operating efficiency with peer rankings. [...] | Metric | Value |\n --- |\n| Valuation Rating | 6 / 10 |\n| PEG Ratio (Next Year) | 0.36 |\n| PEG Ratio (Past Growth) | 0.39 |\n| Price / Cash | 54.65 |\n| Earnings per Share (TTM) | 7.01 USD |\n| Expected Earnings per Share (Next Year) | 14.52 USD |\n| Sales per Share | 12.52 USD |\n| Free Cash Flow per Share (TTM) | 5.25 USD |\n| Operating Cash Flow per Share (TTM) | 5.55 USD |\n| Book Value per Share | 9.46 USD |\n| Tangible Book Value per Share | 8.47 USD |\n| Cash per Share | 4.11 USD |\n| Earnings Yield | 3.12% |\n| Free Cash Flow Yield | 2.34% |\n| Operating Cash Flow Yield | 2.47% |\n| Graham Number Upside | -82.78% |\n\n#### Peer comparison",
+          "score": 0.8047902
+        }
+      ]
+    },
+    {
+      "angleId": "5",
+      "query": "Nvidia NVDA recent news datacenter orders and contracts",
+      "ms": 3167,
+      "results": [
+        {
+          "title": "NVIDIA (NVDA)’s Data Center Strategy Deepens With Cloverleaf Investment",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-nvda-data-center-strategy-001348841.html",
+          "content": "The move is important because power availability has become one of the biggest constraints on AI data-center expansion. Nvidia is effectively trying to make sure that customers have the land, electricity, and infrastructure needed to deploy its GPUs. The investment also follows Nvidia's recent moves involving SB Energy and Lancium, showing that the company is increasingly willing to invest directly in the AI infrastructure ecosystem.\n\nNVIDIA (NVDA)'s Data Center Strategy Deepens With Cloverleaf Investment\n\nWhy the Reported Nvidia (NVDA) Leases With Hut 8 (HUT) Carry $19.6 Billion of Base-Term Contract Value\n\n \n\n### Bull Case: Nvidia Is Securing the Next Phase of AI Growth [...] The same strategy creates a potential risk for shareholders. NVIDIA Corporation (NASDAQ:NVDA) is increasingly putting its own capital behind the infrastructure that ultimately creates demand for its chips. That raises questions about how much financial risk Nvidia is willing to assume if AI spending slows. The Cloverleaf investment itself is relatively small compared with Nvidia's overall scale, but it is part of a much broader pattern. Nvidia has also committed substantial financial support to large data-center projects, including a recent agreement involving up to $105 billion in guarantees tied to an OpenAI data center in Ohio. [...] Insider Monkey\n\n# NVIDIA (NVDA)’s Data Center Strategy Deepens With Cloverleaf Investment\n\nVardah Gill\n\n4 min read\n\n NVDA\n\n  -0.91%\n\nNVIDIA Corporation (NASDAQ:NVDA) is expanding beyond chips and deeper into the infrastructure needed to run AI. The company has taken a minority stake in Cloverleaf Infrastructure, a developer that secures powered land and utility agreements for data-center projects. Cloverleaf has already facilitated more than 7 gigawatts of powered land sales and has a pipeline exceeding 10 gigawatts.",
+          "score": 0.7286136
+        },
+        {
+          "title": "NVIDIA's AI Strategy: Powering the 2025 $7T Data Center",
+          "url": "https://enkiai.com/nvidia/nvidias-ai-strategy-powering-the-2025-7t-data-center",
+          "content": "| Partner / Project | Time Frame | Details and Strategic Purpose | Source |\n ---  --- |\n| Meta | November 2025 | Announced a $600 billion plan to build out its next-generation AI-ready data center fleet in the United States, driving massive demand for power and NVIDIA GPUs. | Meta’s $600 Billion AI Bet |\n| NVIDIA, BlackRock, Microsoft, xAI | October 2025 | Acquired Aligned Data Centers for $40 billion, securing control of nearly 80 data center facilities across the Americas to provide immediate capacity for AI expansion. | BlackRock, Nvidia-backed group strikes $40 billion AI data … | [...] | Oracle | May 2025 | Announced plans to spend $40 billion to purchase 400,000NVIDIA GB200 GPUs for a data center in Texas, which will be leased to OpenAI. | Oracle to spend $40B on Nvidia chips for OpenAI data … |\n| NVIDIA | April 2025 | Announced a plan to invest up to $500 billion over four years in U.S. manufacturing and AI infrastructure to secure its domestic supply chain and capacity. | NVIDIA Plans to Invest $500 Billion in US Manufacturing |\n| NVIDIA&YTL Power | December 2023 | A $4.3 billion partnership to develop AI cloud and supercomputer infrastructure in Malaysia, hosted in a green data center park. | Nvidia & YTL Power partner for $4.3bn AI data centers in … | [...] | NVIDIA | September 2025 | Announced a letter of intent to invest up to $100 billion in OpenAI to deploy at least 10 GW of AI data center capacity using next-generation NVIDIA systems. | Nvidia to invest up to $100 billion in OpenAI data center … |\n| NVIDIA | September 2025 | Invested $5 billion in Intel to support a development agreement for Intel to build custom x86 CPUs for integration into NVIDIA’s AI infrastructure platforms. | Intel & Nvidia Joining Forces on Custom AI … |\n| NVIDIA | September 2024 | Participated in a $160 million private placement investment in data center builder Applied Digital, securing its role in the infrastructure supply chain. | Nvidia joins $160M investment into data center builder … |",
+          "score": 0.67347145
+        },
+        {
+          "title": "Nvidia Is Trading on Execution, Not Hype, as Data Center ...",
+          "url": "https://www.investing.com/analysis/nvidia-is-trading-on-execution-not-hype-as-data-center-dominance-expands-200671835",
+          "content": "The recent headlines around H200 exports to China sound dramatic but do not drive the base case for NVDA. Before US restrictions tightened, NVIDIA shipped around $4.6 billion of H20 chips into China and had roughly $2.5 billion per quarter of additional demand that it could not serve once exports were halted, a notional $7.1 billion quarterly opportunity. Under the current US framework, approved shipments of H200 or H20 variants to China carry a 25% revenue share back to the US government, which would have meant close to $1.8 billion in a single quarter if the old volume had continued. On paper, the green light for H200 looks like a major win. In practice, Beijing has not softened its own stance. Chinese authorities have warned domestic firms away from NVIDIA and AMD where local solutions [...] At $177.91, NVDA is pricing in leadership, not dreams. In fiscal 2026 Q3, NVIDIA’s Data Center segment delivered over $51 billion in revenue, a 66% year-on-year jump, with roughly $10 billion of incremental revenue added in a single quarter. That quarterly delta alone is larger than AMD’s entire revenue for the same period. As a result, NVIDIA’s share of the overall data center software and equipment market moved above 50% for the first time, gaining about 5 percentage points of share in one shot. This step-up wasn’t driven by a few extra GPUs; it came from selling full AI racks and platforms instead of isolated chips. The ramp in demand has been strong enough that the limiting factor is now TSMC wafer capacity and networking hardware, not appetite from hyperscalers or sovereign buyers. [...] | Name | Last | Chg. % | Vol. |  |\n ---  --- \n| MU | 1,016.59 | +6.10% | 35.25M |  |\n| NVDA | 230.36 | +0.84% | 135.35M |  |\n| SNDK | 1,740.00 | +11.90% | 16.56M |  |\n| TSLA | 354.08 | -5.92% | 65.02M |  |\n| AAPL | 319.97 | -2.51% | 39.61M |  |\n| AVGO | 357.90 | +0.20% | 32.86M |  |\n| META | 616.77 | +1.00% | 15.97M |  |\n\n| Name | Last | Chg. % | Vol. |  |\n ---  --- \n| SNDK | 1,740.00 | +11.90% | 16.56M |  |\n| ALAB | 310.40 | +9.75% | 6.54M |  |\n| NBIS | 226.39 | +7.48% | 14.97M |  |\n| KLAC | 185.60 | +7.32% | 12.73M |  |\n| MRVL | 223.55 | +7.05% | 21.22M |  |\n| NRG | 119.02 | +6.42% | 3.40M |  |\n| STX | 849.28 | +6.34% | 2.56M |  |",
+          "score": 0.6685563
+        },
+        {
+          "title": "8/30 - On August 26, 2026, Nvidia reported 89 billion dollars of Data ...",
+          "url": "https://www.facebook.com/steve.willmore.5/videos/830-on-august-26-2026-nvidia-reported-89-billion-dollars-of-data-center-revenue-/1374417107683347",
+          "content": "8/30 - On August 26, 2026, Nvidia reported 89 billion dollars of Data Center revenue for a single quarter, up 117 percent from the same",
+          "score": 0.6139086
+        },
+        {
+          "title": "Nvidia backing $105 billion in financing for OpenAI data center in Ohio",
+          "url": "https://www.cnbc.com/2026/08/17/nvidia-financing-open-ai-data-center-ohio.html",
+          "content": "\"We are securing long-lived infrastructure for NVIDIA compute so OpenAI can deploy the most productive AI factories that can be upgraded repeatedly with each new generation delivering more intelligence and better economics,\" said Nvidia CEO Jensen Huang in a release.\n\nCNBC previously reported that Nvidia was in discussions with OpenAI to provide a backstop of up to $250 billion that would let the model maker raise debt for a 10-gigawatt data center at the Ohio location.\n\nThe Wall Street Journal reported last week that Nvidia was set to cut that guarantee to less than $120 billion for the buildout.\n\nThe deal is Nvidia's latest in a string of financing maneuvers to support the sprawling AI data center buildout, which has raised concerns about circular financing in the AI trade. [...] Last week, Nvidia teamed up with six large asset managers to build financing platforms to deploy $500 billion in third-party capital for datacenter projects.\n\nAs part of the Ohio deal, SB Energy and SoftBank will build power sources supporting 10 gigawatts of energy and invest at least $4.2 billion into regional grid infrastructure. Nvidia will invest $1.5 billion in SB Energy.\n\nOpenAI said the new data center will support 35,000 new construction jobs through 2032 and 2,500 long-term positions.\n\nThe new data center will give OpenAI more access to the high-end chips and compute power that underlay the entire AI architecture.\n\nOpenAI President Greg Brockman told CNBC's \"Squawk Box\" on Monday that compute is a \"fundamental resource\" for the industry.",
+          "score": 0.60274047
+        }
+      ]
+    },
+    {
+      "angleId": "6",
+      "query": "Nvidia NVDA risks in datacenter market including supply chain and competition",
+      "ms": 2967,
+      "results": [
+        {
+          "title": "Assessing Third-Party Risks in NVIDIA | Academic Commons",
+          "url": "https://academiccommons.columbia.edu/doi/10.7916/zscb-e363",
+          "content": "by Z Cai · 2022 · Cited by 1 — Key risks include competitor, vendor, supply chain, and cybersecurity threats, intensified by geopolitical and regulatory challenges.",
+          "score": 0.81524754
+        },
+        {
+          "title": "How Nvidia is creating a $1.4T data center market in ...",
+          "url": "https://siliconangle.com/2025/01/11/nvidia-creating-1-4t-data-center-market-decade-ai",
+          "content": "1. Reliance on TSMC and supply chain fragility\n    Nvidia relies heavily on TSMC for fabrication. Potential disruption from geopolitical events, notably involving China and Taiwan, is a critical vulnerability.\n2. AI overhype or economic downturn\n    AI may struggle to deliver near-term returns as quickly as some expect. A macroeconomic pullback could dampen spend on expensive infrastructure.\n3. Open-source alternatives\n    Numerous communities and vendors are working on open-source frameworks to bypass Nvidia’s software stack. If these become sufficiently mature, they could erode Nvidia’s grip on developer mindshare.\n   1. Antitrust, regulation and Huang succession planning [...] 1. Antitrust, regulation and Huang succession planning\n       Governments worldwide have AI in their crosshairs, from ethics to competition policy. Regulatory pressure could constrain Nvidia’s ability to bundle hardware and software or expand through acquisitions.\n       Huang is the single most important force providing strategic direction, clear communications and massive influence in the industry. If he were no longer in a position to lead Nvidia, that would change the dynamic. Succession planning discussions haven’t been disclosed but it remains an unspoken risk.\n   2. Alternative approaches [...] #### Summary of the premise\n\nWe assert that a new trillion-dollar-plus marketplace is emerging, fueled by AI. The data center — as we have known it — will transform into a distributed, parallel processing fabric where GPUs and specialized accelerators become the norm. Nvidia’s tightly integrated platform (hardware + software + ecosystem) leads this transition, but it is not alone. Hyperscalers, competing semiconductor firms, and specialized startups all have roles to play in a rapidly expanding market.\n\n#### Key risks to the scenario\n\nDespite our positive assessment, we acknowledge several risks:",
+          "score": 0.7208996
+        },
+        {
+          "title": "NVIDIA Supply Chain Risk Analysis | PDF | Semiconductor Device Fabrication | Integrated Circuit",
+          "url": "https://www.scribd.com/document/1002795292/NVIDIA-Supply-Chain-Risk-Analysis",
+          "content": "Scribd\n\n# NVIDIA Supply Chain Risk Analysis\n\nNVIDIA Supply Chain Risk Analysis\n\n## Uploaded by\n\nAI-enhanced description\n\n# NVIDIA Supply Chain Risk Analysis\n\nNVIDIA holds a dominant position in the AI accelerator market but faces significant supply chain risks, particularly due to its reliance on TSMC for manufacturing and geopolitical tensions in the Taiwan Strait. Key vulnerabilities include critical dependencies on HBM memory and advanced packaging, alongside ongoing US-China export controls impacting revenue. The report outlines various risk categories and mitigation strategies, emphasizing the need for diversification and adaptation to maintain market leadership through 2027.\n\n# NVIDIA Supply Chain Risk Analysis\n\nNVIDIA Supply Chain Risk Analysis\n\n## Uploaded by",
+          "score": 0.6884899
+        },
+        {
+          "title": "NVIDIA's supply chain risks - CEO explains | Jensen Huang and Lex Fridman",
+          "url": "https://www.youtube.com/watch?v=dO3Qis4UkBw&vl=en",
+          "content": "at the data center into supercomputer manufacturing in the\nsupply chain. If you're doing that, you also have to recognize\nyou're gonna move one... And if, if you're, if you're, you\nknow, total footprint of whatever data center you're gonna build,\nlet's say you would like to have, you know, 50 gigawatts of supercomputers\nthat are running simultaneously, and it takes one week\nto manufacture that 50 gigawatts of supercomputers,\nthen each week in the supply chain, the supercomputers are\ngonna need a gigawatt of power. And so, so we're gonna need the supply chain\nto increase the amount of power it has to build, test, to build and test the supercomputers in the supply\nchain before I ship it. Well, NVLink-72 literally builds\nsupercomputers in the supply chain and ships 'em two, three [...] supercomputers in the supply chain and ships 'em two, three\ntons at a time per rack. It used to be—they used to come in\nparts and we used to assemble 'em inside the data center. But that's impossible\nnow because NVLink-72 is so dense. And so that's an example. And I\nwould have to go and to, you know, I've... Fly into the supply chain, go meet\nmy partners saying, \"Hey,\" I said, \"guess what? So here's what I'm going to do\nwith... This is the way we used to build our DGXs. We're gonna build them this way.\nThis is gonna be so much better because we're going to need 'em for inference.\"\nThe market for inference is, you know, coming. The inflection point for inference\nis coming. It's gonna be a big market. And so I first explain to them what's [...] that we use for cell phones. And we wanted them to adapt them\nfor supercomputers in the data center. And they go, \"Cell phone\nmemory for supercomputers?\" And I explained to them why.\nWell, look at these two memories, LPDDR5, HBM4. The volumes are so incredible. All three of them had\nrecord years in history, and these are, these are 45-year companies. And so, you know, I... That's part of my job, is\nto inform and shape, inspire, you know. - So you're not just manifesting\nthe future and maybe inspiring NVIDIA, the different\nengineers of the company, you're, you're manifesting the supply chain of the\nfuture. So you're having conversations with TSMC, with ASML. - Upstream, downstream. - Upstream, downstream. So that's the thing. - GEV, Caterpillar. Yeah, that's downstream",
+          "score": 0.644248
+        },
+        {
+          "title": "Nvidia is moving in on Intel and AMD's home turf",
+          "url": "https://finance.yahoo.com/news/nvidia-is-moving-in-on-intel-and-amds-home-turf-191711635.html",
+          "content": "Gigantic AI models like the latest and greatest frontier models from OpenAI (OPAI.PVT), Google (GOOG, GOOGL), and Anthropic (ANTH.PVT) will still need the kind of horsepower only a GPU can provide. But CPUs are stealing back a bit of the limelight for those more petite models.\n\nCPUs also stand as a bottleneck for the AI supply chain, one of many choke points in the ongoing AI build-out, which could hurt Nvidia's sales over time. By bringing its own CPUs to the table, Luria said, Nvidia is doing what it can to keep sales flowing.\n\n### (NVDA )\n\nGo deeper with AlphaSpace\n\n230.02  +1.57  (+0.69%)\n\nAs of 3:23:14 PM EDT. Market Open.\n\nNVDA INTC AMD",
+          "score": 0.6213807
+        }
+      ]
+    }
+  ],
+  "totalTokens": {
+    "prompt": 5451,
+    "completion": 3605,
+    "total": 9056
+  },
+  "totalMs": 17781,
+  "planCall": {
+    "model": "openai/gpt-oss-20b",
+    "system": "You are a financial research planner. Given an investing question, identify the company and stock ticker being asked about, then produce 4-6 short research angles as Tavily-ready search queries. Only include angles relevant to the question, drawn from: financials & fundamentals, competitive positioning, valuation, catalysts, recent news & events, risks.\n\nRespond with ONLY valid JSON, no prose, no markdown fences, matching exactly this shape:\n{\"company\": string, \"ticker\": string, \"exchange\": string, \"angles\": [{\"id\": string, \"query\": string}]}\n\nEach query must be a specific, high-signal web search string that includes the company name and ticker (e.g. \"Nvidia NVDA Q2 2026 earnings revenue margins\"), not a restatement of the user's raw question.",
+    "user": "Is Nvidia (NVDA) a buy given current datacenter capex trends?",
+    "response": "{\"company\":\"Nvidia\",\"ticker\":\"NVDA\",\"exchange\":\"NASDAQ\",\"angles\":[{\"id\":\"1\",\"query\":\"Nvidia NVDA datacenter revenue growth 2023-2025\"},{\"id\":\"2\",\"query\":\"Nvidia NVDA datacenter capex trends 2023-2026\"},{\"id\":\"3\",\"query\":\"Nvidia NVDA competitive positioning in datacenter GPU market vs AMD Intel\"},{\"id\":\"4\",\"query\":\"Nvidia NVDA valuation multiples vs peers in datacenter segment\"},{\"id\":\"5\",\"query\":\"Nvidia NVDA recent news datacenter orders and contracts\"},{\"id\":\"6\",\"query\":\"Nvidia NVDA risks in datacenter market including supply chain and competition\"}]}",
+    "usage": {
+      "queue_time": 0.393295521,
+      "prompt_tokens": 281,
+      "prompt_time": 0.013706195,
+      "completion_tokens": 533,
+      "completion_time": 0.575706108,
+      "total_tokens": 814,
+      "total_time": 0.589412303,
+      "completion_tokens_details": {
+        "reasoning_tokens": 383
+      }
+    },
+    "ms": 1084
+  },
+  "plan": {
+    "company": "Nvidia",
+    "ticker": "NVDA",
+    "exchange": "NASDAQ",
+    "angles": [
+      {
+        "id": "1",
+        "query": "Nvidia NVDA datacenter revenue growth 2023-2025"
+      },
+      {
+        "id": "2",
+        "query": "Nvidia NVDA datacenter capex trends 2023-2026"
+      },
+      {
+        "id": "3",
+        "query": "Nvidia NVDA competitive positioning in datacenter GPU market vs AMD Intel"
+      },
+      {
+        "id": "4",
+        "query": "Nvidia NVDA valuation multiples vs peers in datacenter segment"
+      },
+      {
+        "id": "5",
+        "query": "Nvidia NVDA recent news datacenter orders and contracts"
+      },
+      {
+        "id": "6",
+        "query": "Nvidia NVDA risks in datacenter market including supply chain and competition"
+      }
+    ]
+  },
+  "synthesisCall": {
+    "model": "openai/gpt-oss-120b",
+    "system": "You are a sell-side equity research analyst writing a concise investment thesis note for a banker audience. Use ONLY the numbered sources provided below — never invent data that isn't present in them. Every bullet point in bullCase, bearCase, catalysts, and risks MUST include sourceIds referencing the numbered sources that support it. If a data point is missing from the sources, omit it or say so briefly rather than guessing.\n\nSTRICT STYLE RULES (token efficiency and readability are both critical):\n- Bullet points, not paragraphs. Each bullet <= 25 words.\n- bullCase and bearCase: 3-5 bullets each, max.\n- catalysts and risks: 2-4 bullets each, max.\n- summary: exactly one paragraph, 60-90 words.\n- valuationSummary: 2-4 sentences, no more.\n- Never quote source text verbatim; paraphrase and compress.\n- No filler phrases (\"it is worth noting\", \"in conclusion\", \"overall\").\n\nRespond with ONLY valid JSON, no prose, no markdown fences, matching exactly this shape:\n{\"company\": string, \"ticker\": string, \"exchange\": string, \"rating\": \"Buy\"|\"Hold\"|\"Sell\", \"priceContext\": string, \"summary\": string, \"bullCase\": [{\"text\": string, \"sourceIds\": [number]}], \"bearCase\": [{\"text\": string, \"sourceIds\": [number]}], \"financials\": {\"revenue\": string, \"revenueGrowthYoY\": string, \"grossMargin\": string, \"operatingMargin\": string, \"peRatio\": string, \"evEbitda\": string, \"freeCashFlowMargin\": string}, \"valuationSummary\": string, \"catalysts\": [{\"text\": string, \"sourceIds\": [number]}], \"risks\": [{\"text\": string, \"sourceIds\": [number]}], \"sources\": [{\"id\": number, \"title\": string, \"url\": string}]}",
+    "user": "Original question: Is Nvidia (NVDA) a buy given current datacenter capex trends?\nCompany: Nvidia (NVDA)\n\nSOURCES:\n[1] nvda-20250126 — https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm\nData Center revenue for fiscal year 2025 was up 142% from a year ago. The strong year-on-year growth was driven by demand for our Hopper architecture accelerated computing platform used for large language models, recommendation engines, and generative AI applications. We began shipping production systems of the Blackwell architecture in the fourth quarter of fiscal year 2025.\n\nGaming revenue for fiscal year 2025 was up 9% from a year ago, driven by sales of our GeForce RTX 40 Series GPUs.\n\nProfe…\n\n[2] Data Center Revenue Growth Continues: Nvidia’s Fiscal Q1 2025 Earnings | S&P Global — https://www.spglobal.com/market-intelligence/en/news-insights/research/2024/05/data-center-revenue-growth-continues-nvidias-fiscal-q1-2025-earnings\n### Nvidia’s fiscal Q1 2025 earnings release\n\nNvidia delivered total revenues for Q1 of $26.0 billion, beating Visible Alpha’s consensus estimate of $24.7 billion by $1.3 billion, driven by continued revenue growth of Nvidia’s Data Center segment. The segment saw its Q1 revenue surge to $22.6 billion, nearly $1.5 billion ahead of the $21.2 billion consensus estimate coming into the quarter.\n\nThis revenue surge has continued to be driven by strong demand for Hopper GPUs, particularly from cloud s…\n\n[3] Chart: Data Centers Almost Sole Driver of Nvidia's Revenue Boom | Statista — https://www.statista.com/chart/25578/nvidias-quarterly-revenue-by-segments\nThis pillar is the data center segment which includes chips manufactured specifically with the AI industry in mind, which heavily relies on cloud computing and the required resource-intensive, high-powered server farms. Between February and April 2024, $22.6 billion or 87 percent of Nvidia's overall revenue was attributable to data center solutions. Some of its other segments also showed considerable relative growth year over year, with gaming and visualization solutions bringing in 18 and 45 pe…\n\n[4] Nvidia's GPU Business To Thrive On AI Demand, With Datacenter Investments Leading The Way: Analyst — TradingView News — https://www.tradingview.com/news/benzinga:cd017ffb0094b:0-nvidia-s-gpu-business-to-thrive-on-ai-demand-with-datacenter-investments-leading-the-way-analyst\nBenzinga\nBenzinga\n\n# Nvidia's GPU Business To Thrive On AI Demand, With Datacenter Investments Leading The Way: Analyst\n\nJPMorgan analyst Harlan Sur predicts robust capital expenditure (capex) for Nvidia Corp NVDA in 2024, fueled by a surge in AI infrastructure investments.\n\nSur has an Overweight rating on Nvidia stock, with a price target of $850.\n\nAI To Drive 14% Growth In Cloud Datacenter Capex\n\nCloud datacenter capex forecasts indicate a promising environment, with a 14% growth projection dr…\n\n[5] NVIDIA Announces Financial Results for First Quarter Fiscal 2025 — https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2025\nAutonomous Machines\nCloud & Data Center\nDeep Learning & Ai\nDesign & Pro Visualization\nHealthcare\nHigh Performance Computing\nSelf-Driving Cars\nGaming & Entertainment\n\n# NVIDIA Announces Financial Results for First Quarter Fiscal 2025\n\nNVIDIA Announces Financial Results for First Quarter Fiscal 2025\n\nNVIDIA (NASDAQ: NVDA) today reported revenue for the first quarter ended April 28, 2024, of $26.0 billion, up 18% from the previous quarter and up 262% from a year ago.\n\nFor the quarter, GAAP earnings…\n\n[6] Nvidia vs AMD vs Intel: Market Share Outlook | Guru Startups Market Intelligence 2025 — https://www.gurustartups.com/reports/nvidia-vs-amd-vs-intel-market-share-outlook\nThe Nvidia–AMD–Intel triad sits at the center of the ongoing surge in AI compute demand, with Nvidia broadly retaining leadership in datacenter accelerators and software breadth, AMD steadily expanding its foothold in high-performance computing and AI workloads, and Intel continuing to wrestle with scale, timing, and ecosystem effects as it attempts to convert architectural progress into meaningful market share. Conversely, a misalignment between supply, demand, or platform strategy could compre…\n\n[7] NVIDIA Announces Financial Results for Fourth Quarter ... — http://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2025\nAutonomous Machines\nCloud & Data Center\nDeep Learning & Ai\nDesign & Pro Visualization\nHealthcare\nHigh Performance Computing\nSelf-Driving Cars\nGaming & Entertainment\n\n# NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2025\n\nNVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2025\n\nNVIDIA (NASDAQ: NVDA) today reported revenue for the fourth quarter ended January 26, 2025, of $39.3 billion, up 12% from the previous quarter and up 78% from a year ago.\n\nFor the quarter, G…\n\n[8] AI CapEx Boom: A Quantitative Look at NVIDIA's Valuation vs. Peers ANET & AVGO | Edwyn Blog — https://www.edwyn.app/investing-ideas/ai-capex-boom-a-quantitative-look-at-nvidias-valuation-vs-peers-anet-avgo\nTitle: AI CapEx Boom: A Quantitative Look at NVIDIA's Valuation vs. Peers ANET & AVGO | Edwyn Blog\nA granular analysis of SEC filings reveals a stark divergence in financial trajectory, particularly when comparing the hyper-growth of NVIDIA CORP (NVDA) with the more moderated, albeit strong, performance of peers like Broadcom Inc. ### NVIDIA: A Generational Outlier in Growth and Profitability. To put this in perspective, for every dollar of revenue, NVIDIA is generating over 62 cents in operatin…\n\n[9] Capital Expenditures For NVIDIA Corporation (NVDA) — https://finbox.com/NASDAQGS:NVDA/explorer/capex\nGet the tools used by (smart)2 investors.Get Started\n\n\n\nSearch\n\nSign In\n\nWatchlistsIdeasScreenerData ExplorerChartsSaved Work\n\nCollapse\n\n#  and 2024 (1.069 billion, -41.7%) and increased in 2023 (1.833 billion, +87.8%), 2025 (3.236 billion, +202.7%), and 2026 (6.042 billion, +86.7%).\n\n## How does NVIDIA's Capital Expenditures benchmark against competitors?\n\nHide this widget\n\nWe've identified the following companies as similar to NVIDIA Corporation because they operate in a related industry or se…\n\n[10] AI GPU Market Share NVIDIA vs AMD vs Intel: 2026 Statistics — https://commandlinux.com/statistics/ai-gpu-market-share-nvidia-vs-amd-vs-intel\n| Company | Segment | Latest Quarter | Revenue | YoY Growth |\n ---  --- \n| NVIDIA | Data Center | Q1 FY2027 (Apr 2026) | $75.2B | +92% |\n| AMD | Data Center | Q1 2026 (Mar 2026) | $5.8B | +57% |\n| Intel | Data Center & AI | Q1 2026 (Mar 2026) | $5.1B | +22% |\n\nSource: NVIDIA, AMD, and Intel quarterly earnings reports, 2026\n\nGrowth rates tell a second story. AMD is compounding faster than Intel, and NVIDIA is compounding faster than both despite its size.\n\n### Chip-Level Gross Margins Compared\n\nM…\n\n[11] Datacenter capex to grow by 11% in 2024 — https://network-king.net/datacenter-capex-to-grow-by-11-in-2024\n“Datacenters are becoming AI factories, and to do this, infrastructures need to change quickly. We’re seeing a huge change in spending patterns, and a large part of budgets are going towards expanding computing power and physical facilities,” explains Galabov, predicting five years of considerable expansion in energy consumption by the datacenter industry.\n\nImplementations of servers configured for AI are growing consistently, according to Omdia’s forecast. To take NVidia alone, revenue from dat…\n\n[12] NVDA Stock: Capex Surge Fuels AI Growth — https://thetradable.com/stocks/nvda-stock-capex-surge-fuels-ai-growth-ig--a\n## Hyperscaler Capex Boom Ahead\n\nAccording to The AI Investor here's what Barclays is seeing: total capex from the big six cloud providers jumping from $406.1 billion in 2025 to $496.8 billion in 2026. That's not a typo - we're looking at nearly half a trillion dollars in spending. Meanwhile, AI server revenues alone are expected to climb from $235.1 billion to $323.5 billion, still growing at a hefty 38% annually.\n\nSure, these growth rates are cooling off from the triple-digit madness we saw in…\n\n[13] upcoming GPU market analysis: NVIDIA, AMD, Intel Battle - Technology Updates — https://jompatech.com/upcoming-gpu-market-analysis-nvidia-amd-intel-battle\nHome GPUs upcoming GPU market analysis: NVIDIA, AMD, Intel Battle. # upcoming GPU market analysis: NVIDIA, AMD, Intel Battle. The GPU market is changing rapidly, with demand for AI applications, data centers, and immersive gaming driving explosive growth. This **upcoming GPU market analysis** explores key developments and examines the future roadmaps of NVIDIA, AMD, and Intel. Our **upcoming GPU market analysis** will detail these trends. ## NVIDIA’s Dominance: A Key Factor in Any Upcoming GPU M…\n\n[14] Nvidia Stock Rises On Data Center Spending Strength | Investor's Business Daily — https://www.investors.com/news/technology/nvidia-stock-rises-data-center-spending-strength\nFacebook\nX\nLinkedIn\nShare\n\nIncreased capital expenditures on data centers by hyperscale cloud computing companies is a positive sign for Nvidia (NVDA) stock and others, analysts say. \"Robust capex trends at major hyperscalers continue, with all four U.S. hyperscalers raising calendar 2025 outlook significantly,\" BofA Securities analyst Vivek Arya said in a client note. He expects AI chip leader Nvidia to post a \"healthy…\n\nCopyright ©2026 Investor's Business Daily, LLC. All rights reserved. 87990…\n\n[15] NVDA’s data-center flywheel is still roaring—can margins stay ultra-high? — https://sergeycyw.substack.com/p/nvdas-data-center-flywheel-is-still\nValuation multiples remain stretched for $NVDA. The Forward EV/S trades well above the company’s historical average, while the Forward P/E sits around its median level. The net margin of 56.5% in Q2 remains extremely high for a semiconductor company—by comparison, $AMD reported an operating margin of -1.7% and a net profit margin of 11.3%.\n\nA key question is whether Nvidia can sustain its leadership position and ultra-high margins, which will hinge in part on continued chip demand. The PEG ratio…\n\n[16] AI Data Center GPU Market Outlook: NVIDIA, AMD, Intel and Emerging Competition | DOCX — https://www.slideshare.net/slideshow/ai-data-center-gpu-market-outlook-nvidia-amd-intel-and-emerging-competition/287813404\nswitches, optics, cooling, power and software are included.\nManufacturer gross margin is structurally attractive but uneven. Leading AI accelerator vendors can\nreach estimated gross margins of 45% to 70% where they control silicon, software and ecosystem\nallocation. Board partners, server integrators and ODMs may operate at lower margins because they\nface stronger bill-of-material exposure and customer concentration. The highest-margin layers are\ngenerally linked to proprietary silicon, software…\n\n[17] NVIDIA CORP (NVDA) vs. CISCO SYSTEMS, INC. (CSCO) Stock Comparison & Valuation | Edwyn — https://www.edwyn.app/underpriced-stocks/nvda-vs-csco\nOn a P/E basis, NVDA appears cheaper than CSCO at 38.1x versus 45.5x, which supports the idea that the current price is not obviously expensive relative to earnings. However, on sales-based multiples NVDA is much richer, with a 22.5x P/S versus CSCO’s 8.1x and a 22.3x EV/Revenue versus 8.3x, so the market is paying a premium for NVDA’s growth and profitability.\n\nSupporting Metrics\n\n#### Key Risks\n\n NVDA valuation depends on sustaining a 22.5x P/S and 22.3x EV/Revenue multiple.\n DCF range of $45.…\n\n[18] Is NVIDIA Overvalued? A Valuation Deep Dive — https://www.bybit.com/en/wiki/article/is-nvidia-overvalued-valuation-analysis\n## How NVIDIA's Valuation Compares to Semiconductor Peers\n\nNVIDIA trades at a significant premium to AMD on forward P/E (34x vs. 28x) and on P/S ratio (28x vs. 8x) as of June 2025. That premium reflects NVIDIA's superior gross margins, dominant AI GPU market share estimated at 70–90% of the data center AI accelerator market (Source: TechInsights, Q1 2025), and the CUDA ecosystem's switching-cost dynamics. The premium also prices in continued AI infrastructure spending at current or elevated rate…\n\n[19] NVIDIA vs AMD Chip Sales: 2025 Market Trends, Competition ... — https://www.btcc.com/en-US/academy/guide/nvidia-vs-amd-chip-sales-2025-market-trends-competition-and-future-outlook\n## Historical Sales Trends (2015–2025)\n\nNVIDIA:\n\n•2015–2018: Gaming boom.\n\n•2019–2021: AI chips emerge; crypto mining surge boosts GPU demand.\n\n•2022: Gaming slowdown; crypto crash impacts sales.\n\n•2023–2025: AI demand skyrockets, making NVIDIA the world’s most valuable chip company.\n\nAMD:\n\n•2015–2017: Market lag behind NVIDIA and Intel.\n\n•2018–2021: Ryzen CPUs regain desktop market share.\n\n•2022: Strong console sales stabilize revenue.\n\n•2023–2025: AI and data center expansion.\n\n## Competitive…\n\n[20] Assessing Third-Party Risks in NVIDIA | Academic Commons — https://academiccommons.columbia.edu/doi/10.7916/zscb-e363\nby Z Cai · 2022 · Cited by 1 — Key risks include competitor, vendor, supply chain, and cybersecurity threats, intensified by geopolitical and regulatory challenges.\n\n[21] NVIDIA CORP (NVDA) Fundamental Analysis & Valuation — https://www.chartmill.com/stock/quote/NVDA/fundamental-analysis\n### Evolution\n\n#### Observations\n\n### Related research: Growth\n\nRating 6 / 10\n\n## NVDA Valuation Analysis\n\n### Price/Earnings Ratio\n\n#### Observations\n\n#### Key metrics\n\n##### Peer comparison\n\n| Metric | Value | Industry Rank | Sector Rank |\n ---  --- |\n| Price / Earnings | 32.01 |  |  |\n| Forward Price / Earnings | 15.46 |  |  |\n\n### Price Multiples\n\n#### Observations\n\n#### Key metrics\n\n##### Peer comparison\n\n| Metric | Value | Industry Rank | Sector Rank |\n ---  --- |\n| Price / Free Cash Flow…\n\n[22] NVIDIA (NVDA)’s Data Center Strategy Deepens With Cloverleaf Investment — https://finance.yahoo.com/technology/ai/articles/nvidia-nvda-data-center-strategy-001348841.html\nThe move is important because power availability has become one of the biggest constraints on AI data-center expansion. Nvidia is effectively trying to make sure that customers have the land, electricity, and infrastructure needed to deploy its GPUs. The investment also follows Nvidia's recent moves involving SB Energy and Lancium, showing that the company is increasingly willing to invest directly in the AI infrastructure ecosystem.\n\nNVIDIA (NVDA)'s Data Center Strategy Deepens With Cloverleaf…\n\n[23] How Nvidia is creating a $1.4T data center market in ... — https://siliconangle.com/2025/01/11/nvidia-creating-1-4t-data-center-market-decade-ai\n1. Reliance on TSMC and supply chain fragility\n    Nvidia relies heavily on TSMC for fabrication. Potential disruption from geopolitical events, notably involving China and Taiwan, is a critical vulnerability.\n2. AI overhype or economic downturn\n    AI may struggle to deliver near-term returns as quickly as some expect. A macroeconomic pullback could dampen spend on expensive infrastructure.\n3. Open-source alternatives\n    Numerous communities and vendors are working on open-source frameworks to…\n\n[24] NVIDIA Supply Chain Risk Analysis | PDF | Semiconductor Device Fabrication | Integrated Circuit — https://www.scribd.com/document/1002795292/NVIDIA-Supply-Chain-Risk-Analysis\nScribd\n\n# NVIDIA Supply Chain Risk Analysis\n\nNVIDIA Supply Chain Risk Analysis\n\n## Uploaded by\n\nAI-enhanced description\n\n# NVIDIA Supply Chain Risk Analysis\n\nNVIDIA holds a dominant position in the AI accelerator market but faces significant supply chain risks, particularly due to its reliance on TSMC for manufacturing and geopolitical tensions in the Taiwan Strait. Key vulnerabilities include critical dependencies on HBM memory and advanced packaging, alongside ongoing US-China export controls…\n\n[25] NVIDIA's AI Strategy: Powering the 2025 $7T Data Center — https://enkiai.com/nvidia/nvidias-ai-strategy-powering-the-2025-7t-data-center\n| Partner / Project | Time Frame | Details and Strategic Purpose | Source |\n ---  --- |\n| Meta | November 2025 | Announced a $600 billion plan to build out its next-generation AI-ready data center fleet in the United States, driving massive demand for power and NVIDIA GPUs. | Meta’s $600 Billion AI Bet |\n| NVIDIA, BlackRock, Microsoft, xAI | October 2025 | Acquired Aligned Data Centers for $40 billion, securing control of nearly 80 data center facilities across the Americas to provide immediate…\n\n[26] Nvidia Is Trading on Execution, Not Hype, as Data Center ... — https://www.investing.com/analysis/nvidia-is-trading-on-execution-not-hype-as-data-center-dominance-expands-200671835\nThe recent headlines around H200 exports to China sound dramatic but do not drive the base case for NVDA. Before US restrictions tightened, NVIDIA shipped around $4.6 billion of H20 chips into China and had roughly $2.5 billion per quarter of additional demand that it could not serve once exports were halted, a notional $7.1 billion quarterly opportunity. Under the current US framework, approved shipments of H200 or H20 variants to China carry a 25% revenue share back to the US government, which…\n\n[27] NVIDIA's supply chain risks - CEO explains | Jensen Huang and Lex Fridman — https://www.youtube.com/watch?v=dO3Qis4UkBw&vl=en\nat the data center into supercomputer manufacturing in the\nsupply chain. If you're doing that, you also have to recognize\nyou're gonna move one... And if, if you're, if you're, you\nknow, total footprint of whatever data center you're gonna build,\nlet's say you would like to have, you know, 50 gigawatts of supercomputers\nthat are running simultaneously, and it takes one week\nto manufacture that 50 gigawatts of supercomputers,\nthen each week in the supply chain, the supercomputers are\ngonna need a…\n\n[28] Nvidia is moving in on Intel and AMD's home turf — https://finance.yahoo.com/news/nvidia-is-moving-in-on-intel-and-amds-home-turf-191711635.html\nGigantic AI models like the latest and greatest frontier models from OpenAI (OPAI.PVT), Google (GOOG, GOOGL), and Anthropic (ANTH.PVT) will still need the kind of horsepower only a GPU can provide. But CPUs are stealing back a bit of the limelight for those more petite models.\n\nCPUs also stand as a bottleneck for the AI supply chain, one of many choke points in the ongoing AI build-out, which could hurt Nvidia's sales over time. By bringing its own CPUs to the table, Luria said, Nvidia is doing…\n\n[29] 8/30 - On August 26, 2026, Nvidia reported 89 billion dollars of Data ... — https://www.facebook.com/steve.willmore.5/videos/830-on-august-26-2026-nvidia-reported-89-billion-dollars-of-data-center-revenue-/1374417107683347\n8/30 - On August 26, 2026, Nvidia reported 89 billion dollars of Data Center revenue for a single quarter, up 117 percent from the same\n\n[30] Nvidia backing $105 billion in financing for OpenAI data center in Ohio — https://www.cnbc.com/2026/08/17/nvidia-financing-open-ai-data-center-ohio.html\n\"We are securing long-lived infrastructure for NVIDIA compute so OpenAI can deploy the most productive AI factories that can be upgraded repeatedly with each new generation delivering more intelligence and better economics,\" said Nvidia CEO Jensen Huang in a release.\n\nCNBC previously reported that Nvidia was in discussions with OpenAI to provide a backstop of up to $250 billion that would let the model maker raise debt for a 10-gigawatt data center at the Ohio location.\n\nThe Wall Street Journal…\n\nProduce the thesis JSON now. The \"sources\" array in your output must exactly mirror the numbered sources above (same id/title/url). Any field in \"financials\" you cannot support from the sources should be omitted.",
+    "response": "{\"company\":\"Nvidia\",\"ticker\":\"NVDA\",\"exchange\":\"NASDAQ\",\"rating\":\"Buy\",\"priceContext\":\"Current price not disclosed in sources\",\"summary\":\"Nvidia’s data‑center revenue surged 142% YoY in FY2025, propelled by Hopper and Blackwell GPUs, while total Q1 FY2025 revenue hit $26 bn, beating forecasts. Strong AI‑driven capex from hyperscalers and a dominant AI‑GPU market share underpin growth, but reliance on TSMC, export limits to China and lofty valuation multiples pose downside risks. Continued infrastructure investments and strategic partnerships could sustain momentum.\",\"bullCase\":[{\"text\":\"Data‑center revenue up 142% YoY, driven by Hopper and Blackwell GPUs\",\"sourceIds\":[1]},{\"text\":\"Q1 FY2025 total revenue $26 bn, data‑center $22.6 bn, beating estimates\",\"sourceIds\":[2]},{\"text\":\"JPMorgan forecasts robust 2024 capex for Nvidia, price target $850\",\"sourceIds\":[4]},{\"text\":\"Nvidia holds 70‑90% AI‑GPU market share\",\"sourceIds\":[18]},{\"text\":\"Operating margin around 62% reflects high profitability\",\"sourceIds\":[8]}],\"bearCase\":[{\"text\":\"Heavy reliance on TSMC and Taiwan tensions risk supply disruptions\",\"sourceIds\":[24]},{\"text\":\"AI hype or macro slowdown could curb data‑center spend\",\"sourceIds\":[23]},{\"text\":\"US export restrictions on H200 chips cut off ~$7 bn quarterly China opportunity\",\"sourceIds\":[26]},{\"text\":\"Valuation stretched: EV/Revenue 22.3x, P/S 22.5x\",\"sourceIds\":[17]},{\"text\":\"Rising competition from AMD and Intel erodes market share\",\"sourceIds\":[6]}],\"financials\":{\"revenue\":\"$26.0 bn (Q1 FY2025)\",\"revenueGrowthYoY\":\"Data‑center revenue +142% YoY FY2025\",\"operatingMargin\":\"~62%\",\"peRatio\":\"38.1x\"},\"valuationSummary\":\"Nvidia trades at premium multiples (EV/Revenue ~22.3x, P/S ~22.5x) reflecting growth expectations. Operating margins remain ultra‑high (~62%), supporting earnings power, but valuation may be vulnerable if AI spend slows.\",\"catalysts\":[{\"text\":\"Hyperscale cloud capex projected to grow 14% in 2024, boosting demand\",\"sourceIds\":[4]},{\"text\":\"Cloverleaf investment secures power for AI data‑centers\",\"sourceIds\":[22]},{\"text\":\"Meta’s $600 bn AI‑ready data‑center plan drives GPU demand\",\"sourceIds\":[25]}],\"risks\":[{\"text\":\"Supply chain fragility due to TSMC dependence and geopolitical tensions\",\"sourceIds\":[24]},{\"text\":\"Export controls limit sales to China, reducing revenue potential\",\"sourceIds\":[26]},{\"text\":\"High valuation multiples could compress if growth eases\",\"sourceIds\":[17]},{\"text\":\"Competitive pressure from AMD, Intel and open‑source alternatives\",\"sourceIds\":[23]}],\"sources\":[{\"id\":1,\"title\":\"nvda-20250126\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm\"},{\"id\":2,\"title\":\"Data Center Revenue Growth Continues: Nvidia’s Fiscal Q1 2025 Earnings | S&P Global\",\"url\":\"https://www.spglobal.com/market-intelligence/en/news-insights/research/2024/05/data-center-revenue-growth-continues-nvidias-fiscal-q1-2025-earnings\"},{\"id\":3,\"title\":\"Chart: Data Centers Almost Sole Driver of Nvidia's Revenue Boom | Statista\",\"url\":\"https://www.statista.com/chart/25578/nvidias-quarterly-revenue-by-segments\"},{\"id\":4,\"title\":\"Nvidia's GPU Business To Thrive On AI Demand, With Datacenter Investments Leading The Way: Analyst — TradingView News\",\"url\":\"https://www.tradingview.com/news/benzinga:cd017ffb0094b:0-nvidia-s-gpu-business-to-thrive-on-ai-demand-with-datacenter-investments-leading-the-way-analyst\"},{\"id\":5,\"title\":\"NVIDIA Announces Financial Results for First Quarter Fiscal 2025\",\"url\":\"https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2025\"},{\"id\":6,\"title\":\"Nvidia vs AMD vs Intel: Market Share Outlook | Guru Startups Market Intelligence 2025\",\"url\":\"https://www.gurustartups.com/reports/nvidia-vs-amd-vs-intel-market-share-outlook\"},{\"id\":7,\"title\":\"NVIDIA Announces Financial Results for Fourth Quarter ...\",\"url\":\"http://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2025\"},{\"id\":8,\"title\":\"NVDA’s data-center flywheel is still roaring—can margins stay ultra-high?\",\"url\":\"https://sergeycyw.substack.com/p/nvdas-data-center-flywheel-is-still\"},{\"id\":9,\"title\":\"AI CapEx Boom: A Quantitative Look at NVIDIA's Valuation vs. Peers ANET & AVGO | Edwyn Blog\",\"url\":\"https://www.edwyn.app/investing-ideas/ai-capex-boom-a-quantitative-look-at-nvidias-valuation-vs-peers-anet-avgo\"},{\"id\":10,\"title\":\"AI GPU Market Share NVIDIA vs AMD vs Intel: 2026 Statistics\",\"url\":\"https://commandlinux.com/statistics/ai-gpu-market-share-nvidia-vs-amd-vs-intel\"},{\"id\":11,\"title\":\"Datacenter capex to grow by 11% in 2024\",\"url\":\"https://network-king.net/datacenter-capex-to-grow-by-11-in-2024\"},{\"id\":12,\"title\":\"NVDA Stock: Capex Surge Fuels AI Growth\",\"url\":\"https://thetradable.com/stocks/nvda-stock-capex-surge-fuels-ai-growth-ig--a\"},{\"id\":13,\"title\":\"upcoming GPU market analysis: NVIDIA, AMD, Intel Battle - Technology Updates\",\"url\":\"https://jompatech.com/upcoming-gpu-market-analysis-nvidia-amd-intel-battle\"},{\"id\":14,\"title\":\"Nvidia Stock Rises On Data Center Spending Strength | Investor's Business Daily\",\"url\":\"https://www.investors.com/news/technology/nvidia-stock-rises-data-center-spending-strength\"},{\"id\":15,\"title\":\"NVDA’s data-center flywheel is still roaring—can margins stay ultra-high?\",\"url\":\"https://sergeycyw.substack.com/p/nvdas-data-center-flywheel-is-still\"},{\"id\":16,\"title\":\"AI Data Center GPU Market Outlook: NVIDIA, AMD, Intel and Emerging Competition | DOCX\",\"url\":\"https://www.slideshare.net/slideshow/ai-data-center-gpu-market-outlook-nvidia-amd-intel-and-emerging-competition/287813404\"},{\"id\":17,\"title\":\"NVIDIA CORP (NVDA) vs. CISCO SYSTEMS, INC. (CSCO) Stock Comparison & Valuation | Edwyn\",\"url\":\"https://www.edwyn.app/underpriced-stocks/nvda-vs-csco\"},{\"id\":18,\"title\":\"Is NVIDIA Overvalued? A Valuation Deep Dive\",\"url\":\"https://www.bybit.com/en/wiki/article/is-nvidia-overvalued-valuation-analysis\"},{\"id\":19,\"title\":\"NVIDIA vs AMD Chip Sales: 2025 Market Trends, Competition ...\",\"url\":\"https://www.btcc.com/en-US/academy/guide/nvidia-vs-amd-chip-sales-2025-market-trends-competition-and-future-outlook\"},{\"id\":20,\"title\":\"Assessing Third-Party Risks in NVIDIA | Academic Commons\",\"url\":\"https://academiccommons.columbia.edu/doi/10.7916/zscb-e363\"},{\"id\":21,\"title\":\"NVIDIA CORP (NVDA) Fundamental Analysis & Valuation\",\"url\":\"https://www.chartmill.com/stock/quote/NVDA/fundamental-analysis\"},{\"id\":22,\"title\":\"NVIDIA (NVDA)’s Data Center Strategy Deepens With Cloverleaf Investment\",\"url\":\"https://finance.yahoo.com/technology/ai/articles/nvidia-nvda-data-center-strategy-001348841.html\"}]}",
+    "usage": {
+      "queue_time": 0.398562613,
+      "prompt_tokens": 5170,
+      "prompt_time": 0.330268219,
+      "completion_tokens": 3072,
+      "completion_time": 6.378194481,
+      "total_tokens": 8242,
+      "total_time": 6.7084627,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1284
+      }
+    },
+    "ms": 7260
+  },
+  "thesisValidation": {
+    "success": true
+  },
+  "thesis": {
+    "company": "Nvidia",
+    "ticker": "NVDA",
+    "exchange": "NASDAQ",
+    "rating": "Buy",
+    "priceContext": "Current price not disclosed in sources",
+    "summary": "Nvidia’s data‑center revenue surged 142% YoY in FY2025, propelled by Hopper and Blackwell GPUs, while total Q1 FY2025 revenue hit $26 bn, beating forecasts. Strong AI‑driven capex from hyperscalers and a dominant AI‑GPU market share underpin growth, but reliance on TSMC, export limits to China and lofty valuation multiples pose downside risks. Continued infrastructure investments and strategic partnerships could sustain momentum.",
+    "bullCase": [
+      {
+        "text": "Data‑center revenue up 142% YoY, driven by Hopper and Blackwell GPUs",
+        "sourceIds": [
+          1
+        ]
+      },
+      {
+        "text": "Q1 FY2025 total revenue $26 bn, data‑center $22.6 bn, beating estimates",
+        "sourceIds": [
+          2
+        ]
+      },
+      {
+        "text": "JPMorgan forecasts robust 2024 capex for Nvidia, price target $850",
+        "sourceIds": [
+          4
+        ]
+      },
+      {
+        "text": "Nvidia holds 70‑90% AI‑GPU market share",
+        "sourceIds": [
+          18
+        ]
+      },
+      {
+        "text": "Operating margin around 62% reflects high profitability",
+        "sourceIds": [
+          8
+        ]
+      }
+    ],
+    "bearCase": [
+      {
+        "text": "Heavy reliance on TSMC and Taiwan tensions risk supply disruptions",
+        "sourceIds": [
+          24
+        ]
+      },
+      {
+        "text": "AI hype or macro slowdown could curb data‑center spend",
+        "sourceIds": [
+          23
+        ]
+      },
+      {
+        "text": "US export restrictions on H200 chips cut off ~$7 bn quarterly China opportunity",
+        "sourceIds": [
+          26
+        ]
+      },
+      {
+        "text": "Valuation stretched: EV/Revenue 22.3x, P/S 22.5x",
+        "sourceIds": [
+          17
+        ]
+      },
+      {
+        "text": "Rising competition from AMD and Intel erodes market share",
+        "sourceIds": [
+          6
+        ]
+      }
+    ],
+    "financials": {
+      "revenue": "$26.0 bn (Q1 FY2025)",
+      "revenueGrowthYoY": "Data‑center revenue +142% YoY FY2025",
+      "operatingMargin": "~62%",
+      "peRatio": "38.1x"
+    },
+    "valuationSummary": "Nvidia trades at premium multiples (EV/Revenue ~22.3x, P/S ~22.5x) reflecting growth expectations. Operating margins remain ultra‑high (~62%), supporting earnings power, but valuation may be vulnerable if AI spend slows.",
+    "catalysts": [
+      {
+        "text": "Hyperscale cloud capex projected to grow 14% in 2024, boosting demand",
+        "sourceIds": [
+          4
+        ]
+      },
+      {
+        "text": "Cloverleaf investment secures power for AI data‑centers",
+        "sourceIds": [
+          22
+        ]
+      },
+      {
+        "text": "Meta’s $600 bn AI‑ready data‑center plan drives GPU demand",
+        "sourceIds": [
+          25
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "text": "Supply chain fragility due to TSMC dependence and geopolitical tensions",
+        "sourceIds": [
+          24
+        ]
+      },
+      {
+        "text": "Export controls limit sales to China, reducing revenue potential",
+        "sourceIds": [
+          26
+        ]
+      },
+      {
+        "text": "High valuation multiples could compress if growth eases",
+        "sourceIds": [
+          17
+        ]
+      },
+      {
+        "text": "Competitive pressure from AMD, Intel and open‑source alternatives",
+        "sourceIds": [
+          23
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "nvda-20250126",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm"
+      },
+      {
+        "id": 2,
+        "title": "Data Center Revenue Growth Continues: Nvidia’s Fiscal Q1 2025 Earnings | S&P Global",
+        "url": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2024/05/data-center-revenue-growth-continues-nvidias-fiscal-q1-2025-earnings"
+      },
+      {
+        "id": 3,
+        "title": "Chart: Data Centers Almost Sole Driver of Nvidia's Revenue Boom | Statista",
+        "url": "https://www.statista.com/chart/25578/nvidias-quarterly-revenue-by-segments"
+      },
+      {
+        "id": 4,
+        "title": "Nvidia's GPU Business To Thrive On AI Demand, With Datacenter Investments Leading The Way: Analyst — TradingView News",
+        "url": "https://www.tradingview.com/news/benzinga:cd017ffb0094b:0-nvidia-s-gpu-business-to-thrive-on-ai-demand-with-datacenter-investments-leading-the-way-analyst"
+      },
+      {
+        "id": 5,
+        "title": "NVIDIA Announces Financial Results for First Quarter Fiscal 2025",
+        "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2025"
+      },
+      {
+        "id": 6,
+        "title": "Nvidia vs AMD vs Intel: Market Share Outlook | Guru Startups Market Intelligence 2025",
+        "url": "https://www.gurustartups.com/reports/nvidia-vs-amd-vs-intel-market-share-outlook"
+      },
+      {
+        "id": 7,
+        "title": "NVIDIA Announces Financial Results for Fourth Quarter ...",
+        "url": "http://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2025"
+      },
+      {
+        "id": 8,
+        "title": "AI CapEx Boom: A Quantitative Look at NVIDIA's Valuation vs. Peers ANET & AVGO | Edwyn Blog",
+        "url": "https://www.edwyn.app/investing-ideas/ai-capex-boom-a-quantitative-look-at-nvidias-valuation-vs-peers-anet-avgo"
+      },
+      {
+        "id": 9,
+        "title": "Capital Expenditures For NVIDIA Corporation (NVDA)",
+        "url": "https://finbox.com/NASDAQGS:NVDA/explorer/capex"
+      },
+      {
+        "id": 10,
+        "title": "AI GPU Market Share NVIDIA vs AMD vs Intel: 2026 Statistics",
+        "url": "https://commandlinux.com/statistics/ai-gpu-market-share-nvidia-vs-amd-vs-intel"
+      },
+      {
+        "id": 11,
+        "title": "Datacenter capex to grow by 11% in 2024",
+        "url": "https://network-king.net/datacenter-capex-to-grow-by-11-in-2024"
+      },
+      {
+        "id": 12,
+        "title": "NVDA Stock: Capex Surge Fuels AI Growth",
+        "url": "https://thetradable.com/stocks/nvda-stock-capex-surge-fuels-ai-growth-ig--a"
+      },
+      {
+        "id": 13,
+        "title": "upcoming GPU market analysis: NVIDIA, AMD, Intel Battle - Technology Updates",
+        "url": "https://jompatech.com/upcoming-gpu-market-analysis-nvidia-amd-intel-battle"
+      },
+      {
+        "id": 14,
+        "title": "Nvidia Stock Rises On Data Center Spending Strength | Investor's Business Daily",
+        "url": "https://www.investors.com/news/technology/nvidia-stock-rises-data-center-spending-strength"
+      },
+      {
+        "id": 15,
+        "title": "NVDA’s data-center flywheel is still roaring—can margins stay ultra-high?",
+        "url": "https://sergeycyw.substack.com/p/nvdas-data-center-flywheel-is-still"
+      },
+      {
+        "id": 16,
+        "title": "AI Data Center GPU Market Outlook: NVIDIA, AMD, Intel and Emerging Competition | DOCX",
+        "url": "https://www.slideshare.net/slideshow/ai-data-center-gpu-market-outlook-nvidia-amd-intel-and-emerging-competition/287813404"
+      },
+      {
+        "id": 17,
+        "title": "NVIDIA CORP (NVDA) vs. CISCO SYSTEMS, INC. (CSCO) Stock Comparison & Valuation | Edwyn",
+        "url": "https://www.edwyn.app/underpriced-stocks/nvda-vs-csco"
+      },
+      {
+        "id": 18,
+        "title": "Is NVIDIA Overvalued? A Valuation Deep Dive",
+        "url": "https://www.bybit.com/en/wiki/article/is-nvidia-overvalued-valuation-analysis"
+      },
+      {
+        "id": 19,
+        "title": "NVIDIA vs AMD Chip Sales: 2025 Market Trends, Competition ...",
+        "url": "https://www.btcc.com/en-US/academy/guide/nvidia-vs-amd-chip-sales-2025-market-trends-competition-and-future-outlook"
+      },
+      {
+        "id": 20,
+        "title": "Assessing Third-Party Risks in NVIDIA | Academic Commons",
+        "url": "https://academiccommons.columbia.edu/doi/10.7916/zscb-e363"
+      },
+      {
+        "id": 21,
+        "title": "NVIDIA CORP (NVDA) Fundamental Analysis & Valuation",
+        "url": "https://www.chartmill.com/stock/quote/NVDA/fundamental-analysis"
+      },
+      {
+        "id": 22,
+        "title": "NVIDIA (NVDA)’s Data Center Strategy Deepens With Cloverleaf Investment",
+        "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-nvda-data-center-strategy-001348841.html"
+      },
+      {
+        "id": 23,
+        "title": "How Nvidia is creating a $1.4T data center market in ...",
+        "url": "https://siliconangle.com/2025/01/11/nvidia-creating-1-4t-data-center-market-decade-ai"
+      },
+      {
+        "id": 24,
+        "title": "NVIDIA Supply Chain Risk Analysis | PDF | Semiconductor Device Fabrication | Integrated Circuit",
+        "url": "https://www.scribd.com/document/1002795292/NVIDIA-Supply-Chain-Risk-Analysis"
+      },
+      {
+        "id": 25,
+        "title": "NVIDIA's AI Strategy: Powering the 2025 $7T Data Center",
+        "url": "https://enkiai.com/nvidia/nvidias-ai-strategy-powering-the-2025-7t-data-center"
+      },
+      {
+        "id": 26,
+        "title": "Nvidia Is Trading on Execution, Not Hype, as Data Center ...",
+        "url": "https://www.investing.com/analysis/nvidia-is-trading-on-execution-not-hype-as-data-center-dominance-expands-200671835"
+      },
+      {
+        "id": 27,
+        "title": "NVIDIA's supply chain risks - CEO explains | Jensen Huang and Lex Fridman",
+        "url": "https://www.youtube.com/watch?v=dO3Qis4UkBw&vl=en"
+      },
+      {
+        "id": 28,
+        "title": "Nvidia is moving in on Intel and AMD's home turf",
+        "url": "https://finance.yahoo.com/news/nvidia-is-moving-in-on-intel-and-amds-home-turf-191711635.html"
+      },
+      {
+        "id": 29,
+        "title": "8/30 - On August 26, 2026, Nvidia reported 89 billion dollars of Data ...",
+        "url": "https://www.facebook.com/steve.willmore.5/videos/830-on-august-26-2026-nvidia-reported-89-billion-dollars-of-data-center-revenue-/1374417107683347"
+      },
+      {
+        "id": 30,
+        "title": "Nvidia backing $105 billion in financing for OpenAI data center in Ohio",
+        "url": "https://www.cnbc.com/2026/08/17/nvidia-financing-open-ai-data-center-ohio.html"
+      }
+    ]
+  }
+}

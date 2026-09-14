@@ -34,8 +34,6 @@ yarn-error.log*
 .env*
 !.env.example
 
-# agent run transcripts (local dev output)
-/transcripts/
 
 # vercel
 .vercel

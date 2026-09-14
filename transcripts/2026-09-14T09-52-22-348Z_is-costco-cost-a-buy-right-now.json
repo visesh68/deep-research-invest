@@ -1,0 +1,64 @@
+{
+  "runId": "60e9be12-4e74-4374-8944-923751767fb6",
+  "startedAt": "2026-09-14T09:52:22.348Z",
+  "question": "Is Costco (COST) a buy right now?",
+  "tavily": [],
+  "totalTokens": {
+    "prompt": 462,
+    "completion": 208,
+    "total": 670
+  },
+  "totalMs": 1571,
+  "planCall": {
+    "model": "openai/gpt-oss-20b",
+    "startedAt": "2026-09-14T09:52:22.349Z",
+    "system": "Today's date is 2026-09-14 (Q3 2026). You are a financial research planner. Given an investing question, identify the company and stock ticker being asked about, then produce 4-6 short research angles as Tavily-ready search queries. Always make one angle a current share price / valuation snapshot query. Fill the rest from: financials & fundamentals (most recent quarter), competitive positioning, valuation, catalysts, recent news & events, risks — choosing those relevant to the question.\n\nQueries must target the most recent available data, but express recency as a YEAR or a QUARTER LABEL only. Never write a full calendar date into a query — a search engine treats \"2026-09-14\" as a literal token and it only dilutes the real search terms.\nWRONG: \"Palantir PLTR bear case risks 2026-09-14\"\nRIGHT: \"Palantir PLTR bear case risks 2026\"\nRIGHT: \"Palantir PLTR Q2 2026 earnings revenue margins\"\nUse 2026 for general recency, and Q2 2026 (the most recently reported quarter) for financial-results angles. Never anchor a query on a year before 2025.\n\nRespond with ONLY valid JSON, no prose, no markdown fences, matching exactly this shape:\n{\"company\": string, \"ticker\": string, \"exchange\": string, \"angles\": [{\"id\": string, \"query\": string}]}\n\nEach query must be a specific, high-signal web search string that includes the company name and ticker (e.g. \"Nvidia NVDA Q2 2026 earnings revenue margins\"), not a restatement of the user's raw question.",
+    "user": "Is Costco (COST) a buy right now?",
+    "response": "{\"company\":\"Costco Wholesale Corporation\",\"ticker\":\"COST\",\"exchange\":\"NASDAQ\",\"angles\":[{\"id\":\"1\",\"query\":\"Costco COST current share price 2026\"},{\"id\":\"2\",\"query\":\"Costco COST Q2 2026 earnings revenue margins\"},{\"id\":\"3\",\"query\":\"Costco COST competitive positioning discount retailer market share 2026\"},{\"id\":\"4\",\"query\":\"Costco COST valuation multiples P/E EV/EBITDA 2026\"},{\"id\":\"5\",\"query\":\"Costco COST catalysts membership growth supply chain 2026\"},{\"id\":\"6\",\"query\":\"Costco COST risks inflation supply chain disruption 2026\"}]}",
+    "usage": {
+      "queue_time": 0.346322291,
+      "prompt_tokens": 462,
+      "prompt_time": 0.027788848,
+      "completion_tokens": 208,
+      "completion_time": 0.229703984,
+      "total_tokens": 670,
+      "total_time": 0.257492832,
+      "completion_tokens_details": {
+        "reasoning_tokens": 67
+      }
+    },
+    "ms": 792
+  },
+  "plan": {
+    "company": "Costco Wholesale Corporation",
+    "ticker": "COST",
+    "exchange": "NASDAQ",
+    "angles": [
+      {
+        "id": "1",
+        "query": "Costco COST current share price 2026"
+      },
+      {
+        "id": "2",
+        "query": "Costco COST Q2 2026 earnings revenue margins"
+      },
+      {
+        "id": "3",
+        "query": "Costco COST competitive positioning discount retailer market share 2026"
+      },
+      {
+        "id": "4",
+        "query": "Costco COST valuation multiples P/E EV/EBITDA 2026"
+      },
+      {
+        "id": "5",
+        "query": "Costco COST catalysts membership growth supply chain 2026"
+      },
+      {
+        "id": "6",
+        "query": "Costco COST risks inflation supply chain disruption 2026"
+      }
+    ]
+  },
+  "error": "Research search failed: Only 0 of 6 research angles succeeded. First failure: Tavily API error 401: {\"detail\":{\"error\":\"Unauthorized: missing or invalid API key.\"}}"
+}

@@ -1,0 +1,498 @@
+{
+  "runId": "7c87f3c5-1027-43e6-812a-c0d8856acdf2",
+  "startedAt": "2026-09-14T09:43:45.256Z",
+  "question": "What is the bear case on Nvidia (NVDA) at current valuation?",
+  "tavily": [
+    {
+      "angleId": "1",
+      "query": "Nvidia NVDA current share price valuation snapshot 2026",
+      "ms": 4412,
+      "results": [
+        {
+          "title": "NVIDIA Relative Valuation | NVIDIA Corp (NVDA)",
+          "url": "https://valueinvesting.io/NVDA/valuation/pe-multiples",
+          "content": "|  |  |\n --- |\n| Date | P/E |\n| 2026-08-21 | 32.56 |\n| 2026-08-20 | 32.88 |\n| 2026-08-19 | 32.99 |\n| 2026-08-18 | 33.32 |\n| 2026-08-17 | 34.12 |\n| 2026-08-14 | 34.14 |\n| 2026-08-13 | 34.16 |\n| 2026-08-12 | 33.98 |\n| 2026-08-11 | 32.98 |\n| 2026-08-10 | 32.98 |\n| 2026-08-07 | 33.96 |\n| 2026-08-06 | 33.20 |\n| 2026-08-05 | 33.24 |\n| 2026-08-04 | 32.13 |\n| 2026-08-03 | 31.33 |\n| 2026-07-31 | 30.44 |\n| 2026-07-30 | 29.57 |\n| 2026-07-29 | 28.81 |\n| 2026-07-28 | 29.87 |\n| 2026-07-27 | 29.79 |\n| 2026-07-24 | 31.36 |\n| 2026-07-23 | 31.65 |\n| 2026-07-22 | 32.15 |\n| 2026-07-21 | 31.43 |\n| 2026-07-20 | 30.82 |\n| 2026-07-17 | 30.75 |\n| 2026-07-16 | 31.45 |\n| 2026-07-15 | 32.22 |\n| 2026-07-14 | 32.11 |\n| 2026-07-13 | 30.86 |\n| 2026-07-10 | 31.99 |\n| 2026-07-09 | 30.74 |\n| 2026-07-08 | 30.95 | [...] NVIDIA Corp\n\nPrice:\n\n214.72\n\nUSD\n\nVolume:\n\n98,347,740.00\n\nUnited States | Semiconductors & Semiconductor Equipment\n\nValuation\n\nOverview\n\nFinancials\n\nForecast\n\nCompare\n\nHistorical Price\n\nSolvencyDividends\n\nTransactions\n\nPeople\n\n# NVIDIA Relative Valuation\n\n41.4%\n\nUpside\n\nAs of 2026-08-24, the Relative Valuation of NVIDIA Corp (NVDA) is 303.62 USD. This relative valuation is based on P/E multiples. With the latest stock price at 214.72 USD, the upside of NVIDIA Corp based on Relative Valuation is 41.4%.\n\nThe range of the Relative Valuation is 223.72 - 430.21 USD.\n\n| Range | Selected |\n| Trailing P/E multiples | 33.9x - 41.5x | 37.3x |\n| Forward P/E multiples | 36.5x - 60.1x | 50.4x |\n| Fair Price | 223.72 - 430.21 | 303.62 |\n| Upside | 4.2% - 100.4% | 41.4% |\n\n214.72 USD\n\nStock Price [...] | 2026-07-09 | 30.74 |\n| 2026-07-08 | 30.95 |\n| 2026-07-07 | 29.86 |\n| 2026-07-06 | 29.65 |\n| 2026-07-02 | 29.54 |\n| 2026-07-01 | 29.96 |\n| 2026-06-30 | 30.34 |\n| 2026-06-29 | 29.56 |\n| 2026-06-26 | 29.19 |\n| 2026-06-25 | 29.68 |\n| 2026-06-24 | 30.17 |\n| 2026-06-23 | 30.33 |\n| 2026-06-22 | 31.63 |\n| 2026-06-18 | 31.94 |\n| 2026-06-17 | 31.03 |\n| 2026-06-16 | 31.45 |\n| 2026-06-15 | 32.21 |\n| 2026-06-12 | 31.11 |\n| 2026-06-11 | 31.06 |",
+          "score": 0.9163571
+        },
+        {
+          "title": "Nvidia (NVDA) Valuation and Outlook",
+          "url": "https://www.reddit.com/r/NVDA_Stock/comments/1iky07c/nvidia_nvda_valuation_and_outlook_by_chatgpt_deep",
+          "content": "Title: Nvidia (NVDA) Valuation and Outlook\n# Nvidia (NVDA) Valuation and Outlook - By ChatGPT Deep Research Mode : r/NVDA_Stock. # Nvidia (NVDA) Valuation and Outlook – By ChatGPT Deep Research Mode. *   **Record Earnings:** In Q3 2025, Nvidia posted $35.1B in revenue—a 94% YoY increase—with its data center business (including AI accelerator chips) generating $30.8B (112% YoY growth). *   **AI Boom:** The surge in demand for AI applications is fueling unprecedented need for Nvidia’s GPUs, which dominate the AI accelerator market (an estimated 80%+ share). *   **Interest Rates & Economic Environment:** While high interest rates typically pressure high-growth tech stocks, Nvidia’s explosive earnings have so far offset these headwinds. *   **Ecosystem Advantage:** Despite these challenges, Nvidia’s advanced hardware, mature software ecosystem (CUDA and AI libraries), and strong industry partnerships have kept it at the forefront, maintaining a commanding market share. *   **9 Months (Nov 2025):** Continued robust performance could drive the stock toward $170–$180 as more data solidifies the AI demand narrative. *   **12 Months (Feb 2026):** Consensus price targets of $180–$200 (or higher) are expected if Nvidia meets or exceeds its growth projections, particularly if current profit estimates are revised upward based on stronger-than-expected AI capex and compute demand. Nvidia has become one of the world’s most valuable companies thanks to its leadership in AI hardware and exceptional revenue growth. Our base-case scenario sees Nvidia’s stock trending upward over the next 12 months, potentially reaching the $180–$200 range by early 2026, with the possibility of even higher profit estimates reflecting stronger-than-expected demand. Impact of AI on NVIDIA's stock price. NVIDIA's stock price has been significantly impacted by the rise of AI, with various opinions on whether the current valuation is justified and what the future holds. *   **Massive AI Orders**: NVIDIA is projected to see $1 trillion in combined Blackwell and Vera Rubin orders through 2027. *   **Strategic Investments**: NVIDIA is investing heavily in the AI ecosystem, which is expected to drive future demand for its GPUs. *   **High Valuation**: The stock is seen as overvalued by some, with a lot of future growth already priced in. *   **Circular Financing**: Some skeptics suggest that NVIDIA's investments in AI companies are a form of circular financing to create demand.",
+          "score": 0.9138076
+        },
+        {
+          "title": "Nvidia (NVDA) Valuation Check After Recent Share Price Cooldown And Strong Multi Year Returns - Simply Wall St News",
+          "url": "https://simplywall.st/stocks/us/semiconductors/nasdaq-nvda/nvidia/news/nvidia-nvda-valuation-check-after-recent-share-price-cooldow",
+          "content": "Title: Nvidia (NVDA) Valuation Check After Recent Share Price Cooldown And Strong Multi Year Returns - Simply Wall St News\n# Nvidia (NVDA) Valuation Check After Recent Share Price Cooldown And Strong Multi Year Returns. ## NVIDIA stock: recent performance snapshot. NVIDIA (NVDA) has drawn investor attention after a recent period of mixed returns, with the share price near $182.81 and performance varying across the past week, month, past 3 months, and year. With annual revenue of about $187.1b and net income around $99.2b, NVIDIA operates across data center, gaming, automotive, and AI focused software, giving investors several business segments to assess. If NVIDIA’s recent weakness has you looking across the broader AI theme, this is a good moment to scan 34 AI infrastructure stocks as a fresh set of ideas to research next. With the stock sliding recently but still showing very strong multi year returns, the real question now is whether NVIDIA is undervalued after this pullback or if the market has already priced in much of its future growth. At a last close of $182.81, the most followed narrative for NVIDIA, according to KiwiInvest, pegs fair value at $170.26, leaving the shares above that narrative estimate and asking you to judge whether the growth case justifies the gap. *Nvidia will hit $400b annual revenue in 5 years time. The narrative leans heavily on aggressive revenue compounding, rising profitability, and a premium future earnings multiple that assumes NVIDIA keeps its edge in data center AI. However, this depends on Nvidia maintaining its GPU and AI software edge, and on power constraints or tougher regulation not slowing data center build outs. Find out about the key risks to this NVIDIA narrative. KiwiInvest’s fair value of $170.26 suggests NVIDIA looks overvalued, but the market is telling a more mixed story. ## Build Your Own NVIDIA Narrative. If you stop at NVIDIA, you risk missing other opportunities, so use the Simply Wall Street Screener to quickly surface fresh stocks that fit your style. Discover if NVIDIA might be undervalued or overvalued with our detailed analysis, featuring **fair value estimates, potential risks, dividends, insider trades, and its financial condition.**. Financial Data provided by S&P Global Market Intelligence LLC, analysis provided by Simply Wall Street Pty Ltd. Copyright © 2026, S&P Global Market Intelligence LLC.",
+          "score": 0.91118777
+        },
+        {
+          "title": "NVIDIA Relative Valuation | NVIDIA Corp (NVDA)",
+          "url": "https://www.valueinvesting.io/NVDA/valuation/pe-multiples",
+          "content": "|  |  |\n --- |\n| Date | P/E |\n| 2026-09-10 | 27.40 |\n| 2026-09-09 | 28.06 |\n| 2026-09-08 | 28.32 |\n| 2026-09-04 | 28.90 |\n| 2026-09-03 | 28.66 |\n| 2026-09-02 | 28.16 |\n| 2026-09-01 | 27.28 |\n| 2026-08-31 | 27.70 |\n| 2026-08-28 | 27.30 |\n| 2026-08-27 | 28.60 |\n| 2026-08-26 | 26.31 |\n| 2026-08-25 | 26.73 |\n| 2026-08-24 | 26.16 |\n| 2026-08-21 | 26.94 |\n| 2026-08-20 | 27.21 |\n| 2026-08-19 | 27.30 |\n| 2026-08-18 | 27.57 |\n| 2026-08-17 | 28.23 |\n| 2026-08-14 | 28.25 |\n| 2026-08-13 | 28.27 |\n| 2026-08-12 | 28.12 |\n| 2026-08-11 | 27.29 |\n| 2026-08-10 | 27.30 |\n| 2026-08-07 | 28.10 |\n| 2026-08-06 | 27.48 |\n| 2026-08-05 | 27.50 |\n| 2026-08-04 | 26.59 |\n| 2026-08-03 | 25.93 |\n| 2026-07-31 | 25.19 |\n| 2026-07-30 | 24.47 |\n| 2026-07-29 | 23.84 |\n| 2026-07-28 | 24.72 |\n| 2026-07-27 | 24.66 | [...] NVIDIA Corp\n\nPrice:\n\n218.36\n\nUSD\n\nVolume:\n\n102,363,416.00\n\nUnited States | Semiconductors & Semiconductor Equipment\n\nValuation\n\nOverview\n\nFinancials\n\nForecast\n\nCompare\n\nHistorical Price\n\nSolvencyDividends\n\nTransactions\n\nPeople\n\n# NVIDIA Relative Valuation\n\n56.0%\n\nUpside\n\nAs of 2026-09-11, the Relative Valuation of NVIDIA Corp (NVDA) is 340.61 USD. This relative valuation is based on P/E multiples. With the latest stock price at 218.36 USD, the upside of NVIDIA Corp based on Relative Valuation is 56.0%.\n\nThe range of the Relative Valuation is 261.14 - 427.79 USD.\n\n| Range | Selected |\n| Trailing P/E multiples | 34.4x - 43.0x | 40.8x |\n| Forward P/E multiples | 36.0x - 58.9x | 49.0x |\n| Fair Price | 261.14 - 427.79 | 340.61 |\n| Upside | 19.6% - 95.9% | 56.0% |\n\n218.36 USD\n\nStock Price [...] | 2026-07-28 | 24.72 |\n| 2026-07-27 | 24.66 |\n| 2026-07-24 | 25.95 |\n| 2026-07-23 | 26.19 |\n| 2026-07-22 | 26.61 |\n| 2026-07-21 | 26.01 |\n| 2026-07-20 | 25.50 |\n| 2026-07-17 | 25.45 |\n| 2026-07-16 | 26.02 |\n| 2026-07-15 | 26.66 |\n| 2026-07-14 | 26.57 |\n| 2026-07-13 | 25.54 |\n| 2026-07-10 | 26.47 |\n| 2026-07-09 | 25.44 |\n| 2026-07-08 | 25.61 |\n| 2026-07-07 | 24.71 |\n| 2026-07-06 | 24.54 |\n| 2026-07-02 | 24.44 |\n| 2026-07-01 | 24.79 |",
+          "score": 0.89849097
+        },
+        {
+          "title": "Nvidia (NVDA) Stock Predictions for 2026 and Beyond",
+          "url": "https://www.fool.com/investing/how-to-invest/stocks/nvidia-stock-forecast",
+          "content": "Other signs indicate a strong 2026, as well. Data center capital expenditures continue to rise among other hyperscalers and start-ups, and AI is starting to drive real business at the software level, not only for start-ups like OpenAI and Anthropic but also for established cloud software companies that are leveraging AI models in their own businesses.\n\nNvidia trades at a premium to the S&P 500, but that should be expected, given its strong growth and industry leadership. The stock currently trades at a price-to-earnings (P/E) ratio of 46. At that valuation, Nvidia appears to be a good bet to outperform again in 2026, especially following its recent pullback. A gain of 20% or more seems like a reasonable expectation for Nvidia in 2026. [...] After coming so far in recent years, can Nvidia stock continue to climb? Let's take a look at where the stock might be by 2026 and 2030, as well as the key drivers to watch for the AI chip leader.\n\nNvidia Stock Quote\n\n## NASDAQ: NVDA\n\nNvidia\n\nToday's Change\n\n(-0.98%) $-2.13\n\nCurrent Price\n\n$214.72\n\n### Key Data Points\n\nMarket Cap\n\n$5.2TMarket cap calculated using publicly traded shares outstanding only. Does not include unlisted, private, or dual-class non-traded shares. Implied market cap may vary.\n\nDay's Range\n\n$214.50- $218.74\n\n52wk Range\n\n$164.07- $236.54\n\nAvg Vol\n\nGross Margin\n\nDividend Yield\n\n## Nvidia (NVDA) forecast [...] Wall Street analysts currently expect earnings per share of $7.46 for fiscal 2027, which ends in January 2027, and have a price target of $258, implying an increase of 41% over the next year.\n\n### 2030 forecast\n\nLooking out five years from now, there's a lot more uncertainty for Nvidia and AI. There is some reason to be concerned about a bubble. There's the precedent of the dot-com bubble, of course, but that's far from the only example. New technologies often go through some type of overexuberance cycle, which leads to a pullback and eventually steady growth.",
+          "score": 0.89720124
+        }
+      ],
+      "attempts": 1
+    },
+    {
+      "angleId": "2",
+      "query": "Nvidia NVDA bear case risks 2026",
+      "ms": 3441,
+      "results": [
+        {
+          "title": "Nvidia Price Prediction: 1 Year Bull and Bear Case",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-price-prediction-1-bull-123214941.html",
+          "content": "Courtesy of Nvidia\n\n \n\n## Future Risks\n\nThe bear case centers on geopolitical risk and concentration. Q1 FY2027 guidance carries zero China Data Center compute contribution, a market Huang estimated at approximately $50 billion. NVIDIA absorbed a $4.5B H20 charge in Q1 FY2026 and lost an estimated $8 billion in H20 orders in Q2. Total supply-related commitments stand at $95.2B, creating execution risk if demand softens.\n\nData Center revenue represents 91.5% of total revenue, with large cloud providers accounting for roughly 50% of that. Any hyperscaler capex slowdown would hit NVIDIA disproportionately. A beta of 2.375 amplifies broader market downside. Our bear case projects $189.78 by April 2027.\n\n## Key Risks and the Path Forward [...] CEO Jensen Huang stated at GTC 2026 that NVIDIA sees at least $1 trillion in orders for Blackwell and Vera Rubin through 2027. Data Center Networking growing 263% year-over-year signals full-stack platform stickiness that raises customer switching costs.\n\nStrategic demand is concrete: Meta Platforms (NASDAQ:META | META Price Prediction) has committed to millions of Blackwell and Rubin GPUs, OpenAI is building more than 10 gigawatts of NVIDIA systems, and CoreWeave is targeting more than 5 gigawatts of AI factories by 2030.\n\nNon-GAAP gross margin expanded from 71.3% in Q1 FY2026 to 75.2% in Q4. The analyst consensus target of $268.22, backed by 60 buy-rated analysts and only 1 sell, reflects institutional conviction. Our bull case projects $272.13 by April 2027. [...] Nvidia (NVDA) posted Q4 FY2026 revenue of $68.13B, up 73.2% year-over-year with non-GAAP EPS of $1.62 beating estimates by 6.58%, while Data Center revenue surged 75% to $62.31B and Data Center Networking exploded 263% to $10.98B.\n Meta committed to millions of Blackwell and Rubin GPUs, OpenAI is building more than 10 gigawatts of Nvidia systems, and CEO Jensen Huang stated the company sees at least $1 trillion in orders for Blackwell and Vera Rubin through 2027.",
+          "score": 0.93978655
+        },
+        {
+          "title": "Nvidia: The Bulls Strengthen The Bear Case - 2 Graphs To Make You Think Twice (NVDA) | Seeking Alpha",
+          "url": "https://seekingalpha.com/article/4848563-nvidia-the-bulls-strengthen-the-bear-case-2-graphs-to-make-you-think-twice",
+          "content": "Elizabeth Pramila\n\n1.11K Followers\n\n## Summary\n\n Nvidia Corporation delivered Q3 fiscal 2026 results above expectations, but investors may be ignoring the risk of investing at these levels of valuation.\n Despite strong earnings and revenue growth, NVDA's forward sales and profit multiples suggest the market is pricing in uninterrupted outperformance for the next several years.\n My view is that the bulls are now supporting the bear case, and the article explains why I think this is where we are now.\n This is a fantastic company and things are going extremely well, but that is not the real consideration if you are a serious NVDA investor.\n\nBear and bull stock market \n\nGetty Images [...] Bear and bull stock market \n\nGetty Images\n\nNvidia Corporation's (NVDA) Q3 fiscal 2026 results have come in above expectations, of course. Was there any question that they would? The problem is not with the way revenues or earnings are growing now - that would be an unsupportable\n\nThis article was written by\n\nElizabeth Pramila\n\n1.11K Followers",
+          "score": 0.8742601
+        },
+        {
+          "title": "Why I'm still bullish Nvidia (January 2026) : r/investing - Reddit",
+          "url": "https://www.reddit.com/r/investing/comments/1qj0gai/why_im_still_bullish_nvidia_january_2026",
+          "content": "it's also a risk because China has to play along. Bear case (25%): down ~65%. The risk is valuation and capex cycles, not the business.",
+          "score": 0.85186684
+        },
+        {
+          "title": "Nvidia (NVDA) – Is the Bottom In?! | Nvidia (NVDA) – Is the Bottom In?! | Schwab Network",
+          "url": "https://schwabnetwork.com/articles/nvidia-nvda-is-the-bottom-in",
+          "content": "How long will the demand remain for Nvidia, and is there a peak spend on the horizon? Despite blowout earnings, NVDA shares have at times struggled in 2026 amid broader risk off sentiment, elevated volatility, and geopolitical uncertainty. Despite the great fundamentals and earnings, even Nvidia is not immune from macro and market risks.\n\nNvidia’s latest earnings confirm that the company is executing at an almost unprecedented level. However, the stock now represents not just confidence in AI, but confidence in near flawless execution looking forward. It’s the biggest component in the S&P 500 and the Nasdaq-100 (NDX). [...] While fundamentals remain extraordinary, the bear case centers on expectations, concentration risk, and macro sensitivity. The valuation level assumes continued hypergrowth well into the future. Any sign of slowing AI spending or even a moderation rather than a decline could compress multiples quickly. Management itself has acknowledged that capacity constraints and supply chain complexity remain ongoing challenges, particularly as the company ramps newer architectures, including Blackwell and Rubin Chips. [...] Last Quarter, Nvidia reported fiscal 4Q 2026 results that again exceeded Wall Street expectations, delivering record revenue of $68.1 billion, up 73% year over year, and adjusted EPS of $1.62, up 82% from a year earlier. The company’s Data Center segment generated $62.3 billion, representing 75% year-over-year growth, as hyperscalers and enterprises continued to invest aggressively in AI infrastructure. Free cash flow for the quarter came in at $34.9 billion, highlighting the company’s ability to convert revenue growth into real cash generation. All the CapEx spending from the tech sector has benefitted Nvidia greatly.",
+          "score": 0.82492816
+        },
+        {
+          "title": "Is it Too Late to Buy? Bank of America’s $275 Case for NVDA Stock (2026 Update) (Investing Tutorial)",
+          "url": "https://www.youtube.com/watch?v=717WGoCaFFY",
+          "content": "of defined risk. If we go through this, you potentially may want to take the trade off because it's not working. The defined risk is 180 to 88. So, put your stop just underneath maybe about not uh one let's see about 178 or so. Uh the trade is a vertical. It is uh the strikes are it's a March 20th debit spread. I should say March 20th debit spread. If you buy one contract at $5, you risk 500 to make 1,500. So, you can So, here's the thing. I I said 10 contracts with Micron, but what I forgot to mention is what I want you to do is size based on your account size. So, I'm giving you one here on Nvidia, but hey, if you want to go up to five or 10 contracts, that's up to you. You have to make that decision yourself. All right, Rick. So, as we take a look at Nvidia, are you also seeing the [...] AMD has recently upgraded its offerings, which may be significant enough to justify switching to AMD technology. Furthermore, AMD's products are far less expensive than Nvidia's. So, when capital budgets tighten, AMD may see increased adoption. However, Nvidia remains the king. During AMD's fourth quarter, data center revenue increased 39% year-over-year. If Nvidia reports 39% data center revenue growth in Q4, the stock will plummet alongside the rest of the market. Expectations for Nvidia are much greater because it has performed significantly better. While we don't yet have Nvidia's Q4 figures, we do know that the data center growth rate in Q3 was 66%. Nvidia's overall growth rate in the third quarter was 62%. Wall Street analysts predict 67% increase in the fourth quarter. This means [...] enormous growth in the next years, as well as significant inflows from investors, although neither is certain. Nvidia, for example, had planned to invest 100 billion in OpenAI, but the agreement is now on hold. This may limit OpenAI's ability to meet its promises with providers such as Microsoft and Oracle, perhaps reducing their appetite for chips and other hardware from vendors such as Nvidia. Thus, the domino effect could harm the entire AI business. Check out the graph below to show the losses in some of the equities with the most perceived exposure to OpenAI since the SNAMP. P500's most recent record high on January 28th. The worry about AI coincides with a similar level of concern about the US labor situation. The unemployment rate is currently at 4.4% at the highest level in 5",
+          "score": 0.7975099
+        }
+      ],
+      "attempts": 1
+    },
+    {
+      "angleId": "3",
+      "query": "Nvidia NVDA Q2 2026 earnings revenue margins",
+      "ms": 0,
+      "results": [
+        {
+          "title": "NVIDIA (NVDA) Q2 2026 Earnings: Results, Market Reaction & History | 24/7 Wall St.",
+          "url": "https://247wallst.com/companies/nvda/earnings/2026/Q2",
+          "content": "NVIDIA delivered another strong quarter in Q2 fiscal 2026, reporting earnings per share of $1.05 against a consensus estimate of $1.01, a beat of 3.96%, while revenue surged 55.6% year-over-year to $46.74 billion as insatiable demand for AI infrastructure continued to drive the business forward. The single most consequential engine behind the results was Data Center, which generated $41.10 billion in revenue, up 56% year-over-year, with Blackwell architecture scaling rapidly and networking revenue nearly doubling to $7.25 billion on the strength of NVLink, InfiniBand, and Ethernet for AI deployments. A one-time $180 million release of previously reserved H20 inventory provided a modest tailwind to gross margins, which came in at 72.4% on a GAAP basis. The broader enthusiasm surrounding AI [...] ## Forward Guidance & Outlook\n\nFor Q3 fiscal 2026, NVIDIA expects revenue of $54.0 billion, plus or minus 2%, excluding any H20 shipments to China. GAAP and non-GAAP gross margins are expected to be 73.3% and 73.5%, respectively, plus or minus 50 basis points. The company continues to expect to exit the fiscal year with non-GAAP gross margins in the mid-70% range. GAAP and non-GAAP operating expenses are expected to be approximately $5.9 billion and $4.2 billion, respectively. Full year fiscal 2026 operating expense growth is expected in the high-30% range. GAAP and non-GAAP other income and expense are expected to be income of approximately $500 million. GAAP and non-GAAP tax rates are expected to be 16.5%, plus or minus 1%.\n\n## NVDA YoY Financials\n\n## NVDA Revenue by Segment [...] on a GAAP basis. The broader enthusiasm surrounding AI infrastructure spending, underscored by major cloud operators committing to aggressive data center expansion, reinforces the demand backdrop supporting NVIDIA's trajectory. Looking ahead, management guided Q3 revenue to $54.00 billion, a figure that points to continued acceleration as Blackwell Ultra ramps and non-GAAP gross margins are expected to recover toward the mid-70% range by fiscal year-end.",
+          "score": 0.97042274
+        },
+        {
+          "title": "NVIDIA Corporation (NVDA) Q2 2026 Earnings Report | Quarter Results",
+          "url": "https://quarter-results.com/financial-reports/NASDAQ/NVDA/Q2/2026/nvda-q2-2026-earnings-report",
+          "content": "NVIDIA reported a record quarter (QQ2 2026) with total revenue of $46.7 billion, up 55.6% year over year and 6.1% quarter over quarter. Data center revenue rose 56% YoY, underscoring a durable AI infrastructure upgrade cycle, while gaming revenue reached a record $4.3 billion, driven by the Blackwell-enabled GeForce RTX lineup and ramping supply. The company’s GAAP gross margin was 72.4% and non-GAAP gross margin 72.7%, aided partly by a $180 million inventory release benefit. Despite a disciplined inventory build (inventory rose from $11B to $15B to support Blackwell/Ultra ramp), NVIDIA returned about $10B to shareholders via buybacks and dividends and boosted buyback authorization to $60B. Management provided a robust Q3 guide of approximately $54B revenue (+/- 2%), with gross margins [...] of approximately $54B revenue (+/- 2%), with gross margins around 73.3–73.5% and higher, ongoing investment in Blackwell/Rubin ramps, and no H20 China shipments included in the outlook. The long‑term storyline remains compelling: AI infrastructure spend is expected to reach $3–$4 trillion by decade’s end, with NVIDIA uniquely positioned as an end‑to‑end AI infrastructure platform (hardware, software, and ecosystem) across cloud, on‑prem, edge, robotics, and sovereign AI initiatives. Risks cited include geopolitical/licensing uncertainties around H20 shipments to China and the substantial execution demands of Rubin/Rack‑Scale AI deployments, but the company’s balance sheet, cash flow generation, and multi‑year product cadence support a constructive, long‑duration investment thesis for [...] ## Key Performance Indicators\n\nRevenue\n\n Increasing\n\n46.74B\n\nQoQ: 6.08% | YoY: 55.60%\n\nGross Profit\n\n Increasing\n\n33.85B\n\n72.42% margin\n\nQoQ: 26.94% | YoY: 49.96%\n\nOperating Income\n\n Increasing\n\n28.44B\n\nQoQ: 31.44% | YoY: 52.56%\n\nNet Income\n\n Increasing\n\n26.42B\n\nQoQ: 40.73% | YoY: 59.18%\n\nEPS\n\n Increasing\n\n1.08\n\nQoQ: 40.26% | YoY: 58.82%\n\n### Revenue Trend\n\n### Margin Analysis\n\n## Financial Highlights",
+          "score": 0.9700164
+        },
+        {
+          "title": "NVIDIA Corporation (NVDA) Q2 2026 Earnings Report | Quarter Results",
+          "url": "https://quarter-results.com/financial-reports/NASDAQ/NVDA/Q2/2026",
+          "content": "NVIDIA reported a record quarter (QQ2 2026) with total revenue of $46.7 billion, up 55.6% year over year and 6.1% quarter over quarter. Data center revenue rose 56% YoY, underscoring a durable AI infrastructure upgrade cycle, while gaming revenue reached a record $4.3 billion, driven by the Blackwell-enabled GeForce RTX lineup and ramping supply. The company’s GAAP gross margin was 72.4% and non-GAAP gross margin 72.7%, aided partly by a $180 million inventory release benefit. Despite a disciplined inventory build (inventory rose from $11B to $15B to support Blackwell/Ultra ramp), NVIDIA returned about $10B to shareholders via buybacks and dividends and boosted buyback authorization to $60B. Management provided a robust Q3 guide of approximately $54B revenue (+/- 2%), with gross margins [...] of approximately $54B revenue (+/- 2%), with gross margins around 73.3–73.5% and higher, ongoing investment in Blackwell/Rubin ramps, and no H20 China shipments included in the outlook. The long‑term storyline remains compelling: AI infrastructure spend is expected to reach $3–$4 trillion by decade’s end, with NVIDIA uniquely positioned as an end‑to‑end AI infrastructure platform (hardware, software, and ecosystem) across cloud, on‑prem, edge, robotics, and sovereign AI initiatives. Risks cited include geopolitical/licensing uncertainties around H20 shipments to China and the substantial execution demands of Rubin/Rack‑Scale AI deployments, but the company’s balance sheet, cash flow generation, and multi‑year product cadence support a constructive, long‑duration investment thesis for [...] ## Key Performance Indicators\n\nRevenue\n\n Increasing\n\n46.74B\n\nQoQ: 6.08% | YoY: 55.60%\n\nGross Profit\n\n Increasing\n\n33.85B\n\n72.42% margin\n\nQoQ: 26.94% | YoY: 49.96%\n\nOperating Income\n\n Increasing\n\n28.44B\n\nQoQ: 31.44% | YoY: 52.56%\n\nNet Income\n\n Increasing\n\n26.42B\n\nQoQ: 40.73% | YoY: 59.18%\n\nEPS\n\n Increasing\n\n1.08\n\nQoQ: 40.26% | YoY: 58.82%\n\n### Revenue Trend\n\n### Margin Analysis\n\n## Financial Highlights",
+          "score": 0.9700164
+        },
+        {
+          "title": "NVIDIA Announces Financial Results for Second Quarter Fiscal 2027",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
+          "content": "NVIDIA (NASDAQ: NVDA) today reported revenue for the second quarter ended July 26, 2026, of $96.2 billion, up 18% from the previous quarter and up 106% from a year ago. For the quarter, GAAP and non-GAAP gross margins were both 75.0%. GAAP and non-GAAP earnings per diluted share were $2.46 and $2.22, respectively.",
+          "score": 0.9639738
+        },
+        {
+          "title": "Nvidia Nvda Earnings Report - NVIDIA’s Q2 FY2026 Revenue Soars 56%, EPS Beats Estimates",
+          "url": "https://lapnews.in/nvidia-nvda-earnings-report-nvidias-q2-fy2026-revenue-soars-56-eps-beats-estimates",
+          "content": "* Nvidia Nvda Earnings Report – NVIDIA’s Q2 FY2026 Revenue Soars 56%, EPS Beats Estimates. # Nvidia Nvda Earnings Report – NVIDIA’s Q2 FY2026 Revenue Soars 56%, EPS Beats Estimates. Nvidia Nvda Earnings Report stellar results for the second quarter of fiscal 2026, with **revenues reaching a record $46.7 billion**—a **56% increase year-over-year** and **6% sequential growth**. * **GAAP gross margin**: 72.4%; **Non-GAAP gross margin**: 72.7% (72.3% excluding an H20-related $180 million inventory release). * **GAAP earnings per diluted share**: $1.08; **Non-GAAP EPS**: $1.05 (or $1.04 excluding H20 impact). * **Net income**: $26.4 billion. The **Data Center division** dominated, delivering **$41.1 billion in revenue**—up 56% year-over-year and 5% sequentially. Other segments also performed strongly:. * **Gaming**: $4.3 billion, up 49% y/y. * **Professional Visualization**: $601 million, up 32% y/y. * **Automotive & Robotics**: $586 million, up 69% y/y. NVIDIA also approved an additional **$60 billion share buyback program**, on top of the $24.3 billion already returned to shareholders in the first half of fiscal 2026. **Outlook**: NVIDIA forecasts **Q3 FY2026 revenue of $54 billion (±2%)**, with **gross margins expected in the mid-70% range**. Despite strong results, the stock slipped in after-hours trading, weighed down by weaker-than-expected Data Center revenue and uncertainty over sales in China. ### Share this:. * Click to share on Threads (Opens in new window). * Click to share on WhatsApp (Opens in new window). ### Like this:. ### Leave a Reply Cancel reply. ## Related News. ## Apple Plans WhatsApp Status Integration for Apple Music – Here’s Everything We Know. ## Apple Working on WhatsApp Status Feature for Apple Music: Social Listening Gets Real.",
+          "score": 0.96171045
+        }
+      ],
+      "attempts": 0,
+      "cached": true
+    },
+    {
+      "angleId": "4",
+      "query": "Nvidia NVDA competitive positioning AI GPU market 2026",
+      "ms": 5182,
+      "results": [
+        {
+          "title": "Nvidia Competitive Positioning Ai Market Share - Oreate AI Blog",
+          "url": "http://oreateai.com/blog/nvidia-competitive-positioning-ai-market-share/28f2f76b915d62e49e2721465b70589b",
+          "content": "Title: Nvidia Competitive Positioning Ai Market Share - Oreate AI Blog\n# Nvidia Competitive Positioning Ai Market Share. In the rapidly evolving landscape of artificial intelligence, NVIDIA stands out as a titan. The company has carved its niche not just by selling graphics processing units (GPUs), but by positioning itself at the very heart of AI innovation. As organizations across various sectors race to harness AI's potential, NVIDIA’s strategic moves have made it a key player in this competitive arena. It’s more than just cutting-edge technology; it's about vision and timing. While many companies were still grappling with basic machine learning concepts, NVIDIA was already pioneering advancements that would redefine industries—from healthcare to automotive. Consider the recent surge in demand for generative AI applications—NVIDIA has been quick to respond with tailored solutions like their DGX systems designed specifically for deep learning tasks. But let’s delve deeper into market share dynamics. According to industry reports, NVIDIA commands an impressive percentage of the GPU market dedicated to AI workloads—estimates suggest upwards of 80%. This dominance is bolstered by partnerships with major cloud service providers such as Amazon Web Services and Microsoft Azure, which integrate NVIDIA technology into their offerings, further embedding them within enterprise ecosystems. Moreover, there’s an emotional resonance here too—a sense of community among developers who rely on CUDA (Compute Unified Device Architecture) programming language developed by NVIDIA. Looking forward, one might wonder how long this lead can last amidst fierce competition from companies like AMD and Intel entering the fray with aggressive pricing strategies and innovative technologies aimed at capturing portions of this lucrative market. Yet what remains clear is that while others scramble for footholds in emerging markets like edge computing or quantum computing, NVIDIA continues to build upon its stronghold in core areas like data centers and autonomous vehicles. The question isn’t whether other players will catch up—it’s how quickly they can match what seems almost effortless for NVIDIA: combining technical prowess with visionary leadership. Save my name, email, and website in this browser for the next time I comment. ## ABOUT OREATE AI. Oreate AI is your all-in-one assistant, helping you write essays, build presentations, and humanize your content—100% plagiarism-free. Last Updated on 2026-01-07T19:46:48+00:00 by oreate.",
+          "score": 0.9380391
+        },
+        {
+          "title": "AMD vs NVIDIA AI GPU Market Share 2026 - Silicon Analysts",
+          "url": "https://siliconanalysts.com/analysis/amd-vs-nvidia-ai-gpu-market-share-2026",
+          "content": "Semiconductor capex by company\n\nEvery series is dated and sourced — live data on this article’s subject.\n\nNVIDIA holds approximately 80% of the AI accelerator market in 2026, with data center revenue reaching $193.7 billion in FY2026. AMD's Instinct GPU line generated an estimated $7–8 billion in 2025, capturing roughly 5–7% market share. However, the competitive landscape is more nuanced than a two-horse race: hyperscaler custom silicon (Google TPU, AWS Trainium, Broadcom ASICs) collectively represents a larger and faster-growing threat to NVIDIA than AMD does. The AI accelerator total addressable market has grown from roughly $55B in 2023 to an estimated $160B in 2025, heading toward $200B+ in 2026, with inference on track to represent two-thirds of all spending. Data as of April 2026. [...] 1. Inference is more price-sensitive than training — favoring AMD's cost advantage and custom silicon's TCO optimization.\n2. Inference is less CUDA-dependent — vLLM, SGLang, and ONNX Runtime abstract GPU-specific code.\n3. Memory capacity matters most for memory-bound inference serving of large models — AMD's 192–288 GB lead is decisive.\n\nThe AI accelerator market is transitioning from NVIDIA monopoly to a three-tier competitive structure: NVIDIA retains 60–75% through 2028, AMD reaches 10–15% as the credible merchant silicon alternative, and custom silicon captures 15–25% concentrated in cloud-locked inference. All three can grow simultaneously because TAM is expanding from ~$200B to $500B+.\n\nBoth companies can win. Data as of April 2026. [...] Silicon Analysts\n\nAI Accelerators\n\n# AMD vs NVIDIA: The AI GPU War in Numbers\n\nBy Silicon Analysts Research\n\n11 min read\n\nMarket DynamicsMemory & HBM\n\n## Executive Summary\n\nNVIDIA holds ~80% of the AI accelerator market by revenue with $193.7B in FY2026 data center sales, versus AMD's estimated 5-7% share (~$7-8B in Instinct revenue). AMD's MI350X matches B200 on FP8 compute (4,600 TFLOPS) and exceeds it on memory (288GB vs 192GB HBM3E), but NVIDIA's software maturity delivers 50-55% MFU versus AMD's ~45%, preserving a real-world performance gap. The bigger structural threat to NVIDIA is custom silicon — Broadcom AI ASIC revenue hit $20B+ in FY2025 — not AMD.",
+          "score": 0.93295
+        },
+        {
+          "title": "Nvidia Competitive Positioning Ai Chips Market Share - Oreate AI Blog",
+          "url": "http://oreateai.com/blog/nvidia-competitive-positioning-ai-chips-market-share/b1ee48dc01e2707bc3c5ee0bb92bf92a",
+          "content": "Title: Nvidia Competitive Positioning Ai Chips Market Share - Oreate AI Blog\n# Nvidia Competitive Positioning Ai Chips Market Share. In the rapidly evolving landscape of artificial intelligence, NVIDIA stands out as a titan in the AI chip market. Their dominance isn't just about having powerful hardware; it's also about strategic positioning and an acute understanding of industry needs. NVIDIA's journey began with graphics processing units (GPUs), but they recognized early on that these chips could be repurposed for AI workloads. This foresight has allowed them to capture significant market share by providing solutions tailored for deep learning and neural networks—areas where traditional CPUs struggle. The company’s CUDA programming model enables developers to harness GPU power efficiently, making it easier to create complex algorithms that drive advancements in machine learning. What’s interesting is how NVIDIA doesn't merely rest on its laurels after achieving success; they continuously innovate. For instance, their recent launch of the H100 Tensor Core GPU marks a leap forward in performance metrics crucial for training large-scale models. By focusing on high-performance computing and data centers, they've positioned themselves not only as a supplier but as an essential partner in the AI revolution. Moreover, partnerships play a pivotal role in NVIDIA's strategy. Collaborations with major cloud service providers such as Amazon Web Services and Microsoft Azure have expanded their reach significantly, allowing more businesses access to cutting-edge AI capabilities without heavy upfront investments in hardware. But competition is fierce—companies like Google are developing custom chips designed specifically for their own needs while startups emerge with innovative approaches every day. In this environment, adaptability becomes key: NVIDIA must continue refining its offerings while keeping an eye on emerging technologies like quantum computing that could disrupt current paradigms. As we look ahead at 2024 and beyond, one thing remains clear: NVIDIA's competitive positioning will depend heavily on maintaining its lead through innovation and collaboration within this dynamic field. Your email address will not be published. Save my name, email, and website in this browser for the next time I comment. ## ABOUT OREATE AI. Oreate AI is your all-in-one assistant, helping you write essays, build presentations, and humanize your content—100% plagiarism-free. Last Updated on 2026-01-07T13:33:25+00:00 by oreate.",
+          "score": 0.8898454
+        },
+        {
+          "title": "Nvidia Stock Analysis 2026: Is NVDA Still a Buy for ...",
+          "url": "https://intellectia.ai/blog/nvidia-stock-ai-investment-analysis-2026",
+          "content": "Get Started\n\nnvidia stock,NVDA analysis,AI chip investment,nvidia market cap,AI stocks 2026\n\n# Nvidia Stock Analysis 2026: The Path to a $20 Trillion Market Cap\n\n2026-05-2711mins\n\nJason Huang\n\nWritten byJason Huang\n\nContent\n\n## Key Takeaway\n\nNvidia remains the dominant force in the AI chip market, commanding an estimated 85% to 92% share of the AI accelerator market as we move through 2026. The company stands at the epicenter of an unprecedented technological transformation, with hyperscalers projected to spend over $380 billion on AI infrastructure in 2025 alone. However, investors must weigh this dominant position against emerging competitive threats, valuation concerns, and the evolving landscape of custom silicon solutions from major cloud providers. [...] ### Is Nvidia stock still a buy in 2026?\n\nNvidia remains a compelling investment for those with long-term horizons and appropriate risk tolerance. The company dominates the AI chip market with 85-92% market share and is positioned at the center of massive AI infrastructure spending. However, valuation remains elevated, so dollar-cost averaging and position sizing are prudent strategies for new investors.\n\n### What is Nvidia's $20 trillion market cap thesis?\n\nThe $20 trillion thesis is based on Nvidia expanding beyond GPU sales to become a comprehensive AI platform company. With AI capital expenditure projected to reach $3-4 trillion annually by 2030, capturing even 20% of this market through hardware, software, and services could justify a much higher valuation than current levels. [...] ## Competitive Threats and Market Dynamics\n\nThe narrative of Nvidia's unassailable dominance requires nuance. While the company currently controls 85% to 92% of the AI accelerator market, several factors suggest this share will face pressure in coming years. Understanding these competitive dynamics is crucial for investors evaluating Nvidia's long-term prospects.",
+          "score": 0.8893851
+        },
+        {
+          "title": "NVIDIA Facts and Statistics (2026)",
+          "url": "https://www.investing.com/academy/statistics/nvidia-facts-and-statistics",
+          "content": "“That is arguably the more important message from Nvidia’s results. Growth is becoming less dependent on more GPU demand growth. Data Center remains the engine, but networking was the standout, nearly tripling year over year. Long story short, Nvidia is capturing a larger share of the AI buildout as customers spend not just on chips, but on the systems that connect and scale them,” he continued. “In that more complex AI infrastructure market, Nvidia remains the company everyone else has to build around. That also helps explain the new reporting structure. By breaking out hyperscale demand from AI clouds, industrial customers and enterprise, Nvidia is making the case that its growth is broadening beyond the largest cloud platforms. [...] 1. AMD (Advanced Micro Devices): AMD is a formidable competitor in the GPU market, challenging NVIDIA’s dominance with its Radeon graphics cards. Although NVIDIA maintains a larger market share, AMD competes aggressively, especially in terms of performance and price.\n2. Intel Corporation: As Intel ventures deeper into discrete GPU development, it presents growing competition to NVIDIA. Known for its dominance in CPUs, Intel is expanding its portfolio with products like the Intel Arc series, aiming to capture a slice of NVIDIA’s market.\n3. Qualcomm Inc: While primarily known for mobile processors, Qualcomm competes with NVIDIA in AI and automotive technology sectors with its Snapdragon platform, particularly in areas like edge computing and connected vehicles. [...] 5. Gaming Dominance: NVIDIA holds over 80% market share in discrete GPUs used for gaming, reflecting its dominance in the sector.\n6. Expansive Partner Ecosystem: NVIDIA collaborates with more than 20,000 companies and organizations globally, ensuring broad adoption of its GPU technology and AI solutions.\n7. AI and Cloud: NVIDIA GPUs power more than 90% of cloud-based AI workloads, highlighting its critical role in data processing and computational tasks.\n8. Founder’s Insight: Co-founder and current CEO Jensen Huang has steered the company since its inception, consistently ranking among the top visionary leaders in tech.",
+          "score": 0.8884594
+        }
+      ],
+      "attempts": 1
+    },
+    {
+      "angleId": "5",
+      "query": "Nvidia NVDA valuation multiples P/E P/S 2026",
+      "ms": 3403,
+      "results": [
+        {
+          "title": "NVIDIA - Multiples.vc - Public Comps and Valuation ...",
+          "url": "https://multiples.vc/public-comps/nvidia-valuation-multiples",
+          "content": "See NTM and 2027E valuation multiples for NVIDIA\n\n#### EV / Revenue (LTM)\n\n#### NVIDIAFinancial Valuation Multiples\n\nAs of September 10, 2026, NVIDIA has market cap of $5.4T and EV of $5.4T.\n\nNVIDIAhas a P/E ratio of 29.5x.\n\n| LTM | Last FY | 2023 | 2024 | 2025 | 2026 | 2027 | 2028 |\n ---  ---  ---  --- |\n| EV/Revenue | 16.1x | 24.9x | 92.6x | 43.1x | 25.7x |\n| EV/EBITDA | 24.6x | 37.8x | 162.4x | 65.6x | 38.5x |\n| EV/EBIT | 24.8x | 41.2x | 175.2x | 69.5x | 42.6x |\n| EV/Gross Profit | 22.1x | 35.0x | 128.4x | 57.6x | 36.1x |\n| P/E | 29.5x | 45.0x | 195.4x | 78.0x | 46.5x |\n| EV/FCF | 34.2x | 55.6x | 214.3x | 92.7x | 57.4x |\n\nMultiples above and below 250x are considered non-meaningful (n/m). Valuation data powered by FactSet, Inc. and Morningstar, Inc. [...] | HQ Country |\n| HQ City | New York City, NY | San Francisco, CA | San Francisco, CA | Tel Aviv |\n| Deal Date | 26 Aug 2026 | 19 Jun 2026 | 2 Jun 2026 | 23 Feb 2026 |\n| Valuation | $13B | undisclosed | $400M | $60M |\n| EV/Revenue |\n| EV/EBITDA |\n| This data is available for Pro users. Sign up to see allNVIDIAacquisitions and their M&A valuation multiples. Start Free Trial | [...] | What was the last NVIDIA investment? | On 8th September 2026 NVIDIA invested in Mistral AI, participating in a $3.5B Series D round at $24B valuation, alongside Samsung, Korelya Capital, General Catalyst, Index Ventures, EQT, Carmignac, Government of Luxembourg, Andreessen Horowitz, Advent International, BlackRock, and 10 other investors. |\n| In what companies NVIDIA invested in? | NVIDIA invested in OpenAI, Anthropic, xAI, Safe Superintelligence, Mistral AI, Lancium Technologies, Cursor, Nscale, Thinking Machines Lab, Firmus Technologies, Reflection.Ai, Fireworks AI, NEURA Robotics, Inflection AI, Ineffable Intelligence, Advanced Machine Intelligence, Wayve, World Labs, Poolside, Together AI, and 143 other companies. |",
+          "score": 0.94584644
+        },
+        {
+          "title": "NVIDIA (NVDA) Statistics & Valuation",
+          "url": "https://stockanalysis.com/stocks/nvda/statistics",
+          "content": "logo\n\n# NVIDIA Statistics\n\n## Total Valuation\n\nNVIDIA has a market cap or net worth of $5.56 trillion. The enterprise value is $5.54 trillion.\n\n|  |  |\n --- |\n| Market Cap | 5.56T |\n| Enterprise Value | 5.54T |\n\n## Important Dates\n\nThe last earnings date was Wednesday, August 26, 2026, after market close.\n\n|  |  |\n --- |\n| Earnings Date | Aug 26, 2026 |\n| Ex-Dividend Date | Sep 10, 2026 |\n\n## Share Statistics\n\nNVIDIA has 24.15 billion shares outstanding. The number of shares has decreased by -1.04% in one year.\n\n|  |  |\n --- |\n| Current Share Class | 24.15B |\n| Shares Outstanding | 24.15B |\n| Shares Change (YoY) | -1.04% |\n| Shares Change (QoQ) | -0.43% |\n| Owned by Insiders (%) | 3.91% |\n| Owned by Institutions (%) | 70.78% |\n| Float | 23.17B |\n\n## Valuation Ratios",
+          "score": 0.9224337
+        },
+        {
+          "title": "NVIDIA Corp. (NASDAQ:NVDA) | Valuation Ratios",
+          "url": "https://www.stock-analysis-on.net/NASDAQ/Company/NVIDIA-Corp/Valuation/Ratios",
+          "content": "Based on: 10-K (reporting date: 2026-01-25).\n\nIf the company price multiple is lower then the price multiple of benchmark then company stock is relatively undervalued.  \n Otherwise, if the company price multiple is higher then the price multiple of benchmark then company stock is relatively overvalued.\n\n### Historical Valuation Ratios (Summary)\n\nNVIDIA Corp., historical price multiples\n\nMicrosoft Excel\n\n| Jan 25, 2026 | Jan 26, 2025 | Jan 28, 2024 | Jan 29, 2023 | Jan 30, 2022 | Jan 31, 2021 |\n ---  ---  --- |\n|  | Price to earnings (P/E) |\n|  | Price to operating profit (P/OP) |\n|  | Price to sales (P/S) |\n|  | Price to book value (P/BV) | [...] Price to Earnings (P/E)\n:   The Price to Earnings ratio peaked in 2023 at 131.70 before declining consistently through 2026, reaching 39.58. This suggests a decreasing investor willingness to pay for each dollar of earnings over time, or potentially, expectations of slower earnings growth. The ratio began at 78.54 in 2021 and decreased to 68.08 in 2022 before the significant increase in 2023.\n\nPrice to Operating Profit (P/OP)\n:   The Price to Operating Profit ratio mirrored the trend of the P/E ratio, reaching a high of 136.19 in 2023 and subsequently decreasing to 36.45 by 2026. This indicates a similar shift in investor sentiment regarding the company’s operational profitability. The ratio followed a similar pattern to P/E, starting at 75.08 in 2021 and decreasing to 66.12 in 2022. [...] Share Price and Sales Per Share Relationship\n:   The share price increased significantly over the period, rising from 13.72 in January 2021 to 195.56 in January 2026. This increase, coupled with the growth in sales per share, contributed to the observed fluctuations in the price-to-sales ratio. The ratio’s movements reflect the interplay between investor expectations regarding future growth and the actual realization of sales.\n\nThe decreasing price-to-sales ratio in the latter part of the period, despite continued growth in sales per share, could indicate that the market’s growth expectations are moderating or that the share price is becoming more grounded in the company’s fundamental performance.",
+          "score": 0.90810597
+        },
+        {
+          "title": "Nvidia Stock Price Prediction 2026, 2027, 2028, 2029-2030 - XS",
+          "url": "https://www.xs.com/en/blog/nvidia-stock-price-prediction",
+          "content": "May 22, 2026 - The following projections synthesize ... performance. As of May 2026, Nvidia Corp (NVDA) trades at $219.51, maintaining a P/E ratio of 33.3x.",
+          "score": 0.88705814
+        },
+        {
+          "title": "NVIDIA Corporation (NVDA) Valuation Measures & ...",
+          "url": "https://finance.yahoo.com/quote/NVDA/key-statistics",
+          "content": "View in AlphaSpace\n\nCurrency in USD Download\n\n|  | Current | 7/31/2026 | 4/30/2026 | 1/31/2026 | 10/31/2025 | 7/31/2025 |\n ---  ---  --- \n| Market Cap | 5.45T | 4.85T | 4.83T | 4.65T | 4.92T | 4.34T |\n| Enterprise Value | 5.43T | 4.78T | 4.78T | 4.60T | 4.88T | 4.29T |\n| Trailing P/E | 28.54 | 30.74 | 40.73 | 47.31 | 57.69 | 57.38 |\n| Forward P/E | 25.06 | 22.88 | 24.57 | 24.94 | 31.55 | 39.84 |\n| PEG Ratio (5yr expected) | 0.58 | 0.55 | 0.63 | 0.72 | 0.92 | 1.72 |\n| Price/Sales | 18.18 | 19.37 | 22.66 | 25.11 | 30.22 | 29.62 |\n| Price/Book | 23.80 | 24.80 | 30.73 | 39.07 | 49.15 | 51.65 |\n| Enterprise Value/Revenue | 17.91 | 18.85 | 22.15 | 24.55 | 29.53 | 28.92 |\n| Enterprise Value/EBITDA | 23.20 | 24.77 | 33.08 | 38.59 | 47.27 | 47.14 |\n\n| 7/31/2025 - 1/22/1999 | [...] ### Share Statistics\n\nAvg Vol (3 month) 3 134.58M\nAvg Vol (10 day) 3 158.04M\nShares Outstanding 5 24.15B\nImplied Shares Outstanding 6 24.15B\nFloat 8 23.13B\n% Held by Insiders 1 4.01%\n% Held by Institutions 1 71.53%\nShares Short (8/14/2026) 4 285.96M\nShort Ratio (8/14/2026) 4 2.35\nShort % of Float (8/14/2026) 4 1.23%\nShort % of Shares Outstanding (8/14/2026) 4 1.18%\nShares Short (prior month 7/15/2026) 4 324.05M\n\n### Dividends & Splits\n\nForward Annual Dividend Rate 4 1\nForward Annual Dividend Yield 4 0.44%\nTrailing Annual Dividend Rate 3 0.28\nTrailing Annual Dividend Yield 3 0.12%\n5 Year Average Dividend Yield 4 0.05\nPayout Ratio 4 3.54%\nDividend Date 3 10/1/2026\nEx-Dividend Date 4 9/10/2026\nLast Split Factor 2 10:1\nLast Split Date 3 6/10/2024\n\n### Footnotes [...] 223.58-2.15(-0.95%)\n\nAs of 3:57:25 PM EDT. Market Open.\n\nTrade NVIDIA on CoinbaseTrading disclosure\n\n## Trading disclosure\n\nThe above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational.\n\nLearn more\n\nDividend\n\nNVDA announced a cash dividend of $0.25 with an ex-date of Sep. 10, 2026\n\n### Valuation Measures\n\nAnnualQuarterly Monthly\n\nView in AlphaSpace\n\nCurrency in USD Download",
+          "score": 0.8839694
+        }
+      ],
+      "attempts": 1
+    },
+    {
+      "angleId": "6",
+      "query": "Nvidia NVDA recent news events supply chain 2026",
+      "ms": 3372,
+      "results": [
+        {
+          "title": "Nvidia (NVDA) Stock Price, News & Analysis",
+          "url": "https://www.stocktitan.net/overview/NVDA",
+          "content": "October 1, 2026  Financial\n\n### Quarterly cash dividend\n\nNVIDIA to pay quarterly cash dividend of $0.25 per share on 2026-10-01 to shareholders of record; payment via usual transfer channels.\n\nOCT\n\n01\n\nOctober 1, 2026 - December 31, 2026  Operations\n\n### Vera Rubin shipments begin\n\nProduction shipments of Vera Rubin systems begin in fall; manufacturing at scale with Dell, HPE, Lenovo, Supermicro.\n\nOCT\n\n01\n\nOctober 1, 2026  Product\n\n### DGX Station availability\n\nAvailability begins Q4 2026; NVIDIA DGX Station for Windows deskside AI system; OEMs ASUS, Dell, GIGABYTE, HP, MSI, Supermicro.\n\nDEC\n\n31\n\nDecember 31, 2026  Operations\n\n### GPU deployment completion\n\nDeploy 120,000 NVIDIA Blackwell Ultra GPUs in UK data centers\n\nJAN\n\n01\n\nJanuary 1, 2027  Operations\n\n### Autonomous network launch [...] $215.9B\n\nRevenue (FY2026)\n\n$120.1B\n\nNet Income (FY2026)\n\n$4.90\n\nDiluted EPS (FY2026)\")\n\n$102.7B\n\nOperating Cash Flow\n\n55.6%\n\nNet Profit Margin\n\n60.4%\n\nOper. Profit Margin\n\n## Upcoming Events\n\nSEP\n\n10\n\nSeptember 10, 2026  Marketing\n\n### Goldman Sachs presentation\n\nPresentation at Goldman Sachs Communacopia + Technology Conference, Sept 10 8:50am PT. Live audio webcast and 90-day replay at investor.nvidia.com\n\nOCT\n\n01\n\nOctober 1, 2026 - December 31, 2026  Product\n\n### NVL4 rack availability\n\nGlobal OEMs to ship liquid-cooled Vera Rubin NVL4 racks; availability expected Q4 2026; inquire via NVIDIA sales.\n\nOCT\n\n01\n\nOctober 1, 2026  Financial\n\n### Quarterly cash dividend [...] ### [ NVIDIA (NASDAQ: NVDA) director sells 1.8M shares in 3 days](/sec-filings/NVDA/form-4-nvidia-corp-insider-trading-activity-711b56084d88.html)\n\nNvidia Corporation has filed 5 recent SEC filings, including 3 Form 4, 1 Form 3, 1 Form 8-K. The most recent filing was submitted on September 8, 2026. SEC filings provide transparency into a company's financial condition, material events, and regulatory compliance. View all NVDA SEC filings →\n\n## Insider Radar\n\nView Form 4 Filings\n\nNet Sellers\n\n90-Day Summary\n\n0\n\nShares Bought\n\n3,785,740\n\nShares Sold\n\n19\n\nTransactions\n\nMost Recent Transaction\n\nSTEVENS MARK A (Director)  sold 182,628 shares  @ $233.46  on September 4, 2026",
+          "score": 0.8467682
+        },
+        {
+          "title": "The News Today On NVIDIA Stock, Micron, AI Demand - NVDA Update",
+          "url": "https://www.youtube.com/watch?v=kbUFi_HLil4",
+          "content": "Hosts of CNBC, Fox Business, Bloomberg, and Yahoo Finance discuss NVIDIA, NVIDIA stock (NVDA stock), Micron (MU stock), and AI demand. The big NVIDIA news today involves comments from Jensen Huang about NVIDIA spending $100 billion - going to $150 billion annually - in Taiwan. It's important to remember that most of NVIDIA's manufacturing partners are based in Taiwan. Jensen was speaking about spending money in Taiwan with manufacturing and supply chain partners in order to produce more product for NVIDIA's customers. AI demand is strong. NVIDIA's business is growing. Therefore, NVIDIA's spend on manufacturing is growing as well. Looking ahead, we have a GTC keynote from NVIDIA CEO Jensen Huang in Taipei on June 1, 2026 starting at 11 AM Taipei Time (that's May 31, 2026 starting at 11 PM [...] at 11 AM Taipei Time (that's May 31, 2026 starting at 11 PM EDT, 8 PM PDT). We are witnessing a major inflection in inference demand, and subsequently, an inflection in demand for NVIDIA's products. Most market participants have no idea what is happening right now. The current inflection in inference demand is being fueled by agentic AI and the adoption of agentic systems at scale. Jensen Huang recently appeared on the Lex Fridman podcast, and very seriously raised the possibility of NVIDIA becoming a $3 trillion revenue company in the near future. Again, most market participants have no idea what is happening right now; we are witnessing a major inflection in inference demand fueled by agentic AI and that has major implications for the growth of NVIDIA's business. I continue to be [...] being supply constrained on their most recent earnings calls. Alphabet CEO specifically said that they are compute constrained and would have higher cloud revenues if they had more supply. Additionally, many of the clouds are building out into contracted demand. They're not blindly building in the hopes that demand will eventually show up. No, they're building out because they have signed contracts and in some cases significant prepayments from their paying customers. This AI revolution is fundamentally different from the dot com bubble. And 2026 will be a pivotal year for the AI industry thanks to the rapid adoption of agentic AI and the proliferation of agentic systems in the world's leading enterprises. The leading AI labs revenues are surging right now. Agentic coding and the",
+          "score": 0.82560414
+        },
+        {
+          "title": "The AI Supply Chain Just Confirmed Nvidia's Future (NASDAQ:NVDA) | Seeking Alpha",
+          "url": "https://seekingalpha.com/article/4922584-ai-supply-chain-just-confirmed-nvidia-future",
+          "content": "Home page Seeking Alpha - Power to Investors\n\nSearch for Symbols, analysts, keywords\n\n# The AI Supply Chain Just Confirmed Nvidia's Future\n\nJul 16, 2026, 8:15 AM ETNVIDIA Corporation (NVDA) Stock, NVDA:CA Stock, ZNVD:CA StockTSM, ASML, ASML:CA, ASMLF, TSMWF11 Comments\n\nPythia Research\n\n8.62K Followers\n\n## Summary [...] Pythia Research\n\n8.62K Followers\n\n## Summary\n\n TSMC and ASML both raised guidance, confirming AI infrastructure remains supply constrained, while Rubin's N3 node is fully booked and CoWoS capacity expands nearly 50%.\n Nvidia's Kyber delay concerns appear limited to Rubin Ultra, leaving mainstream Rubin NVL72 deployments and near-term revenue expectations largely unchanged.\n Qualification of Samsung, SK hynix and Micron for HBM4 reduces supply-chain risk as the industry shifts toward higher-capacity 16-Hi HBM4 memory.\n Despite 82% projected FY2027 revenue growth, Nvidia's valuation compresses materially, while upstream capacity expansion suggests AI infrastructure investment remains in its early stages.\n\nCPU \n\nGetty Images",
+          "score": 0.8091708
+        },
+        {
+          "title": "NVIDIA Announces Financial Results for Fourth Quarter ...",
+          "url": "http://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026",
+          "content": "Download Press Release\n\n## More News\n\nImage 11\n\n### NVIDIA Announces Upcoming Event for Financial Community\n\nAugust 27, 2026\n\nImage 12\n\n### AWS and NVIDIA to Deliver 2 Million Additional GPUs and Next-Generation Infrastructure for Agentic and Physical AI\n\nAugust 26, 2026\n\nImage 13\n\n### NVIDIA Announces Financial Results for Second Quarter Fiscal 2027\n\nAugust 26, 2026\n\nImage 14\n\n### NVIDIA Announces Jetson Orin Nano 2 Robotics Computer to Redefine Entry-Level Edge AI\n\nAugust 25, 2026\n\nImage 15\n\n### NVIDIA Groq 3 LPX Now in Full Production With World-Class Speed for Agentic AI\n\nAugust 24, 2026\n\nAbout NVIDIA\n\nNVIDIA(NASDAQ: NVDA) is the world leader in AI and accelerated computing. [...] NVIDIA (NASDAQ: NVDA) today reported record revenue for the fourth quarter ended January 25, 2026, of $68.1 billion, up 20% from the previous quarter and up 73% from a year ago. For fiscal 2026, revenue was $215.9 billion, up 65% from a year ago.\n\nFor the quarter, GAAP and non-GAAP gross margins were 75.0% and 75.2%, respectively. For fiscal 2026, GAAP and non-GAAP gross margins were 71.1% and 71.3%, respectively.\n\nFor the quarter, GAAP and non-GAAP earnings per diluted share were $1.76 and $1.62, respectively. For fiscal 2026, GAAP and non-GAAP earnings per diluted share were $4.90 and $4.77, respectively. [...] NVIDIA in Brief\n   Exec Bios\n   NVIDIA Blog\n   Podcast\n   Media Assets\n   In the News\n   Press Contacts\n   Online Press Kits\n\nPress Release \n\nShare\n\nTweet Twitter\n\nShare LinkedIn\n\nShare Facebook\n\nEmail\n\n# NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2026\n\n   Record quarterly revenue of $68.1 billion, up 20% from Q3 and up 73% from a year ago\n   Record quarterly Data Center revenue of $62.3 billion, up 22% from Q3 and up 75% from a year ago\n   Record full-year revenue of $215.9 billion, up 65%\n\n February 25, 2026 \n\nImage 9: NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2026",
+          "score": 0.80442166
+        },
+        {
+          "title": "The Supply-Chain Bet That Underpins The NVIDIA Stock Story | Trefis",
+          "url": "https://www.trefis.com/stock/nvda/articles/604525/the-supply-chain-bet-that-underpins-the-nvidia-stock-story/2026-06-25",
+          "content": "Trefis\n\n All Data\n Our Story\n Management Team\n Investors and Advisors\n Careers\n Contact Us\n\n# The Supply-Chain Bet That Underpins The NVIDIA Stock Story\n\nJune 25th, 2026 · by Trefis Team\n\nNVDAYTD+17.3%SPYYTD+12.4%QQQYTD+16.5%\n\nAnalyze NVDA →\n\nWhile investors fixate on NVIDIA’s dizzying growth rate, a far more telling number lies in its supply commitments, revealing a concrete plan to meet demand that skeptics think is unsustainable. [...] How This Secures Future Revenue\n\nThe mechanism here is simple: you cannot sell what you cannot build. The biggest physical constraint on NVIDIA’s growth is not demand, but the complex supply chain required for its AI accelerators. By locking in $145 billion worth of supply, the company is building the foundation for its forecasts. This move is proactive, serving as the tangible underpinning of management’s stated confidence in securing $1 trillion in Blackwell and Rubin revenue through 2027. That forecast seems abstract until you see the nine-figure commitments being made to secure the parts needed to actually produce those chips.\n\nThe Answer To The Biggest Worry?",
+          "score": 0.79958355
+        }
+      ],
+      "attempts": 1
+    }
+  ],
+  "totalTokens": {
+    "prompt": 3667,
+    "completion": 1953,
+    "total": 5620
+  },
+  "totalMs": 10178,
+  "planCall": {
+    "model": "openai/gpt-oss-20b",
+    "system": "Today's date is 2026-09-14 (Q3 2026). You are a financial research planner. Given an investing question, identify the company and stock ticker being asked about, then produce 4-6 short research angles as Tavily-ready search queries. Always make one angle a current share price / valuation snapshot query. Fill the rest from: financials & fundamentals (most recent quarter), competitive positioning, valuation, catalysts, recent news & events, risks — choosing those relevant to the question.\n\nQueries must target the most recent available data, but express recency as a YEAR or a QUARTER LABEL only. Never write a full calendar date into a query — a search engine treats \"2026-09-14\" as a literal token and it only dilutes the real search terms.\nWRONG: \"Palantir PLTR bear case risks 2026-09-14\"\nRIGHT: \"Palantir PLTR bear case risks 2026\"\nRIGHT: \"Palantir PLTR Q2 2026 earnings revenue margins\"\nUse 2026 for general recency, and Q2 2026 (the most recently reported quarter) for financial-results angles. Never anchor a query on a year before 2025.\n\nRespond with ONLY valid JSON, no prose, no markdown fences, matching exactly this shape:\n{\"company\": string, \"ticker\": string, \"exchange\": string, \"angles\": [{\"id\": string, \"query\": string}]}\n\nEach query must be a specific, high-signal web search string that includes the company name and ticker (e.g. \"Nvidia NVDA Q2 2026 earnings revenue margins\"), not a restatement of the user's raw question.",
+    "user": "What is the bear case on Nvidia (NVDA) at current valuation?",
+    "response": "{\"company\":\"Nvidia\",\"ticker\":\"NVDA\",\"exchange\":\"NASDAQ\",\"angles\":[{\"id\":\"1\",\"query\":\"Nvidia NVDA current share price valuation snapshot 2026\"},{\"id\":\"2\",\"query\":\"Nvidia NVDA bear case risks 2026\"},{\"id\":\"3\",\"query\":\"Nvidia NVDA Q2 2026 earnings revenue margins\"},{\"id\":\"4\",\"query\":\"Nvidia NVDA competitive positioning AI GPU market 2026\"},{\"id\":\"5\",\"query\":\"Nvidia NVDA valuation multiples P/E P/S 2026\"},{\"id\":\"6\",\"query\":\"Nvidia NVDA recent news events supply chain 2026\"}]}",
+    "usage": {
+      "queue_time": 0.340848609,
+      "prompt_tokens": 466,
+      "prompt_time": 0.023384658,
+      "completion_tokens": 171,
+      "completion_time": 0.181842776,
+      "total_tokens": 637,
+      "total_time": 0.205227434,
+      "completion_tokens_details": {
+        "reasoning_tokens": 30
+      }
+    },
+    "ms": 636
+  },
+  "plan": {
+    "company": "Nvidia",
+    "ticker": "NVDA",
+    "exchange": "NASDAQ",
+    "angles": [
+      {
+        "id": "1",
+        "query": "Nvidia NVDA current share price valuation snapshot 2026"
+      },
+      {
+        "id": "2",
+        "query": "Nvidia NVDA bear case risks 2026"
+      },
+      {
+        "id": "3",
+        "query": "Nvidia NVDA Q2 2026 earnings revenue margins"
+      },
+      {
+        "id": "4",
+        "query": "Nvidia NVDA competitive positioning AI GPU market 2026"
+      },
+      {
+        "id": "5",
+        "query": "Nvidia NVDA valuation multiples P/E P/S 2026"
+      },
+      {
+        "id": "6",
+        "query": "Nvidia NVDA recent news events supply chain 2026"
+      }
+    ]
+  },
+  "researchFailures": [],
+  "synthesisCall": {
+    "model": "openai/gpt-oss-120b",
+    "system": "Today's date is 2026-09-14. You are a sell-side equity research analyst writing a concise investment thesis note for a banker audience. Use ONLY the numbered sources provided below — never invent data that isn't present in them. Prefer the most recent figures available in the sources, and always label a figure with its period (e.g. \"Q2 FY2027\") so stale data is visible rather than implied to be current. Every bullet point in bullCase, bearCase, catalysts, and risks MUST include sourceIds referencing the numbered sources that support it. If a data point is missing from the sources, omit it or say so briefly rather than guessing.\n\nSTRICT STYLE RULES (token efficiency and readability are both critical):\n- Bullet points, not paragraphs. Each bullet <= 25 words.\n- bullCase and bearCase: 3-5 bullets each, max.\n- catalysts and risks: 2-4 bullets each, max.\n- summary: exactly one paragraph, 60-90 words.\n- valuationSummary: 2-4 sentences, no more.\n- Never quote source text verbatim; paraphrase and compress.\n- No filler phrases (\"it is worth noting\", \"in conclusion\", \"overall\").\n- Citations belong ONLY in sourceIds arrays. Never write \"(source 4)\", \"[4]\" or similar into any text field.\n- Any comparison must be directionally correct. Before writing a comparison, check which number is larger. WRONG: \"P/E of 149 is far above the 3-year average of 202\". RIGHT: \"P/E of 149 sits below the 3-year average of 202\". If two figures come from different periods or definitions and are not comparable, state the figure alone rather than comparing it.\n\nRespond with ONLY valid JSON, no prose, no markdown fences, matching exactly this shape:\n{\"company\": string, \"ticker\": string, \"exchange\": string, \"rating\": \"Buy\"|\"Hold\"|\"Sell\", \"priceContext\": string, \"summary\": string, \"bullCase\": [{\"text\": string, \"sourceIds\": [number]}], \"bearCase\": [{\"text\": string, \"sourceIds\": [number]}], \"financials\": {\"revenue\": string, \"revenueGrowthYoY\": string, \"grossMargin\": string, \"operatingMargin\": string, \"peRatio\": string, \"evEbitda\": string, \"freeCashFlowMargin\": string}, \"valuationSummary\": string, \"catalysts\": [{\"text\": string, \"sourceIds\": [number]}], \"risks\": [{\"text\": string, \"sourceIds\": [number]}], \"sources\": [{\"id\": number, \"title\": string, \"url\": string}]}",
+    "user": "Original question: What is the bear case on Nvidia (NVDA) at current valuation?\nCompany: Nvidia (NVDA)\n\nSOURCES:\n[1] NVIDIA (NVDA) Q2 2026 Earnings: Results, Market Reaction & History | 24/7 Wall St. — https://247wallst.com/companies/nvda/earnings/2026/Q2\nNVIDIA delivered another strong quarter in Q2 fiscal 2026, reporting earnings per share of $1.05 against a consensus estimate of $1.01, a beat of 3.96%, while revenue surged 55.6% year-over-year to $46.74 billion as insatiable demand for AI infrastructure continued to drive the business forward. The single most consequential engine behind the resul…\n\n[2] NVIDIA Corporation (NVDA) Q2 2026 Earnings Report | Quarter Results — https://quarter-results.com/financial-reports/NASDAQ/NVDA/Q2/2026/nvda-q2-2026-earnings-report\nNVIDIA reported a record quarter (QQ2 2026) with total revenue of $46.7 billion, up 55.6% year over year and 6.1% quarter over quarter. Data center revenue rose 56% YoY, underscoring a durable AI infrastructure upgrade cycle, while gaming revenue reached a record $4.3 billion, driven by the Blackwell-enabled GeForce RTX lineup and ramping supply. T…\n\n[3] NVIDIA Corporation (NVDA) Q2 2026 Earnings Report | Quarter Results — https://quarter-results.com/financial-reports/NASDAQ/NVDA/Q2/2026\nNVIDIA reported a record quarter (QQ2 2026) with total revenue of $46.7 billion, up 55.6% year over year and 6.1% quarter over quarter. Data center revenue rose 56% YoY, underscoring a durable AI infrastructure upgrade cycle, while gaming revenue reached a record $4.3 billion, driven by the Blackwell-enabled GeForce RTX lineup and ramping supply. T…\n\n[4] NVIDIA Announces Financial Results for Second Quarter Fiscal 2027 — https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027\nNVIDIA (NASDAQ: NVDA) today reported revenue for the second quarter ended July 26, 2026, of $96.2 billion, up 18% from the previous quarter and up 106% from a year ago. For the quarter, GAAP and non-GAAP gross margins were both 75.0%. GAAP and non-GAAP earnings per diluted share were $2.46 and $2.22, respectively.\n\n[5] Nvidia Nvda Earnings Report - NVIDIA’s Q2 FY2026 Revenue Soars 56%, EPS Beats Estimates — https://lapnews.in/nvidia-nvda-earnings-report-nvidias-q2-fy2026-revenue-soars-56-eps-beats-estimates\n* Nvidia Nvda Earnings Report – NVIDIA’s Q2 FY2026 Revenue Soars 56%, EPS Beats Estimates. # Nvidia Nvda Earnings Report – NVIDIA’s Q2 FY2026 Revenue Soars 56%, EPS Beats Estimates. Nvidia Nvda Earnings Report stellar results for the second quarter of fiscal 2026, with **revenues reaching a record $46.7 billion**—a **56% increase year-over-year** a…\n\n[6] NVIDIA - Multiples.vc - Public Comps and Valuation ... — https://multiples.vc/public-comps/nvidia-valuation-multiples\nSee NTM and 2027E valuation multiples for NVIDIA\n\n#### EV / Revenue (LTM)\n\n#### NVIDIAFinancial Valuation Multiples\n\nAs of September 10, 2026, NVIDIA has market cap of $5.4T and EV of $5.4T.\n\nNVIDIAhas a P/E ratio of 29.5x.\n\n| LTM | Last FY | 2023 | 2024 | 2025 | 2026 | 2027 | 2028 |\n ---  ---  ---  --- |\n| EV/Revenue | 16.1x | 24.9x | 92.6x | 43.1…\n\n[7] Nvidia Price Prediction: 1 Year Bull and Bear Case — https://finance.yahoo.com/markets/stocks/articles/nvidia-price-prediction-1-bull-123214941.html\nCourtesy of Nvidia\n\n \n\n## Future Risks\n\nThe bear case centers on geopolitical risk and concentration. Q1 FY2027 guidance carries zero China Data Center compute contribution, a market Huang estimated at approximately $50 billion. NVIDIA absorbed a $4.5B H20 charge in Q1 FY2026 and lost an estimated $8 billion in H20 orders in Q2. Total supply-relate…\n\n[8] Nvidia Competitive Positioning Ai Market Share - Oreate AI Blog — http://oreateai.com/blog/nvidia-competitive-positioning-ai-market-share/28f2f76b915d62e49e2721465b70589b\nTitle: Nvidia Competitive Positioning Ai Market Share - Oreate AI Blog\n# Nvidia Competitive Positioning Ai Market Share. In the rapidly evolving landscape of artificial intelligence, NVIDIA stands out as a titan. The company has carved its niche not just by selling graphics processing units (GPUs), but by positioning itself at the very heart of AI…\n\n[9] AMD vs NVIDIA AI GPU Market Share 2026 - Silicon Analysts — https://siliconanalysts.com/analysis/amd-vs-nvidia-ai-gpu-market-share-2026\nSemiconductor capex by company\n\nEvery series is dated and sourced — live data on this article’s subject.\n\nNVIDIA holds approximately 80% of the AI accelerator market in 2026, with data center revenue reaching $193.7 billion in FY2026. AMD's Instinct GPU line generated an estimated $7–8 billion in 2025, capturing roughly 5–7% market share. However,…\n\n[10] NVIDIA (NVDA) Statistics & Valuation — https://stockanalysis.com/stocks/nvda/statistics\nlogo\n\n# NVIDIA Statistics\n\n## Total Valuation\n\nNVIDIA has a market cap or net worth of $5.56 trillion. The enterprise value is $5.54 trillion.\n\n|  |  |\n --- |\n| Market Cap | 5.56T |\n| Enterprise Value | 5.54T |\n\n## Important Dates\n\nThe last earnings date was Wednesday, August 26, 2026, after market close.\n\n|  |  |\n --- |\n| Earnings Date | Aug 26, 2…\n\n[11] Nvidia (NVDA) Valuation and Outlook — https://www.reddit.com/r/NVDA_Stock/comments/1iky07c/nvidia_nvda_valuation_and_outlook_by_chatgpt_deep\nTitle: Nvidia (NVDA) Valuation and Outlook\n# Nvidia (NVDA) Valuation and Outlook - By ChatGPT Deep Research Mode : r/NVDA_Stock. # Nvidia (NVDA) Valuation and Outlook – By ChatGPT Deep Research Mode. *   **Record Earnings:** In Q3 2025, Nvidia posted $35.1B in revenue—a 94% YoY increase—with its data center business (including AI accelerator chips)…\n\n[12] Nvidia (NVDA) Valuation Check After Recent Share Price Cooldown And Strong Multi Year Returns - Simply Wall St News — https://simplywall.st/stocks/us/semiconductors/nasdaq-nvda/nvidia/news/nvidia-nvda-valuation-check-after-recent-share-price-cooldow\nTitle: Nvidia (NVDA) Valuation Check After Recent Share Price Cooldown And Strong Multi Year Returns - Simply Wall St News\n# Nvidia (NVDA) Valuation Check After Recent Share Price Cooldown And Strong Multi Year Returns. ## NVIDIA stock: recent performance snapshot. NVIDIA (NVDA) has drawn investor attention after a recent period of mixed returns, w…\n\n[13] NVIDIA Corp. (NASDAQ:NVDA) | Valuation Ratios — https://www.stock-analysis-on.net/NASDAQ/Company/NVIDIA-Corp/Valuation/Ratios\nBased on: 10-K (reporting date: 2026-01-25).\n\nIf the company price multiple is lower then the price multiple of benchmark then company stock is relatively undervalued.  \n Otherwise, if the company price multiple is higher then the price multiple of benchmark then company stock is relatively overvalued.\n\n### Historical Valuation Ratios (Summary)\n\nNV…\n\n[14] NVIDIA Relative Valuation | NVIDIA Corp (NVDA) — https://www.valueinvesting.io/NVDA/valuation/pe-multiples\n|  |  |\n --- |\n| Date | P/E |\n| 2026-09-10 | 27.40 |\n| 2026-09-09 | 28.06 |\n| 2026-09-08 | 28.32 |\n| 2026-09-04 | 28.90 |\n| 2026-09-03 | 28.66 |\n| 2026-09-02 | 28.16 |\n| 2026-09-01 | 27.28 |\n| 2026-08-31 | 27.70 |\n| 2026-08-28 | 27.30 |\n| 2026-08-27 | 28.60 |\n| 2026-08-26 | 26.31 |\n| 2026-08-25 | 26.73 |\n| 2026-08-24 | 26.16 |\n| 2026-08-21 | 26.94…\n\n[15] Nvidia (NVDA) Stock Predictions for 2026 and Beyond — https://www.fool.com/investing/how-to-invest/stocks/nvidia-stock-forecast\nOther signs indicate a strong 2026, as well. Data center capital expenditures continue to rise among other hyperscalers and start-ups, and AI is starting to drive real business at the software level, not only for start-ups like OpenAI and Anthropic but also for established cloud software companies that are leveraging AI models in their own business…\n\n[16] Nvidia Competitive Positioning Ai Chips Market Share - Oreate AI Blog — http://oreateai.com/blog/nvidia-competitive-positioning-ai-chips-market-share/b1ee48dc01e2707bc3c5ee0bb92bf92a\nTitle: Nvidia Competitive Positioning Ai Chips Market Share - Oreate AI Blog\n# Nvidia Competitive Positioning Ai Chips Market Share. In the rapidly evolving landscape of artificial intelligence, NVIDIA stands out as a titan in the AI chip market. Their dominance isn't just about having powerful hardware; it's also about strategic positioning and an…\n\n[17] Nvidia Stock Analysis 2026: Is NVDA Still a Buy for ... — https://intellectia.ai/blog/nvidia-stock-ai-investment-analysis-2026\nGet Started\n\nnvidia stock,NVDA analysis,AI chip investment,nvidia market cap,AI stocks 2026\n\n# Nvidia Stock Analysis 2026: The Path to a $20 Trillion Market Cap\n\n2026-05-2711mins\n\nJason Huang\n\nWritten byJason Huang\n\nContent\n\n## Key Takeaway\n\nNvidia remains the dominant force in the AI chip market, commanding an estimated 85% to 92% share of the AI…\n\n[18] NVIDIA Facts and Statistics (2026) — https://www.investing.com/academy/statistics/nvidia-facts-and-statistics\n“That is arguably the more important message from Nvidia’s results. Growth is becoming less dependent on more GPU demand growth. Data Center remains the engine, but networking was the standout, nearly tripling year over year. Long story short, Nvidia is capturing a larger share of the AI buildout as customers spend not just on chips, but on the sys…\n\nProduce the thesis JSON now. The \"sources\" array in your output must exactly mirror the numbered sources above (same id/title/url). Any field in \"financials\" you cannot support from the sources should be omitted.",
+    "response": "{\"company\":\"Nvidia\",\"ticker\":\"NVDA\",\"exchange\":\"NASDAQ\",\"rating\":\"Hold\",\"priceContext\":\"Shares trade near a P/E of 27.4x (2026‑09‑10) and EV/Revenue 16.1x LTM, reflecting premium valuation after rapid AI‑driven growth.\",\"summary\":\"Nvidia posted record Q2 FY2026 revenue of $46.7 bn, up 55.6% YoY, driven by data‑center demand and a 75% gross margin. AI dominance underpins growth, but valuation remains elevated and exposure to geopolitical headwinds and concentration in China data‑center spend pose downside risks. Near‑term catalysts include continued data‑center capex and new Blackwell GPU launches, while execution risk and macro uncertainty could pressure the stock.\",\"bullCase\":[{\"text\":\"AI data‑center revenue surged 56% YoY, confirming durable demand\",\"sourceIds\":[1]},{\"text\":\"Gross margins at 75% support strong profitability\",\"sourceIds\":[4]},{\"text\":\"Dominant 80% AI accelerator market share sustains pricing power\",\"sourceIds\":[9]},{\"text\":\"New Blackwell GPU lineup expected to drive further revenue growth\",\"sourceIds\":[2]}],\"bearCase\":[{\"text\":\"Q1 FY2027 guidance assumes zero China data‑center compute, removing ~$50 bn market\",\"sourceIds\":[7]},{\"text\":\"$4.5 bn H2O charge in Q1 FY2026 and $8 bn lost H2O orders in Q2 signal volatility\",\"sourceIds\":[7]},{\"text\":\"Valuation remains high with P/E ~27.4x and EV/Revenue 16.1x despite slowdown risk\",\"sourceIds\":[14,6]}],\"financials\":{\"revenue\":\"$46.7 bn (Q2 FY2026)\",\"revenueGrowthYoY\":\"55.6% YoY (Q2 FY2026)\",\"grossMargin\":\"75.0% (Q2 FY2027)\",\"peRatio\":\"27.4x (2026‑09‑10)\",\"evEbitda\":\"16.1x (LTM)\"},\"valuationSummary\":\"Nvidia trades at a P/E of 27.4x, modestly above its historical average, while EV/Revenue sits at 16.1x LTM, lower than the 2023 peak of 92.6x. The premium reflects expectations of sustained AI growth but leaves limited upside if demand moderates.\",\"catalysts\":[{\"text\":\"Launch of Blackwell GPUs could expand data‑center addressable market\",\"sourceIds\":[2]},{\"text\":\"Continued hyperscaler capex growth fuels data‑center revenue expansion\",\"sourceIds\":[15]}],\"risks\":[{\"text\":\"Geopolitical tensions could further curtail China data‑center sales\",\"sourceIds\":[7]},{\"text\":\"Potential slowdown in AI spend may pressure high valuation multiples\",\"sourceIds\":[1]}],\"sources\":[{\"id\":1,\"title\":\"NVIDIA (NVDA) Q2 2026 Earnings: Results, Market Reaction & History | 24/7 Wall St.\",\"url\":\"https://247wallst.com/companies/nvda/earnings/2026/Q2\"},{\"id\":2,\"title\":\"NVIDIA Corporation (NVDA) Q2 2026 Earnings Report | Quarter Results\",\"url\":\"https://quarter-results.com/financial-reports/NASDAQ/NVDA/Q2/2026/nvda-q2-2026-earnings-report\"},{\"id\":3,\"title\":\"NVIDIA Corporation (NVDA) Q2 2026 Earnings Report | Quarter Results\",\"url\":\"https://quarter-results.com/financial-reports/NASDAQ/NVDA/Q2/2026\"},{\"id\":4,\"title\":\"NVIDIA Announces Financial Results for Second Quarter Fiscal 2027\",\"url\":\"https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027\"},{\"id\":5,\"title\":\"Nvidia Nvda Earnings Report - NVIDIA’s Q2 FY2026 Revenue Soars 56%, EPS Beats Estimates\",\"url\":\"https://lapnews.in/nvidia-nvda-earnings-report-nvidias-q2-fy2026-revenue-soars-56-eps-beats-estimates\"},{\"id\":6,\"title\":\"NVIDIA - Multiples.vc - Public Comps and Valuation ...\",\"url\":\"https://multiples.vc/public-comps/nvidia-valuation-multiples\"},{\"id\":7,\"title\":\"Nvidia Price Prediction: 1 Year Bull and Bear Case\",\"url\":\"https://finance.yahoo.com/markets/stocks/articles/nvidia-price-prediction-1-bull-123214941.html\"},{\"id\":8,\"title\":\"Nvidia Competitive Positioning Ai Market Share - Oreate AI Blog\",\"url\":\"http://oreateai.com/blog/nvidia-competitive-positioning-ai-market-share/28f2f76b915d62e49e2721465b70589b\"},{\"id\":9,\"title\":\"AMD vs NVIDIA AI GPU Market Share 2026 - Silicon Analysts\",\"url\":\"https://siliconanalysts.com/analysis/amd-vs-nvidia-ai-gpu-market-share-2026\"},{\"id\":10,\"title\":\"NVIDIA (NVDA) Statistics & Valuation\",\"url\":\"https://stockanalysis.com/stocks/nvda/statistics\"},{\"id\":11,\"title\":\"Nvidia (NVDA) Valuation and Outlook\",\"url\":\"https://www.reddit.com/r/NVDA_Stock/comments/1iky07c/nvidia_nvda_valuation_and_outlook_by_chatgpt_deep\"},{\"id\":12,\"title\":\"Nvidia (NVDA) Valuation Check After Recent Share Price Cooldown And Strong Multi Year Returns - Simply Wall St News\",\"url\":\"https://simplywall.st/stocks/us/semiconductors/nasdaq-nvda/nvidia/news/nvidia-nvda-valuation-check-after-recent-share-price-cooldow\"},{\"id\":13,\"title\":\"NVIDIA Corp. (NASDAQ:NVDA) | Valuation Ratios\",\"url\":\"https://www.stock-analysis-on.net/NASDAQ/Company/NVIDIA-Corp/Valuation/Ratios\"},{\"id\":14,\"title\":\"NVIDIA Relative Valuation | NVIDIA Corp (NVDA)\",\"url\":\"https://www.valueinvesting.io/NVDA/valuation/pe-multiples\"},{\"id\":15,\"title\":\"Nvidia (NVDA) Stock Predictions for 2026 and Beyond\",\"url\":\"https://www.fool.com/investing/how-to-invest/stocks/nvidia-stock-forecast\"},{\"id\":16,\"title\":\"Nvidia Competitive Positioning Ai Chips Market Share - Oreate AI Blog\",\"url\":\"http://oreateai.com/blog/nvidia-competitive-positioning-ai-chips-market-share/b1ee48dc01e2707bc3c5ee0bb92bf92a\"},{\"id\":17,\"title\":\"Nvidia Stock Analysis 2026: Is NVDA Still a Buy for ...\",\"url\":\"https://intellectia.ai/blog/nvidia-stock-ai-investment-analysis-2026\"},{\"id\":18,\"title\":\"NVIDIA Facts and Statistics (2026)\",\"url\":\"https://www.investing.com/academy/statistics/nvidia-facts-and-statistics\"}]}",
+    "usage": {
+      "queue_time": 0.348043339,
+      "prompt_tokens": 3201,
+      "prompt_time": 0.16012123,
+      "completion_tokens": 1782,
+      "completion_time": 3.750435166,
+      "total_tokens": 4983,
+      "total_time": 3.910556396,
+      "completion_tokens_details": {
+        "reasoning_tokens": 262
+      }
+    },
+    "ms": 4356
+  },
+  "thesisValidation": {
+    "success": true
+  },
+  "thesis": {
+    "company": "Nvidia",
+    "ticker": "NVDA",
+    "exchange": "NASDAQ",
+    "rating": "Hold",
+    "priceContext": "Shares trade near a P/E of 27.4x (2026‑09‑10) and EV/Revenue 16.1x LTM, reflecting premium valuation after rapid AI‑driven growth.",
+    "summary": "Nvidia posted record Q2 FY2026 revenue of $46.7 bn, up 55.6% YoY, driven by data‑center demand and a 75% gross margin. AI dominance underpins growth, but valuation remains elevated and exposure to geopolitical headwinds and concentration in China data‑center spend pose downside risks. Near‑term catalysts include continued data‑center capex and new Blackwell GPU launches, while execution risk and macro uncertainty could pressure the stock.",
+    "bullCase": [
+      {
+        "text": "AI data‑center revenue surged 56% YoY, confirming durable demand",
+        "sourceIds": [
+          1
+        ]
+      },
+      {
+        "text": "Gross margins at 75% support strong profitability",
+        "sourceIds": [
+          4
+        ]
+      },
+      {
+        "text": "Dominant 80% AI accelerator market share sustains pricing power",
+        "sourceIds": [
+          9
+        ]
+      },
+      {
+        "text": "New Blackwell GPU lineup expected to drive further revenue growth",
+        "sourceIds": [
+          2
+        ]
+      }
+    ],
+    "bearCase": [
+      {
+        "text": "Q1 FY2027 guidance assumes zero China data‑center compute, removing ~$50 bn market",
+        "sourceIds": [
+          7
+        ]
+      },
+      {
+        "text": "$4.5 bn H2O charge in Q1 FY2026 and $8 bn lost H2O orders in Q2 signal volatility",
+        "sourceIds": [
+          7
+        ]
+      },
+      {
+        "text": "Valuation remains high with P/E ~27.4x and EV/Revenue 16.1x despite slowdown risk",
+        "sourceIds": [
+          14,
+          6
+        ]
+      }
+    ],
+    "financials": {
+      "revenue": "$46.7 bn (Q2 FY2026)",
+      "revenueGrowthYoY": "55.6% YoY (Q2 FY2026)",
+      "grossMargin": "75.0% (Q2 FY2027)",
+      "peRatio": "27.4x (2026‑09‑10)",
+      "evEbitda": "16.1x (LTM)"
+    },
+    "valuationSummary": "Nvidia trades at a P/E of 27.4x, modestly above its historical average, while EV/Revenue sits at 16.1x LTM, lower than the 2023 peak of 92.6x. The premium reflects expectations of sustained AI growth but leaves limited upside if demand moderates.",
+    "catalysts": [
+      {
+        "text": "Launch of Blackwell GPUs could expand data‑center addressable market",
+        "sourceIds": [
+          2
+        ]
+      },
+      {
+        "text": "Continued hyperscaler capex growth fuels data‑center revenue expansion",
+        "sourceIds": [
+          15
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "text": "Geopolitical tensions could further curtail China data‑center sales",
+        "sourceIds": [
+          7
+        ]
+      },
+      {
+        "text": "Potential slowdown in AI spend may pressure high valuation multiples",
+        "sourceIds": [
+          1
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "NVIDIA (NVDA) Q2 2026 Earnings: Results, Market Reaction & History | 24/7 Wall St.",
+        "url": "https://247wallst.com/companies/nvda/earnings/2026/Q2"
+      },
+      {
+        "id": 2,
+        "title": "NVIDIA Corporation (NVDA) Q2 2026 Earnings Report | Quarter Results",
+        "url": "https://quarter-results.com/financial-reports/NASDAQ/NVDA/Q2/2026/nvda-q2-2026-earnings-report"
+      },
+      {
+        "id": 3,
+        "title": "NVIDIA Corporation (NVDA) Q2 2026 Earnings Report | Quarter Results",
+        "url": "https://quarter-results.com/financial-reports/NASDAQ/NVDA/Q2/2026"
+      },
+      {
+        "id": 4,
+        "title": "NVIDIA Announces Financial Results for Second Quarter Fiscal 2027",
+        "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027"
+      },
+      {
+        "id": 5,
+        "title": "Nvidia Nvda Earnings Report - NVIDIA’s Q2 FY2026 Revenue Soars 56%, EPS Beats Estimates",
+        "url": "https://lapnews.in/nvidia-nvda-earnings-report-nvidias-q2-fy2026-revenue-soars-56-eps-beats-estimates"
+      },
+      {
+        "id": 6,
+        "title": "NVIDIA - Multiples.vc - Public Comps and Valuation ...",
+        "url": "https://multiples.vc/public-comps/nvidia-valuation-multiples"
+      },
+      {
+        "id": 7,
+        "title": "Nvidia Price Prediction: 1 Year Bull and Bear Case",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-price-prediction-1-bull-123214941.html"
+      },
+      {
+        "id": 8,
+        "title": "Nvidia Competitive Positioning Ai Market Share - Oreate AI Blog",
+        "url": "http://oreateai.com/blog/nvidia-competitive-positioning-ai-market-share/28f2f76b915d62e49e2721465b70589b"
+      },
+      {
+        "id": 9,
+        "title": "AMD vs NVIDIA AI GPU Market Share 2026 - Silicon Analysts",
+        "url": "https://siliconanalysts.com/analysis/amd-vs-nvidia-ai-gpu-market-share-2026"
+      },
+      {
+        "id": 10,
+        "title": "NVIDIA (NVDA) Statistics & Valuation",
+        "url": "https://stockanalysis.com/stocks/nvda/statistics"
+      },
+      {
+        "id": 11,
+        "title": "Nvidia (NVDA) Valuation and Outlook",
+        "url": "https://www.reddit.com/r/NVDA_Stock/comments/1iky07c/nvidia_nvda_valuation_and_outlook_by_chatgpt_deep"
+      },
+      {
+        "id": 12,
+        "title": "Nvidia (NVDA) Valuation Check After Recent Share Price Cooldown And Strong Multi Year Returns - Simply Wall St News",
+        "url": "https://simplywall.st/stocks/us/semiconductors/nasdaq-nvda/nvidia/news/nvidia-nvda-valuation-check-after-recent-share-price-cooldow"
+      },
+      {
+        "id": 13,
+        "title": "NVIDIA Corp. (NASDAQ:NVDA) | Valuation Ratios",
+        "url": "https://www.stock-analysis-on.net/NASDAQ/Company/NVIDIA-Corp/Valuation/Ratios"
+      },
+      {
+        "id": 14,
+        "title": "NVIDIA Relative Valuation | NVIDIA Corp (NVDA)",
+        "url": "https://www.valueinvesting.io/NVDA/valuation/pe-multiples"
+      },
+      {
+        "id": 15,
+        "title": "Nvidia (NVDA) Stock Predictions for 2026 and Beyond",
+        "url": "https://www.fool.com/investing/how-to-invest/stocks/nvidia-stock-forecast"
+      },
+      {
+        "id": 16,
+        "title": "Nvidia Competitive Positioning Ai Chips Market Share - Oreate AI Blog",
+        "url": "http://oreateai.com/blog/nvidia-competitive-positioning-ai-chips-market-share/b1ee48dc01e2707bc3c5ee0bb92bf92a"
+      },
+      {
+        "id": 17,
+        "title": "Nvidia Stock Analysis 2026: Is NVDA Still a Buy for ...",
+        "url": "https://intellectia.ai/blog/nvidia-stock-ai-investment-analysis-2026"
+      },
+      {
+        "id": 18,
+        "title": "NVIDIA Facts and Statistics (2026)",
+        "url": "https://www.investing.com/academy/statistics/nvidia-facts-and-statistics"
+      }
+    ]
+  }
+}
