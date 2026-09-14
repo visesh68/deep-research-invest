@@ -5,7 +5,8 @@
 A summary of what this system does, how it is put together, and the optimization made at
 each stage — with the measurement that justified it. Companion documents:
 [HLD.md](./docs/HLD.md) for architecture, [LLD.md](./docs/LLD.md) for function-level
-detail, [transcripts/](./transcripts) for the raw runs the numbers come from.
+detail, [evals/README.md](./evals/README.md) for how quality is scored,
+[transcripts/](./transcripts) for the raw runs the numbers come from.
 
 ---
 
@@ -239,7 +240,76 @@ readable as raw JSON in the repo and as a trace tree in Langfuse:
 
 ---
 
-## 5. What the failures document
+## 5. Evals — scoring what the observability made visible
+
+A transcript makes a run *inspectable*. It does not make quality *measurable* — reading
+fifteen JSON files by hand is not a measurement. So the same artifact is reused as an eval
+fixture: because it already holds both prompts, both raw responses and every search
+result, scoring a run needs no API keys, no mocking and no re-execution. The whole
+committed history scores in about a second.
+
+```bash
+npm run eval          # score every committed transcript — no API calls
+npm run eval:judge    # ...and grade each one with an LLM judge
+npm run eval:live     # run the golden question set for real, then score it
+```
+
+Three layers, cheapest first: **Zod validation** inline in the pipeline, fatal to the run
+by design; **18 deterministic scorers** covering everything countable; **3 model-graded
+scorers** for what a rule cannot read. Each carries a threshold and `npm run eval` exits
+non-zero below it, so the suite gates a prompt change rather than merely describing one.
+
+Every scorer guards a property some part of this document already claims.
+`plan/no-literal-dates` guards the fix in Stage 1. `retrieval/price-source-dated` guards
+the news-topic routing in Stage 2. `thesis/number-provenance` and `thesis/citation-coverage`
+guard the citation rules in Stage 3. That constraint is what keeps a suite from drifting
+into measuring whatever is easiest to measure.
+
+![The eval suite scoring a run](./docs/media/eval-run.gif)
+
+**What it found on the first honest run.** Scoring the most recent transcript with the
+judge enabled, everything passes except `judge/comparison-direction` — and three different
+scorers converge on one defect:
+
+```
+thesis/number-provenance    catalysts[2]: "1200" not in sources [17]
+judge/groundedness          catalysts[2] unsupported: snippet shows $1,011.88, not $1,200
+judge/comparison-direction  catalysts[2] incorrect: $1,200 target vs $902.38 price
+```
+
+The note claimed a *"$1,200 price target, ~33% upside"*. The cited page's **headline** reads
+"A $1,200 Target Comes Into Focus"; its body gives $1,011.88 and 12.13%. A counter, a
+reader and a comparison check each caught it from a different direction — which is the
+argument for keeping the deterministic and model-graded layers overlapping rather than
+deduplicating them.
+
+The second finding is about ranking: `thesis/source-utilisation` sits at 0.47–0.56, meaning
+roughly half the 18 curated sources are never cited. Sources are ranked on Tavily's
+relevance score alone — no domain prior, no per-angle quota — and for Costco that put an
+Instagram post and `companieshistory.com` in the context window. That is a real cost
+(prompt tokens spent on pages the model ignores) that the optimization pass in §3 did not
+see, because nothing was measuring it.
+
+Three measurement decisions, each of which was wrong first:
+
+- **Grounding is checked against the truncated snippets parsed back out of the synthesis
+  prompt** — exactly what the model was shown, 350-char cut and all. An early judge pass
+  trimmed them further and marked genuinely supported claims unsupported.
+- **Source titles are excluded from the provenance pool.** Counting the title as support
+  scored the fabricated $1,200 target as grounded — the headline was the only place it
+  appeared.
+- **Numbers match numerically with a rounding allowance, not by string prefix.** Prefix
+  matching passed "~33% upside" against a snippet whose only `3` came from "Q3 fiscal 2026".
+
+**Honest limit:** run unfiltered, `npm run eval` scores the entire build history, including
+runs made before the fixes those very runs motivated, so several scorers read low by
+construction (`retrieval/price-source-dated` 0.09, `thesis/price-dated` 0.14). `--since`
+scores one generation. The suite is a regression gate, not a leaderboard — and one run is
+not a measurement, which is what `npm run eval:live` exists for.
+
+---
+
+## 6. What the failures document
 
 Four of the fifteen committed transcripts did not produce a thesis. They are kept on
 purpose, because each one is the evidence behind a design decision:
@@ -255,15 +325,20 @@ Read together they show both sides of the fan-out.
 
 ---
 
-## 6. Honest limitations
+## 7. Honest limitations
 
 - **No streaming.** The user waits 9–17s behind a simulated progress bar.
 - **Cache is per-instance.** Module-scope LRU, lost on cold start, not shared between
   concurrent serverless instances. Best-effort by design.
 - **JSON transcripts remain dev-only.** Langfuse covers production; the local files stay
   the richer artifact.
-- **No numeric verification.** The prompt argues the model into correct comparisons; it
-  does not check them. Arithmetic on extracted figures would.
+- **No numeric verification at runtime.** The prompt argues the model into correct
+  comparisons; nothing blocks a bad one before the note renders. The eval suite catches
+  them afterwards (§5) — which is measurement, not a guardrail. Arithmetic on extracted
+  figures, inline, would be the guardrail.
+- **Ranking is relevance-only.** Sources are ordered by Tavily's score with no domain
+  prior and no per-angle quota, and `thesis/source-utilisation` says roughly half of them
+  are never cited. Known, measured, unfixed.
 - **Built for single-name listed equities.** The schema forces a ticker, a price, an
   exchange and P/E-style multiples. A question about a mutual fund or an index will be
   pushed through a shape that does not fit it and will still return `ok`.

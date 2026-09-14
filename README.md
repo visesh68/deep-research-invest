@@ -93,8 +93,54 @@ scorer falls below its threshold, so it can gate a prompt change or a model swap
 Grounding is scored against the truncated snippets the model was actually shown, parsed
 back out of the synthesis prompt — not the full Tavily payload, and not the live web.
 
-See **[evals/README.md](./evals/README.md)** for the scorer table, the thresholds and how
-to read a run.
+![The eval suite scoring a run](./docs/media/eval-run.gif)
+
+### An example
+
+Scoring the most recent run — the one made after every fix in this repo landed — with the
+judge enabled:
+
+```console
+$ npm run eval -- --since 2026-09-14T17:00 --judge
+
+scorer                             n   score    min                status
+plan/no-literal-dates              1   1.000   1.00  ██████████    pass
+plan/price-angle-present           1   1.000   1.00  ██████████    pass
+retrieval/price-source-dated       1   1.000   0.80  ██████████    pass
+retrieval/source-dedup             1   1.000   1.00  ██████████    pass
+thesis/citation-coverage           1   1.000   1.00  ██████████    pass
+thesis/price-dated                 1   1.000   0.90  ██████████    pass
+thesis/number-provenance           1   0.857   0.85  █████████░    pass
+thesis/source-utilisation          1   0.556   0.50  ██████░░░░    pass
+judge/groundedness                 1   0.867   0.85  █████████░    pass
+judge/comparison-direction         1   0.750   0.90  ████████░░    FAIL
+judge/answers-question             1   1.000   0.90  ██████████    pass
+                                              (11 of 21 scorers shown)
+
+DETAIL                                        (trimmed — full output in the GIF above)
+
+· thesis/number-provenance
+    - catalysts[2]: "1200" not in sources [17] — "Price target of $1,200 suggests ~33% upside"
+
+· judge/groundedness
+    - catalysts[2] — unsupported: Snippet shows $1,011.88 target, not $1,200 or 33% upside
+
+✗ judge/comparison-direction
+    - catalysts[2] — incorrect: $1,200 target vs $902.38 price
+
+1 scorer(s) below threshold.
+```
+
+One fabricated price target, caught three times from three directions: a counter that
+found a figure in no cited source, a reader that found the source saying $1,011.88, and a
+comparison check that found the two numbers incompatible. The `$1,200` exists only in that
+source's **headline** — its body gives $1,011.88 and 12.13% upside.
+
+`thesis/source-utilisation` at 0.556 is the other live finding: half the top 18 sources are
+never cited, which is the pure-relevance sort surfacing the wrong pages.
+
+See **[evals/README.md](./evals/README.md)** for the full scorer table, the thresholds and
+how to read a run.
 
 ## Tracing (optional)
 

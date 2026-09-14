@@ -16,6 +16,20 @@ import { SCORERS, type ScoreResult } from "./scorers.ts";
 import { JUDGE_SCORERS, judgeRun, type JudgeScorerId } from "./judge.ts";
 import { CASES, type EvalCase } from "./cases.ts";
 
+// Colour is for the person reading a red line in CI, so it follows the terminal:
+// on when stdout is a TTY, off when the report is piped to a file, and NO_COLOR
+// wins over everything. FORCE_COLOR exists so the README capture matches what a
+// terminal actually shows.
+const COLOR =
+  !process.env.NO_COLOR && (process.env.FORCE_COLOR === "1" || process.stdout.isTTY === true);
+
+const paint = (code: string) => (text: string) => (COLOR ? `\u001b[${code}m${text}\u001b[0m` : text);
+const bold = paint("1");
+const dim = paint("2");
+const red = paint("31");
+const green = paint("32");
+const yellow = paint("33");
+
 type Options = {
   live: boolean;
   judge: boolean;
@@ -174,13 +188,13 @@ async function main() {
   }
 
   // ---- report
-  console.log(`\n${"=".repeat(96)}`);
-  console.log(`EVAL REPORT — ${subjects.length} run(s), ${opts.live ? "live" : "fixtures"}${opts.judge ? " + judge" : ""}`);
-  console.log("=".repeat(96));
+  console.log(`\n${dim("=".repeat(96))}`);
+  console.log(bold(`EVAL REPORT — ${subjects.length} run(s), ${opts.live ? "live" : "fixtures"}${opts.judge ? " + judge" : ""}`));
+  console.log(dim("=".repeat(96)));
   console.log(
-    `${"scorer".padEnd(32)}${"n".padStart(4)}  ${"score".padStart(6)}  ${"min".padStart(5)}  ${"".padEnd(12)}  status`,
+    dim(`${"scorer".padEnd(32)}${"n".padStart(4)}  ${"score".padStart(6)}  ${"min".padStart(5)}  ${"".padEnd(12)}  status`),
   );
-  console.log("-".repeat(96));
+  console.log(dim("-".repeat(96)));
 
   let failed = 0;
   const failureReport: string[] = [];
@@ -188,25 +202,29 @@ async function main() {
   for (const agg of aggregates.values()) {
     const applicable = agg.scores.filter((s) => s.result.score !== null);
     if (applicable.length === 0) {
-      console.log(`${agg.id.padEnd(32)}${"-".padStart(4)}  ${"n/a".padStart(6)}  ${agg.threshold.toFixed(2).padStart(5)}  ${"".padEnd(12)}  SKIP`);
+      console.log(
+        dim(`${agg.id.padEnd(32)}${"-".padStart(4)}  ${"n/a".padStart(6)}  ${agg.threshold.toFixed(2).padStart(5)}  ${"".padEnd(12)}  SKIP`),
+      );
       continue;
     }
     const m = mean(applicable.map((s) => s.result.score!));
     const pass = m >= agg.threshold - 1e-9;
     if (!pass) failed++;
+    const tint = pass ? green : red;
     console.log(
-      `${agg.id.padEnd(32)}${String(applicable.length).padStart(4)}  ${m.toFixed(3).padStart(6)}  ${agg.threshold.toFixed(2).padStart(5)}  ${bar(m).padEnd(12)}  ${pass ? "pass" : "FAIL"}`,
+      `${agg.id.padEnd(32)}${dim(String(applicable.length).padStart(4))}  ${tint(m.toFixed(3).padStart(6))}  ${dim(agg.threshold.toFixed(2).padStart(5))}  ${tint(bar(m))}    ${tint(pass ? "pass" : "FAIL")}`,
     );
 
     const offenders = agg.scores.filter((s) => s.result.failures.length > 0);
     if (offenders.length > 0) {
-      const lines: string[] = [`\n${pass ? "·" : "✗"} ${agg.id} — ${agg.describes}`];
+      const mark = pass ? dim("·") : red("✗");
+      const lines: string[] = [`\n${mark} ${bold(agg.id)} ${dim(`— ${agg.describes}`)}`];
       for (const o of offenders) {
         const shown = opts.verbose ? o.result.failures : o.result.failures.slice(0, 3);
-        lines.push(`  ${o.label} (${o.result.detail})`);
-        for (const f of shown) lines.push(`    - ${f}`);
+        lines.push(`  ${o.label} ${dim(`(${o.result.detail})`)}`);
+        for (const f of shown) lines.push(`    ${yellow("-")} ${f}`);
         if (o.result.failures.length > shown.length) {
-          lines.push(`    - …${o.result.failures.length - shown.length} more (--verbose)`);
+          lines.push(dim(`    - …${o.result.failures.length - shown.length} more (--verbose)`));
         }
       }
       failureReport.push(lines.join("\n"));
@@ -214,7 +232,7 @@ async function main() {
   }
 
   if (failureReport.length > 0) {
-    console.log(`\n${"-".repeat(96)}\nDETAIL`);
+    console.log(`\n${dim("-".repeat(96))}\n${bold("DETAIL")}`);
     console.log(failureReport.join("\n"));
   }
 
@@ -239,7 +257,9 @@ async function main() {
     console.log(`\nWrote ${opts.jsonOut}`);
   }
 
-  console.log(`\n${failed === 0 ? "All scorers met their thresholds." : `${failed} scorer(s) below threshold.`}`);
+  console.log(
+    `\n${failed === 0 ? green("All scorers met their thresholds.") : red(`${failed} scorer(s) below threshold.`)}`,
+  );
   process.exit(failed === 0 ? 0 : 1);
 }
 

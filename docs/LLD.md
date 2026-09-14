@@ -465,10 +465,16 @@ Three decisions worth stating:
 deliberately and fail differently. Both independently caught the same fabricated price
 target in the most recent run, from opposite directions.
 
+The report follows terminal convention for colour: on when stdout is a TTY, off when
+piped to a file, `NO_COLOR` wins over both, and `FORCE_COLOR=1` forces it for a capture.
+
 The judge is opt-in (`npm run eval:judge`). It costs Groq calls on the same free-tier
 8k tokens/minute budget as the pipeline, runs sequentially with a pause between calls,
 and grades at `temperature: 0` — a grader that disagrees with itself turns every eval
 delta into noise. The deterministic suite is the one that belongs in CI.
+
+A worked run — the report, the bars and the detail section — is in the
+[README](../README.md#evals).
 
 **Known limit:** `npm run eval` with no filter scores the entire committed history,
 including runs made before the fixes those runs motivated, so several scorers read low

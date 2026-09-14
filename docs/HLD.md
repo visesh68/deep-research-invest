@@ -210,8 +210,14 @@ is off so the link is shareable, which is why the README carries a key-rotation 
 - **Cache is per-instance.** The LRU lives in module scope, so it is lost on cold start and not shared between concurrent serverless instances. Best-effort by design — see §11.
 - **JSON transcripts are still dev-only** — the Vercel filesystem is ephemeral. Langfuse
   now covers production runs (§12); the local JSON files remain the richer artifact.
-- **No numeric verification.** The prompt argues the model into correct comparisons; it
-  does not check them. Arithmetic on extracted figures would.
+- **No numeric verification at runtime.** The prompt argues the model into correct
+  comparisons; nothing blocks a bad one before the note renders. The eval suite (§13)
+  scores them afterwards — measurement, not a guardrail.
+- **Source ranking is relevance-only.** `lib/sources.ts` sorts on Tavily's score with no
+  domain prior and no per-angle quota. `thesis/source-utilisation` measures the cost:
+  roughly half the 18 curated sources are never cited. Known, measured, unfixed.
+- **Tavily scores are not globally comparable.** Each score is relevance within its own
+  angle query, so ranking the merged pool on them mixes several scales.
 
 ## 11. Caching and storage — current position
 
@@ -324,7 +330,18 @@ a prompt rule, a schema constraint, a retrieval decision — which is what keeps
 suite from drifting into measuring whatever is easy to measure.
 
 The deterministic and model-graded layers deliberately overlap on grounding. They fail
-differently, and on the most recent run both independently caught the same fabricated
-price target: a claim of *"$1,200 target, ~33% upside"* cited to a page whose body says
-$1,011.88 and 12.13%. See [LLD §6.2](./LLD.md#62-evals-evals) and
-[evals/README.md](../evals/README.md).
+differently, and on the most recent run three scorers independently caught the same
+fabricated price target — a claim of *"$1,200 target, ~33% upside"* cited to a page whose
+body says $1,011.88 and 12.13%:
+
+```
+thesis/number-provenance    catalysts[2]: "1200" not in sources [17]
+judge/groundedness          catalysts[2] unsupported: snippet shows $1,011.88, not $1,200
+judge/comparison-direction  catalysts[2] incorrect: $1,200 target vs $902.38 price
+```
+
+That is the argument for keeping the layers overlapping rather than deduplicating them.
+
+A worked run, with the report and this finding, is in the
+[README](../README.md#evals). See also [LLD §6.2](./LLD.md#62-evals-evals) for the
+measurement decisions and [evals/README.md](../evals/README.md) for the full scorer table.
