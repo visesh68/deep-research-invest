@@ -1,7 +1,9 @@
 import type { Source } from "./schema";
 import type { TavilyHit } from "./tavily";
 
-function normalizeUrl(url: string): string {
+// Exported for the dedup eval (evals/scorers.ts), which must normalize URLs the
+// same way this module does or it would score a different dedup than the one that ran.
+export function normalizeUrl(url: string): string {
   try {
     const u = new URL(url);
     u.search = "";

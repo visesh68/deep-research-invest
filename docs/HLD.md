@@ -68,6 +68,7 @@ External dependencies: **Groq** (chat completions, OpenAI-compatible) and **Tavi
 | Observability | `lib/observability.ts` | Replays a finished transcript as a Langfuse trace (prod + dev) |
 | Presentation | `app/page.tsx`, `components/*` | Client state machine + deterministic renderer |
 | Fixture | `lib/mockThesis.ts` | Credit-free UI path under `MOCK_RESEARCH=1` |
+| Evals | `evals/*` | Scores finished transcripts: 18 deterministic scorers + 3 model-graded, thresholds, non-zero exit |
 
 The dependency graph is strictly acyclic and one-directional: `route → pipeline →
 {groq, tavily, sources, prompts, transcript} → schema`. No module imports the
@@ -298,3 +299,32 @@ Langfuse was chosen over LangSmith mainly for fit: a plain TS SDK with no framew
 gravity, open source and self-hostable. The v5 OpenTelemetry SDK (`@langfuse/tracing`)
 is the eventual upgrade path; v3's explicit `flushAsync()` is a better match for a
 two-call pipeline on serverless.
+
+
+---
+
+## 13. Evaluation
+
+Observability and evaluation share one artifact. The `RunTranscript` written for every
+run (§12) is also the eval fixture, so quality can be scored offline — no keys, no
+mocking, no re-running the model — and the full history scores in about a second.
+
+Three layers, cheapest first:
+
+| Layer | What it catches | Cost |
+|---|---|---|
+| **Zod validation**, inline in the pipeline | Malformed output. Fatal to the run by design: a thesis that fails `ThesisSchema` is never rendered. | free |
+| **18 deterministic scorers**, `evals/scorers.ts` | Everything countable: literal dates in queries, undated price hits, duplicate sources, dangling or missing citations, style-limit breaches, mixed currencies, figures that appear in no cited source. | free, ~1s |
+| **3 model-graded scorers**, `evals/judge.ts` | What a rule cannot read: is each cited claim actually supported, does every numeric comparison point the right way, does the note answer the question that was asked. | one Groq call per run |
+
+Each scorer carries a threshold and `npm run eval` exits non-zero when a mean falls
+below it, so the suite gates a prompt change or a model swap rather than merely
+describing one. Scorers are written against properties the system already promises —
+a prompt rule, a schema constraint, a retrieval decision — which is what keeps the
+suite from drifting into measuring whatever is easy to measure.
+
+The deterministic and model-graded layers deliberately overlap on grounding. They fail
+differently, and on the most recent run both independently caught the same fabricated
+price target: a claim of *"$1,200 target, ~33% upside"* cited to a page whose body says
+$1,011.88 and 12.13%. See [LLD §6.2](./LLD.md#62-evals-evals) and
+[evals/README.md](../evals/README.md).

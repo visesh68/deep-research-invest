@@ -430,6 +430,54 @@ complete. A missing observation right after a run is lag, not loss.
 
 ---
 
+## 6.2 Evals (`evals/`)
+
+The transcript is not only a debugging artifact — it is the eval fixture. Because it
+holds both prompts, both raw responses and every search result, scoring a run requires
+no API keys, no mocking and no re-execution. The deterministic suite scores the whole
+committed history in about a second.
+
+```
+evals/register.mjs   resolve hook so `node` can import the app's extensionless lib/*.ts
+evals/cases.ts       golden question set (live mode)
+evals/scorers.ts     18 deterministic scorers over a RunTranscript
+evals/judge.ts       3 model-graded scorers, one Groq call per run
+evals/run.ts         CLI, aggregation, thresholds, non-zero exit
+```
+
+Scorers are grouped by pipeline stage and each one checks a property some prompt rule,
+schema constraint or retrieval decision already promises — `plan/no-literal-dates`
+guards `stripLiteralDates` (§3), `retrieval/price-source-dated` guards the news-topic
+routing in `searchOptionsFor` (§4.1), `thesis/citation-coverage` and
+`thesis/number-provenance` guard the analyst prompt's citation rules (§5.2). A scorer
+returns `null` when it does not apply, so a failed run still scores every stage that
+completed before the failure.
+
+Three decisions worth stating:
+
+| Decision | Why |
+|---|---|
+| Grounding is checked against the **truncated snippets parsed back out of the synthesis prompt**, not the Tavily log and not the live web | That block is exactly what the model was shown, 350-char cut and all. Judging a claim against text the writer never saw scores the wrong thing — and did: an early judge pass truncated snippets further and marked supported claims unsupported. |
+| Source titles are excluded from the provenance pool | A headline figure is the least reliable number on a page. One live source is titled *"A $1,200 Target Comes Into Focus"* while its body gives $1,011.88; counting the title as support scored a hallucinated price target as grounded. |
+| Numbers are matched numerically with a rounding allowance, not by string prefix | Prefix matching passed *"~33% upside"* against a snippet whose only `3` came from "Q3 fiscal 2026". Rounding is a paraphrase (46.4 for 46.43); inventing a digit is not. |
+
+`thesis/number-provenance` (a counter) and `judge/groundedness` (a reader) overlap
+deliberately and fail differently. Both independently caught the same fabricated price
+target in the most recent run, from opposite directions.
+
+The judge is opt-in (`npm run eval:judge`). It costs Groq calls on the same free-tier
+8k tokens/minute budget as the pipeline, runs sequentially with a pause between calls,
+and grades at `temperature: 0` — a grader that disagrees with itself turns every eval
+delta into noise. The deterministic suite is the one that belongs in CI.
+
+**Known limit:** `npm run eval` with no filter scores the entire committed history,
+including runs made before the fixes those runs motivated, so several scorers read low
+by construction (`retrieval/price-source-dated` 0.09, `thesis/price-dated` 0.14).
+`--since <ISO>` scores one generation of the pipeline. The suite is a regression gate,
+not a leaderboard.
+
+---
+
 ## 7. Optimization catalogue
 
 ### 7.1 Token cost — before and after

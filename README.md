@@ -71,6 +71,31 @@ Known limitation: transcript writing is disabled on Vercel (`process.env.VERCEL`
 because the serverless filesystem is ephemeral. Transcript review happens against
 local `npm run dev` runs.
 
+## Evals
+
+```bash
+npm run eval          # score every committed transcript — no API calls, ~1s
+npm run eval:judge    # ...and grade each one with an LLM judge
+npm run eval:live     # run the golden question set for real, then score it
+```
+
+Eighteen deterministic scorers and three model-graded ones, run over the transcripts
+above. Because the transcript already holds both prompts, both raw responses and every
+search result, scoring needs no keys and no re-run — the artifact the pipeline writes
+for observability doubles as the eval fixture.
+
+The scorers check properties the pipeline actually promises: that no angle query carries
+a literal date, that price hits come back dated, that every claim cites a source that
+exists, that every figure in a cited claim appears in one of the sources it cites, that
+the price quote names one venue in one currency. `npm run eval` exits non-zero when any
+scorer falls below its threshold, so it can gate a prompt change or a model swap.
+
+Grounding is scored against the truncated snippets the model was actually shown, parsed
+back out of the synthesis prompt — not the full Tavily payload, and not the live web.
+
+See **[evals/README.md](./evals/README.md)** for the scorer table, the thresholds and how
+to read a run.
+
 ## Tracing (optional)
 
 Set `LANGFUSE_PUBLIC_KEY` and `LANGFUSE_SECRET_KEY` to send each run to

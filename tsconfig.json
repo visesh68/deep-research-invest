@@ -6,6 +6,10 @@
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
+    // The eval harness runs under plain `node`, which resolves relative imports
+    // literally, so evals/*.ts import each other with explicit .ts extensions.
+    // Safe here because nothing in this project is emitted by tsc.
+    "allowImportingTsExtensions": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
