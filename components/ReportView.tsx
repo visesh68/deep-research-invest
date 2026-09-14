@@ -24,7 +24,7 @@ function Section({
       style={{ "--d": `${260 + index * 90}ms` } as React.CSSProperties}
     >
       <h2 className="mb-4 flex items-center gap-3">
-        <span className="nums text-[11px] font-medium text-muted-2">
+        <span className="nums text-[11px] font-semibold text-accent">
           {String(index + 1).padStart(2, "0")}
         </span>
         <span className="text-[11px] font-semibold tracking-[0.18em] text-muted uppercase">
@@ -48,7 +48,7 @@ export default function ReportView({ thesis }: { thesis: Thesis }) {
     <article className="mx-auto max-w-[860px] pb-20">
       <header className="print-break-avoid relative">
         <p
-          className="reveal text-[10px] font-semibold tracking-[0.24em] text-muted-2 uppercase"
+          className="reveal text-[10px] font-semibold tracking-[0.24em] text-accent uppercase"
           style={{ "--d": "0ms" } as React.CSSProperties}
         >
           Equity Research Note
@@ -90,7 +90,7 @@ export default function ReportView({ thesis }: { thesis: Thesis }) {
 
         <span
           aria-hidden="true"
-          className="rule-in mt-5 block h-0.5 bg-navy"
+          className="rule-in rule-accent mt-5 block h-0.5"
           style={{ "--d": "220ms" } as React.CSSProperties}
         />
       </header>

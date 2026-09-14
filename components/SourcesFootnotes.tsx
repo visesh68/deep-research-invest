@@ -28,7 +28,7 @@ export default function SourcesFootnotes({ sources }: { sources: Source[] }) {
               href={s.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="link-underline text-ink-2 transition-colors duration-150 group-hover:text-navy"
+              className="link-underline text-ink-2 transition-colors duration-150 group-hover:text-accent"
             >
               {s.title}
             </a>

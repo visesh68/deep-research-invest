@@ -21,7 +21,7 @@ export default function CitedList({ items }: { items: CitedBullet[] }) {
                   <a
                     key={id}
                     href={`#src-${id}`}
-                    className="nums rounded-[3px] bg-paper-sunk px-1 text-[10px] font-medium text-navy-soft no-underline transition-colors duration-150 hover:bg-navy hover:text-white"
+                    className="nums rounded-[3px] bg-accent-bg px-1 text-[10px] font-medium text-accent no-underline transition-colors duration-150 hover:bg-accent hover:text-white"
                     aria-label={`Source ${id}`}
                   >
                     {id}

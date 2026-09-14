@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Logo from "@/components/Logo";
+import SiteFooter from "@/components/SiteFooter";
 import QuestionForm from "@/components/QuestionForm";
 import ProgressStages, { type Stage } from "@/components/ProgressStages";
 import ReportSkeleton from "@/components/ReportSkeleton";
@@ -59,7 +61,7 @@ function HowItWorks() {
             style={{ "--d": `${320 + i * 80}ms` } as React.CSSProperties}
           >
             <div className="flex items-baseline gap-2">
-              <span className="nums text-[11px] font-medium text-muted-2">{m.n}</span>
+              <span className="nums text-[11px] font-semibold text-accent">{m.n}</span>
               <h3 className="font-serif-display text-[15px] font-semibold text-navy">
                 {m.title}
               </h3>
@@ -69,7 +71,7 @@ function HowItWorks() {
         ))}
       </div>
       <p
-        className="reveal mt-8 border-t border-hairline pt-4 text-[12px] text-muted-2"
+        className="reveal mt-7 text-[12px] text-muted-2"
         style={{ "--d": "560ms" } as React.CSSProperties}
       >
         Generated research, not investment advice. Figures are drawn from public web
@@ -155,27 +157,35 @@ export default function Home() {
   return (
     <main className="mx-auto max-w-[860px] px-5 py-10 sm:px-6 sm:py-14">
       <header className="no-print mb-9">
-        <div className="flex items-baseline gap-3">
-          <h1 className="font-serif-display reveal text-[26px] font-semibold tracking-tight text-navy">
-            Thesis
-          </h1>
-          <span
-            className="reveal text-[10px] font-semibold tracking-[0.2em] text-muted-2 uppercase"
-            style={{ "--i": 1 } as React.CSSProperties}
-          >
-            Equity Research
+        <div className="flex items-center gap-3">
+          <span className="reveal shrink-0">
+            <Logo />
           </span>
+          <div className="flex items-baseline gap-2.5">
+            <h1
+              className="font-serif-display reveal text-[26px] font-semibold tracking-tight text-navy"
+              style={{ "--i": 1 } as React.CSSProperties}
+            >
+              Thesis
+            </h1>
+            <span
+              className="reveal text-[10px] font-semibold tracking-[0.2em] text-accent uppercase"
+              style={{ "--i": 2 } as React.CSSProperties}
+            >
+              Equity Research
+            </span>
+          </div>
         </div>
         <p
           className="reveal mt-2 max-w-lg text-[14px] leading-relaxed text-muted"
-          style={{ "--i": 2 } as React.CSSProperties}
+          style={{ "--i": 3 } as React.CSSProperties}
         >
           Ask an investing question. Get a cited equity thesis, assembled from live web
           sources and rendered as a research note.
         </p>
         <span
           aria-hidden="true"
-          className="rule-in mt-6 block h-px bg-hairline"
+          className="rule-in rule-accent mt-6 block h-px opacity-60"
           style={{ "--d": "160ms" } as React.CSSProperties}
         />
       </header>
@@ -231,6 +241,8 @@ export default function Home() {
           <ReportView thesis={thesis} />
         </div>
       )}
+
+      <SiteFooter />
     </main>
   );
 }

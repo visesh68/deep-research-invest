@@ -14,6 +14,14 @@
   --muted: #6b7280;
   --muted-2: #9aa1ab;
 
+  /* Accent. Chosen by elimination, not taste: teal and pine collide with the buy
+     green (ΔE 11.8 and 6.2 to normal vision) and brass collides under protanopia.
+     Violet is the only candidate that stays separable from all three reserved
+     status hues. 8.53:1 on paper, so it is safe for text as well as marks. */
+  --accent: #5b21b6;
+  --accent-lift: #a78bfa;
+  --accent-bg: #f1ecfd;
+
   /* Rules */
   --hairline: #e5e1d8;
   --hairline-strong: #d6d1c4;
@@ -52,6 +60,9 @@
   --color-muted-2: var(--muted-2);
   --color-hairline: var(--hairline);
   --color-hairline-strong: var(--hairline-strong);
+  --color-accent: var(--accent);
+  --color-accent-lift: var(--accent-lift);
+  --color-accent-bg: var(--accent-bg);
   --color-buy: var(--buy);
   --color-buy-bg: var(--buy-bg);
   --color-hold: var(--hold);
@@ -134,6 +145,12 @@ body {
   animation-delay: var(--d, 0ms);
 }
 
+/* Masthead rule: navy resolving into the accent, so the colour is introduced by
+   the document's own structure rather than applied on top of it. */
+.rule-accent {
+  background-image: linear-gradient(90deg, var(--navy) 0%, var(--navy) 55%, var(--accent) 100%);
+}
+
 .skeleton {
   /* Needs to read as absent content, not as a faint smudge: #efece3 against the
      #faf9f6 ground is the floor at which the shape of the document is legible. */
@@ -171,7 +188,13 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .skeleton { background-image: none; }
+  /* Masthead rule: navy resolving into the accent, so the colour is introduced by
+   the document's own structure rather than applied on top of it. */
+.rule-accent {
+  background-image: linear-gradient(90deg, var(--navy) 0%, var(--navy) 55%, var(--accent) 100%);
+}
+
+.skeleton { background-image: none; }
 }
 
 /* ---------- Print ----------

@@ -26,7 +26,7 @@ export default function QuestionForm({
           e.preventDefault();
           onSubmit();
         }}
-        className="group relative flex flex-col gap-2 rounded-sm border border-hairline bg-paper-raised p-2 shadow-sm transition-all duration-300 focus-within:border-navy/40 focus-within:shadow-md sm:flex-row sm:items-center"
+        className="group relative flex flex-col gap-2 rounded-sm border border-hairline bg-paper-raised p-2 shadow-sm transition-all duration-300 focus-within:border-accent/45 focus-within:shadow-md sm:flex-row sm:items-center"
       >
         <input
           type="text"
@@ -67,7 +67,7 @@ export default function QuestionForm({
             key={ex}
             type="button"
             onClick={() => onChange(ex)}
-            className="reveal rounded-full border border-hairline bg-paper-raised px-3 py-1.5 text-left text-[12.5px] text-muted transition-all duration-200 hover:-translate-y-px hover:border-navy/30 hover:text-navy hover:shadow-sm"
+            className="reveal rounded-full border border-hairline bg-paper-raised px-3 py-1.5 text-left text-[12.5px] text-muted transition-all duration-200 hover:-translate-y-px hover:border-accent/40 hover:text-accent hover:shadow-sm"
             style={{ "--i": i + 1 } as React.CSSProperties}
           >
             {ex}
