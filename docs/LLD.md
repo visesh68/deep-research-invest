@@ -481,8 +481,8 @@ formatting-drift bug that `ThesisSchema` currently makes impossible.
 
 - **8 of 10 components are React Server Components** — only `page.tsx`, `QuestionForm`
   and `ProgressStages` carry `"use client"`. `ReportView` and its whole subtree ship
-  zero JS, including the sticky sub-header (CSS `position: sticky`, no scroll listener)
-  and every entrance animation (CSS keyframes, no animation library).
+  zero JS: every entrance animation is a CSS keyframe, with no animation library and
+  no scroll listener anywhere in the subtree.
 - **`next/font`** (`layout.tsx:5-14`) self-hosts Source Serif 4 and Inter and exposes
   them as CSS variables — no external font request, no FOUT, no layout shift.
 - **Tailwind v4 `@theme inline`** (`globals.css`) — the palette is defined once as CSS

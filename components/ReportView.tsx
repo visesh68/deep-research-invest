@@ -18,7 +18,9 @@ function Section({
 }) {
   return (
     <section
-      className="reveal print-break-avoid border-t border-hairline pt-7"
+      // The header's navy rule already divides the masthead from section 01, so a
+      // second hairline directly under it reads as a double rule.
+      className={`reveal print-break-avoid ${index === 0 ? "" : "border-t border-hairline pt-7"}`}
       style={{ "--d": `${260 + index * 90}ms` } as React.CSSProperties}
     >
       <h2 className="mb-4 flex items-center gap-3">
@@ -92,17 +94,6 @@ export default function ReportView({ thesis }: { thesis: Thesis }) {
           style={{ "--d": "220ms" } as React.CSSProperties}
         />
       </header>
-
-      {/* Pure CSS sticky — no scroll listener, so this subtree stays a Server Component. */}
-      <div className="no-print sticky top-0 z-10 -mx-2 mt-0 flex items-center gap-3 border-b border-hairline bg-paper/85 px-2 py-2.5 backdrop-blur-sm">
-        <span className="nums text-[11px] font-semibold tracking-wider text-navy">
-          {thesis.ticker}
-        </span>
-        <span className="truncate text-[11px] text-muted-2">{thesis.company}</span>
-        <span className="ml-auto text-[10px] font-semibold tracking-[0.14em] text-muted uppercase">
-          {thesis.rating}
-        </span>
-      </div>
 
       <div className="mt-8 space-y-8">
         <Section title="Thesis Summary" index={0}>
