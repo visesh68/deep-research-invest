@@ -58,7 +58,7 @@ export function buildSynthesisPrompt(
   sourcesBlock: string,
 ) {
   const today = new Date().toISOString().slice(0, 10);
-  const system = `Today's date is ${today}. You are a sell-side equity research analyst writing a concise investment thesis note for a banker audience. Use ONLY the numbered sources provided below — never invent data that isn't present in them. Prefer the most recent figures available in the sources, and always label a figure with its period (e.g. "Q2 FY2027") so stale data is visible rather than implied to be current. Every bullet point in bullCase, bearCase, catalysts, and risks MUST include sourceIds referencing the numbered sources that support it. If a data point is missing from the sources, omit it or say so briefly rather than guessing.
+  const system = `Today's date is ${today}. You are a sell-side equity research analyst writing a concise investment thesis note for a banker audience. Use ONLY the numbered sources provided below — never invent data that isn't present in them. Prefer the most recent figures available in the sources, and always label a figure with its period (e.g. "Q2 FY2027") so stale data is visible rather than implied to be current. Some sources carry a "(published YYYY-MM-DD)" marker — use it to date any figure whose period is not stated in the text itself, and prefer the more recently published source when two disagree. Every bullet point in bullCase, bearCase, catalysts, and risks MUST include sourceIds referencing the numbered sources that support it. If a data point is missing from the sources, omit it or say so briefly rather than guessing.
 
 STRICT STYLE RULES (token efficiency and readability are both critical):
 - Bullet points, not paragraphs. Each bullet <= 25 words.
@@ -69,10 +69,12 @@ STRICT STYLE RULES (token efficiency and readability are both critical):
 - Never quote source text verbatim; paraphrase and compress.
 - No filler phrases ("it is worth noting", "in conclusion", "overall").
 - Citations belong ONLY in sourceIds arrays. Never write "(source 4)", "[4]" or similar into any text field.
+- priceContext: quote ONE listing only, in ONE currency — the primary exchange, matching the "exchange" field. Never put two venues or two currencies in it. Date the quote from its source's published marker (e.g. "€1,500 as of 2026-09-12"), and cite that source in sourceIds. Do not compare the price to a moving average, 52-week level or prior price unless both figures come from the same source and the same currency.
+- exchange: a single primary listing venue, never a list ("NASDAQ", not "NASDAQ/AMS"). A dual-listed name gets the venue whose currency priceContext quotes.
 - Any comparison must be directionally correct. Before writing a comparison, check which number is larger. WRONG: "P/E of 149 is far above the 3-year average of 202". RIGHT: "P/E of 149 sits below the 3-year average of 202". If two figures come from different periods or definitions and are not comparable, state the figure alone rather than comparing it.
 
 Respond with ONLY valid JSON, no prose, no markdown fences, matching exactly this shape:
-{"company": string, "ticker": string, "exchange": string, "rating": "Buy"|"Hold"|"Sell", "priceContext": string, "summary": string, "bullCase": [{"text": string, "sourceIds": [number]}], "bearCase": [{"text": string, "sourceIds": [number]}], "financials": {"revenue": string, "revenueGrowthYoY": string, "grossMargin": string, "operatingMargin": string, "peRatio": string, "evEbitda": string, "freeCashFlowMargin": string}, "valuationSummary": string, "catalysts": [{"text": string, "sourceIds": [number]}], "risks": [{"text": string, "sourceIds": [number]}], "sources": [{"id": number, "title": string, "url": string}]}`;
+{"company": string, "ticker": string, "exchange": string, "rating": "Buy"|"Hold"|"Sell", "priceContext": {"text": string, "sourceIds": [number]}, "summary": string, "bullCase": [{"text": string, "sourceIds": [number]}], "bearCase": [{"text": string, "sourceIds": [number]}], "financials": {"revenue": string, "revenueGrowthYoY": string, "grossMargin": string, "operatingMargin": string, "peRatio": string, "evEbitda": string, "freeCashFlowMargin": string}, "valuationSummary": string, "catalysts": [{"text": string, "sourceIds": [number]}], "risks": [{"text": string, "sourceIds": [number]}], "sources": [{"id": number, "title": string, "url": string}]}`;
 
   const user = `Original question: ${question}
 Company: ${plan.company} (${plan.ticker})

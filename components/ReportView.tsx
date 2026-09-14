@@ -6,6 +6,7 @@ import FinancialsTable from "./FinancialsTable";
 import ValuationSummary from "./ValuationSummary";
 import CatalystsRisks from "./CatalystsRisks";
 import SourcesFootnotes from "./SourcesFootnotes";
+import CiteMarks from "./CiteMarks";
 
 function Section({
   title,
@@ -71,7 +72,10 @@ export default function ReportView({ thesis }: { thesis: Thesis }) {
               </span>
               {thesis.exchange && <span className="text-muted-2">{thesis.exchange}</span>}
               <span aria-hidden="true" className="text-hairline-strong">·</span>
-              <span className="text-muted">{thesis.priceContext}</span>
+              <span className="text-muted">
+                {thesis.priceContext.text}
+                <CiteMarks sourceIds={thesis.priceContext.sourceIds} />
+              </span>
             </div>
           </div>
           <RatingBadge rating={thesis.rating} />

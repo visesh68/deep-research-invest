@@ -7,7 +7,10 @@ export const MOCK_THESIS: Thesis = {
   ticker: "NVDA",
   exchange: "NASDAQ",
   rating: "Buy",
-  priceContext: "Trading near $184, up 41% over the trailing twelve months",
+  priceContext: {
+    text: "Trading near $184 as of 2026-02-14, up 41% over the trailing twelve months",
+    sourceIds: [1],
+  },
   summary:
     "NVIDIA remains the default compute layer for frontier AI training and inference, with datacenter revenue compounding faster than hyperscaler capex itself. CUDA lock-in and a one-year cadence on new architectures sustain pricing power that merchant silicon rivals have not dented. The risk is not demand but concentration: a handful of customers fund most of the growth, and any capex digestion cycle would compress both volumes and multiple simultaneously.",
   bullCase: [

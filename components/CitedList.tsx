@@ -1,4 +1,5 @@
 import type { CitedBullet } from "@/lib/schema";
+import CiteMarks from "./CiteMarks";
 
 export default function CitedList({ items }: { items: CitedBullet[] }) {
   return (
@@ -15,20 +16,7 @@ export default function CitedList({ items }: { items: CitedBullet[] }) {
           />
           <span>
             {item.text}
-            {item.sourceIds.length > 0 && (
-              <span className="ml-1 inline-flex gap-0.5 align-super">
-                {item.sourceIds.map((id) => (
-                  <a
-                    key={id}
-                    href={`#src-${id}`}
-                    className="nums rounded-[3px] bg-accent-bg px-1 text-[10px] font-medium text-accent no-underline transition-colors duration-150 hover:bg-accent hover:text-white"
-                    aria-label={`Source ${id}`}
-                  >
-                    {id}
-                  </a>
-                ))}
-              </span>
-            )}
+            <CiteMarks sourceIds={item.sourceIds} />
           </span>
         </li>
       ))}

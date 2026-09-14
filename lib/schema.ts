@@ -13,6 +13,22 @@ export const CitedBulletSchema = z.object({
 });
 export type CitedBullet = z.infer<typeof CitedBulletSchema>;
 
+/**
+ * A cited claim that tolerates the bare string the model still sometimes emits,
+ * normalizing it to the cited shape.
+ *
+ * Used for priceContext, which carries a number but sat outside the citation system
+ * entirely — the one numeric narrative field with no source to check it against, and
+ * so the one place a stale figure could read as current without leaving a trace. A
+ * strict object here would be worse than the problem it fixes: thesis validation is
+ * fatal to the whole run (lib/pipeline.ts:142), and a sound thesis should not be
+ * thrown away over one unstructured line.
+ */
+export const CitedTextSchema = z.union([
+  CitedBulletSchema,
+  z.string().transform((text) => ({ text, sourceIds: [] as number[] })),
+]);
+
 export const FinancialsSchema = z.object({
   revenue: z.string().optional(),
   revenueGrowthYoY: z.string().optional(),
@@ -42,7 +58,7 @@ export const ThesisSchema = z.object({
   ticker: z.string(),
   exchange: z.string().optional(),
   rating: z.enum(["Buy", "Hold", "Sell"]),
-  priceContext: z.string(),
+  priceContext: CitedTextSchema,
   summary: z.string(),
   bullCase: z.array(CitedBulletSchema).min(3).max(5),
   bearCase: z.array(CitedBulletSchema).min(3).max(5),
