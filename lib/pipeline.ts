@@ -1,12 +1,18 @@
 import { callGroq, parseJsonLoose } from "./groq";
 import { buildPlanPrompt, buildSynthesisPrompt, stripLiteralDates } from "./prompts";
 import { ResearchPlanSchema, ThesisSchema, type Thesis } from "./schema";
-import { runAllAngles } from "./tavily";
+import { runAllAngles, ResearchFanoutError } from "./tavily";
 import { mergeAndNumberSources } from "./sources";
 import { addUsage, createTranscript, finalizeTranscript, type RunTranscript } from "./transcript";
 
 const PLAN_MODEL = "openai/gpt-oss-20b";
 const SYNTHESIS_MODEL = "openai/gpt-oss-120b";
+
+/** Recovers the run transcript from an error thrown by runPipeline, if present. */
+export function transcriptFromError(err: unknown): RunTranscript | undefined {
+  const t = (err as { transcript?: RunTranscript })?.transcript;
+  return t && typeof t === "object" ? t : undefined;
+}
 
 export class PipelineError extends Error {
   constructor(
@@ -43,6 +49,7 @@ export async function runPipeline(question: string): Promise<{
 
     transcript.planCall = {
       model: planResult.model,
+      startedAt: new Date(planCallStart).toISOString(),
       system: planPrompt.system,
       user: planPrompt.user,
       response: planResult.content,
@@ -74,6 +81,12 @@ export async function runPipeline(question: string): Promise<{
     try {
       ({ byAngle, log, failures } = await runAllAngles(plan.angles));
     } catch (err) {
+      // Preserve the per-angle detail on the transcript before giving up, so the
+      // failed run is still fully inspectable in the trace and the JSON.
+      if (err instanceof ResearchFanoutError) {
+        transcript.tavily = err.log;
+        transcript.researchFailures = err.failures;
+      }
       throw new PipelineError(`Research search failed: ${(err as Error).message}`, "research");
     }
     transcript.tavily = log;
@@ -108,6 +121,7 @@ export async function runPipeline(question: string): Promise<{
 
     transcript.synthesisCall = {
       model: synthesisResult.model,
+      startedAt: new Date(synthesisCallStart).toISOString(),
       system: synthesisPrompt.system,
       user: synthesisPrompt.user,
       response: synthesisResult.content,
@@ -145,6 +159,8 @@ export async function runPipeline(question: string): Promise<{
     transcript.error = (err as Error).message;
     transcript.totalMs = Date.now() - started;
     await finalizeTranscript(transcript);
-    throw err;
+    // Failed runs are the ones most worth inspecting, so the transcript rides out
+    // with the error rather than being dropped at the throw.
+    throw Object.assign(err as Error, { transcript });
   }
 }

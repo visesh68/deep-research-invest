@@ -17,6 +17,7 @@ lib/schema.ts               3 Zod schemas + inferred types     55 loc
 lib/prompts.ts              buildPlanPrompt, buildSynthesisPrompt  48 loc
 lib/transcript.ts           createTranscript/addUsage/finalize 75 loc
 lib/cache.ts                createLruCache, questionCacheKey   ~110 loc
+lib/observability.ts        emitTrace (Langfuse replay)        ~215 loc
 lib/mockThesis.ts           MOCK_THESIS fixture
 app/page.tsx                client state machine              107 loc
 components/*.tsx            9 presentational components
@@ -396,6 +397,34 @@ This trace is the reason §7 contains measurements rather than guesses.
 
 ---
 
+## 6.1 Langfuse tracing (`lib/observability.ts`)
+
+`emitTrace(transcript)` reconstructs a Langfuse trace from a **completed** `RunTranscript`
+rather than instrumenting the pipeline inline. See [HLD §12](./HLD.md#12-observability-in-production-libobservabilityts)
+for why. Implementation details that are easy to get wrong:
+
+| Detail | Why |
+|---|---|
+| `after()` from `next/server` wraps the call in `route.ts` | Flushing before returning would add its latency to every request; `after` runs post-response and still keeps the function alive |
+| `Promise.race` with `FLUSH_TIMEOUT_MS = 2_500` | `after` work counts against `maxDuration`; an unreachable Langfuse must not eat the budget |
+| `.update({ endTime })`, never `.end()` | `end()` forbids an explicit `endTime` and stamps *now* — on a replay that collapses every span onto the moment of emission |
+| `startedAt` added to `LlmCallLog` / `AngleSearchLog` | A timeline needs wall-clock positions; `ms` durations alone cannot place a span |
+| Client memoized as `null` when unconfigured | One env check for the process, not one per run |
+| Whole body in `try/catch`, returns `null` on failure | Observability must never fail a run that otherwise succeeded |
+| `ResearchFanoutError` carries `log` + `failures` | Found in testing: a hard fan-out failure threw before `transcript.tavily` was assigned, producing a trace with a research stage containing **no searches** — the exact diagnostic you need |
+
+**Verified end-to-end** against a stub ingestion server plus live runs:
+
+| Scenario | Result |
+|---|---|
+| No `LANGFUSE_*` keys | `tracingEnabled() === false`, `emitTrace` returns null, run unaffected |
+| Replay of a stored transcript | 19 events: trace + plan/synthesis generations + research span + 6 angle spans, token usage intact |
+| Unreachable Langfuse host | No throw, bounded at exactly 2.5s |
+| **Live failure run** (invalid Tavily key) | 502 in 1.6s, then `after()` emitted 18 events — 6 ERROR spans carrying the real 401 text, tags `["error","degraded","COST"]` |
+| **Live success run** (COST, 11.6s) | 10 observations, tags `["ok","COST"]`, metadata `{prompt:3504, completion:2208}`, 7 distinct start times across 6.8s — the parallel fan-out is visible as parallel in the timeline |
+
+---
+
 ## 7. Optimization catalogue
 
 ### 7.1 Token cost — before and after
@@ -490,5 +519,6 @@ formatting-drift bug that `ThesisSchema` currently makes impossible.
 | Tune the token budget | `MAX_SOURCES`, `SNIPPET_CHARS` (`sources.ts:28-29`) |
 | Tune fan-out resilience | `PER_ANGLE_TIMEOUT_MS`, `MAX_ATTEMPTS`, `MIN_SUCCESSFUL_ANGLES` (`tavily.ts:11-17`) |
 | Add real streaming | Route → SSE; replace `STAGE_TIMINGS` with server events |
+| Change what is traced | `emitTrace` in `lib/observability.ts` — one function, no pipeline changes |
 | Tune cache behaviour | `THESIS_TTL_MS` (`route.ts:9`), `angleCache` bounds (`tavily.ts`), `RESEARCH_CACHE=0` to disable |
 | Share cache across instances | Swap `createLruCache` for a Redis-backed object with the same `get`/`set` shape |

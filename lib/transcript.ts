@@ -6,6 +6,9 @@ import type { ResearchPlan, Thesis } from "./schema";
 
 export type LlmCallLog = {
   model: string;
+  // Absolute start time, not just a duration: a trace timeline needs to place
+  // each call on a wall clock, and `ms` alone cannot do that.
+  startedAt: string;
   system: string;
   user: string;
   response: string;

@@ -65,6 +65,7 @@ External dependencies: **Groq** (chat completions, OpenAI-compatible) and **Tavi
 | Contracts | `lib/schema.ts` | Zod schemas that are simultaneously the type system, the validator, and the output-length budget |
 | Prompts | `lib/prompts.ts` | The two system prompts; the only place model behaviour is tuned |
 | Observability | `lib/transcript.ts` | Full run trace to `transcripts/*.json` (dev only) |
+| Observability | `lib/observability.ts` | Replays a finished transcript as a Langfuse trace (prod + dev) |
 | Presentation | `app/page.tsx`, `components/*` | Client state machine + deterministic renderer |
 | Fixture | `lib/mockThesis.ts` | Credit-free UI path under `MOCK_RESEARCH=1` |
 
@@ -206,8 +207,8 @@ is off so the link is shareable, which is why the README carries a key-rotation 
 
 - **No streaming.** The user waits 9–17s behind a simulated progress bar.
 - **Cache is per-instance.** The LRU lives in module scope, so it is lost on cold start and not shared between concurrent serverless instances. Best-effort by design — see §11.
-- **Transcripts are dev-only** — the Vercel filesystem is ephemeral, so production runs
-  leave no trace beyond `console.error`.
+- **JSON transcripts are still dev-only** — the Vercel filesystem is ephemeral. Langfuse
+  now covers production runs (§12); the local JSON files remain the richer artifact.
 - **No numeric verification.** The prompt argues the model into correct comparisons; it
   does not check them. Arithmetic on extracted figures would.
 
@@ -249,3 +250,47 @@ Staging: **in-process LRU (done)** → shared Redis + rate limit (once the link 
 public, and the rate limit matters more than the cache) → durable transcript store (once
 prod quality needs measuring). A relational schema over theses stays overkill until
 something actually reads it.
+
+## 12. Observability in production (`lib/observability.ts`)
+
+The JSON transcript cannot be written on Vercel, so production runs previously left no
+trace. Langfuse now covers them — but through an unusual integration shape worth stating
+plainly: **the trace is emitted by replaying the finished transcript, not by threading
+SDK calls through the pipeline.**
+
+The pipeline already records everything a tracer would capture. Instrumenting it a second
+time would duplicate that work and put a vendor SDK on the hot path. Replaying instead
+buys three things:
+
+- exactly one integration point — `lib/pipeline.ts` has no vendor import at all
+- failed runs are traced too, because the transcript is finalized on both paths
+- Langfuse cannot slow down or break research; the worst case is a missing trace
+
+Trace shape (one trace per run, id = the transcript's `runId`, so a Langfuse trace and a
+local `transcripts/*.json` file match one-to-one):
+
+```
+TRACE  research-run            tags: [ok|error, degraded?, TICKER]
+├─ GENERATION  plan            gpt-oss-20b   · prompts, response, token usage
+├─ SPAN        research
+│  ├─ SPAN  angle:1 … angle:6  query, results, cached?, attempts, ERROR level on failure
+│  └─ (output: raw hits, cited sources, failures)
+└─ GENERATION  synthesis       gpt-oss-120b  · prompts, response, token usage
+```
+
+Three operational details that decide whether this works at all:
+
+1. **Flushing.** Serverless functions freeze the moment the handler returns, so batched
+   events are lost unless flushed — the classic "works locally, records nothing in prod"
+   failure. The route schedules tracing via `after()` from `next/server`, which keeps the
+   function alive past the response, so the flush costs the user no latency.
+2. **Bounded.** The flush races a 2.5s timeout. `after` work still counts against
+   `maxDuration`, so a Langfuse outage must not sit there consuming the budget.
+3. **Optional by default.** With no `LANGFUSE_*` keys the module no-ops permanently after
+   one check, and the app behaves exactly as before. `LANGFUSE_TRACING=0` disables it even
+   when keys are present.
+
+Langfuse was chosen over LangSmith mainly for fit: a plain TS SDK with no framework
+gravity, open source and self-hostable. The v5 OpenTelemetry SDK (`@langfuse/tracing`)
+is the eventual upgrade path; v3's explicit `flushAsync()` is a better match for a
+two-call pipeline on serverless.

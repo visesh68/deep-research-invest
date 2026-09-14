@@ -36,7 +36,19 @@ export class TavilyHttpError extends Error {
   }
 }
 
-export class ResearchFanoutError extends Error {}
+export class ResearchFanoutError extends Error {
+  // The per-angle log rides out with the error. A hard fan-out failure is exactly
+  // when the individual angle diagnostics matter most, and they would otherwise be
+  // dropped at the throw — leaving a trace that shows a research stage with no
+  // searches in it.
+  constructor(
+    message: string,
+    public log: AngleSearchLog[] = [],
+    public failures: FanoutResult["failures"] = [],
+  ) {
+    super(message);
+  }
+}
 
 export async function searchAngle(
   query: string,
@@ -118,6 +130,7 @@ async function searchAngleWithRetry(
 export type AngleSearchLog = {
   angleId: string;
   query: string;
+  startedAt: string;
   ms: number;
   results: TavilyHit[];
   attempts: number;
@@ -145,11 +158,13 @@ export async function runAllAngles(
   const settled = await Promise.allSettled(
     angles.map(async (a) => {
       const started = Date.now();
+      const startedAt = new Date(started).toISOString();
       const cached = angleCache.get(a.query);
       if (cached) {
         return {
           angleId: a.id,
           query: a.query,
+          startedAt,
           ms: Date.now() - started,
           results: cached.value,
           attempts: 0,
@@ -161,9 +176,9 @@ export async function runAllAngles(
         // Only successful searches are cached; a failure must be retried next run,
         // never memoized into an hour of empty results.
         if (results.length > 0) angleCache.set(a.query, results);
-        return { angleId: a.id, query: a.query, ms: Date.now() - started, results, attempts };
+        return { angleId: a.id, query: a.query, startedAt, ms: Date.now() - started, results, attempts };
       } catch (err) {
-        throw Object.assign(err as Error, { angleId: a.id, query: a.query, ms: Date.now() - started });
+        throw Object.assign(err as Error, { angleId: a.id, startedAt, ms: Date.now() - started });
       }
     }),
   );
@@ -179,11 +194,12 @@ export async function runAllAngles(
       byAngle[outcome.value.angleId] = outcome.value.results;
       return;
     }
-    const err = outcome.reason as Error & { ms?: number };
+    const err = outcome.reason as Error & { ms?: number; startedAt?: string };
     const message = err?.message ?? String(outcome.reason);
     log.push({
       angleId: angle.id,
       query: angle.query,
+      startedAt: err?.startedAt ?? new Date().toISOString(),
       ms: err?.ms ?? 0,
       results: [],
       attempts: MAX_ATTEMPTS,
@@ -197,6 +213,8 @@ export async function runAllAngles(
     throw new ResearchFanoutError(
       `Only ${succeeded} of ${angles.length} research angles succeeded. ` +
         `First failure: ${failures[0]?.error ?? "unknown"}`,
+      log,
+      failures,
     );
   }
 

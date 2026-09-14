@@ -48,6 +48,20 @@ Known limitation: transcript writing is disabled on Vercel (`process.env.VERCEL`
 because the serverless filesystem is ephemeral. Transcript review happens against
 local `npm run dev` runs.
 
+## Tracing (optional)
+
+Set `LANGFUSE_PUBLIC_KEY` and `LANGFUSE_SECRET_KEY` to send each run to
+[Langfuse](https://langfuse.com) as a trace — both prompts and responses, token usage,
+and every search as its own span, with failed angles at ERROR level. This is what covers
+**production** runs, where the JSON transcript cannot be written.
+
+The trace is built by replaying the finished transcript, so the pipeline itself has no
+vendor import, and a Langfuse outage cannot slow down or break research. Without the keys
+tracing no-ops entirely; `LANGFUSE_TRACING=0` disables it even when keys are set.
+
+Trace ids match the local transcript `runId`, so a trace and a `transcripts/*.json` file
+can be lined up one-to-one.
+
 ## Deploy (Vercel free tier)
 
 1. Push to a Git remote, import the repo at vercel.com, or run `npx vercel`.

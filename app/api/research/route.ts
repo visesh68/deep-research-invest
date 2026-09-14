@@ -1,5 +1,6 @@
-import { NextRequest, NextResponse } from "next/server";
-import { runPipeline, PipelineError } from "@/lib/pipeline";
+import { NextRequest, NextResponse, after } from "next/server";
+import { runPipeline, PipelineError, transcriptFromError } from "@/lib/pipeline";
+import { emitTrace } from "@/lib/observability";
 import { createLruCache, questionCacheKey } from "@/lib/cache";
 import type { Thesis } from "@/lib/schema";
 
@@ -45,7 +46,12 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const { thesis, warnings } = await runPipeline(question);
+    const { thesis, warnings, transcript } = await runPipeline(question);
+    // Tracing runs after the response is sent, so flushing costs the user nothing.
+    after(async () => {
+      const url = await emitTrace(transcript);
+      if (url) console.log(`Langfuse trace: ${url}`);
+    });
     // A degraded run is not cached: serving a thesis built on half its angles
     // for the next hour would turn one transient Tavily blip into sustained
     // low-quality output.
@@ -54,6 +60,13 @@ export async function POST(req: NextRequest) {
   } catch (err) {
     const stage = err instanceof PipelineError ? err.stage : "unknown";
     console.error(`Research pipeline failed at stage "${stage}":`, err);
+    const failed = transcriptFromError(err);
+    if (failed) {
+      after(async () => {
+        const url = await emitTrace(failed);
+        if (url) console.log(`Langfuse trace (failed run): ${url}`);
+      });
+    }
     return NextResponse.json(
       { error: (err as Error).message || "Research pipeline failed.", stage },
       { status: 502 },
