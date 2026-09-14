@@ -7,7 +7,7 @@ outcome, and the final thesis. This is the full agent trace — nothing is summa
 Filenames are `<ISO timestamp>_<question slug>.json`. The `runId` inside each file
 is also the Langfuse trace id, so a file and a trace line up one-to-one.
 
-Four runs below did not produce a thesis. All four are kept on purpose and none is an
+Four of the fifteen runs below did not produce a thesis. All four are kept on purpose and none is an
 open bug: **BY DESIGN** marks a failure induced deliberately to exercise a code path,
 **KEPT** a real constraint hit during the build that the design now accounts for. See
 [Reading these](#reading-these) for what each one demonstrates.
@@ -28,10 +28,11 @@ open bug: **BY DESIGN** marks a failure induced deliberately to exercise a code 
 | 12 | How does Costco (COST) membership model support its va | Costco Wholesale Corporation (COST) — Buy | 5,712 | 11.5s | — |
 | 13 | What is the bull case on AMD (AMD) in AI accelerators? | Advanced Micro Devices (AMD) — Buy | 5,670 | 9.6s | — |
 | 14 | Is Broadcom (AVGO) attractive at its current multiple? | Broadcom Inc. (AVGO) — Buy | 5,665 | 9.6s | — |
+| 15 | Is Costco (COST) a buy right now? | Costco Wholesale Corporation (COST) — Buy | 6,275 | 11.1s | — |
 
 ## Reading these
 
-- **10 successful, 4 kept failures.** None is an unfixed defect — each documents a real
+- **11 successful, 4 kept failures.** None is an unfixed defect — each documents a real
   constraint rather than a mistake, which is why they are committed alongside the
   successful runs:
   - #1 (KEPT) Groq retired the Llama 3.x models mid-build (404), forcing the move to the GPT-OSS tier.
@@ -46,6 +47,11 @@ open bug: **BY DESIGN** marks a failure induced deliberately to exercise a code 
   sources) plus 2k completion from the single synthesis call.
 - **#2 vs #4** is the optimization commit: same question, 9,056 → 5,866 tokens, with better
   output quality. Prompt side from capping sources, completion side from `reasoning_effort: "low"`.
+- **#15 is the successful counterpart to #10 and #11** — the same question, run with a valid
+  key. Read together they show both sides of the fan-out: six angles failing fast on a
+  permanent error, and six succeeding. It is also the first transcript written after price
+  angles moved to a week-wide news search, so its `priceContext` carries a date and a source
+  id (`"$902.38 as of 2026-09-11"`, citing [17]) where earlier runs quoted an undated price.
 - **#8 onward** use year/quarter search labels; earlier runs pasted full ISO dates into queries
   (`"Palantir PLTR bear case risks 2026-09-13"`), which is noise to a search engine.
 - Only one LLM call produces content. The report's layout comes from rendering the validated
