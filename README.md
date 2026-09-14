@@ -4,6 +4,9 @@ Ask an investing question, get a cited equity research thesis rendered as a clea
 
 **Live:** https://deep-research-invest.vercel.app (public — no login required)
 
+**[Build writeup](./writeup.md)** — what the system does, and the optimization made at
+each stage with the measurement behind it.
+
 > Deployment Protection is off so the link can be shared freely. Each run spends
 > roughly 12 Tavily credits against a 1,000/month free tier — about 80 runs — so the
 > URL is a metered resource. Two things blunt that: identical questions are served
