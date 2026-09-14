@@ -479,9 +479,10 @@ formatting-drift bug that `ThesisSchema` currently makes impossible.
 
 ### 7.5 Frontend
 
-- **7 of 9 components are React Server Components** — only `page.tsx`, `QuestionForm`
+- **8 of 10 components are React Server Components** — only `page.tsx`, `QuestionForm`
   and `ProgressStages` carry `"use client"`. `ReportView` and its whole subtree ship
-  zero JS.
+  zero JS, including the sticky sub-header (CSS `position: sticky`, no scroll listener)
+  and every entrance animation (CSS keyframes, no animation library).
 - **`next/font`** (`layout.tsx:5-14`) self-hosts Source Serif 4 and Inter and exposes
   them as CSS variables — no external font request, no FOUT, no layout shift.
 - **Tailwind v4 `@theme inline`** (`globals.css`) — the palette is defined once as CSS
@@ -492,8 +493,25 @@ formatting-drift bug that `ThesisSchema` currently makes impossible.
 - **Anchor-based citations** — `CitedList` renders `<a href="#src-{id}">` superscripts;
   `SourcesFootnotes` renders `id="src-{id}"`. Cross-referencing is pure HTML: no JS,
   no scroll handler, works with JS disabled.
-- **Fixture banner** (`page.tsx:96-101`) — a mock run is visually labelled as sample data,
-  so an illustrative report can never be mistaken for live research.
+- **Fixture banner** — a mock run is visually labelled as sample data, so an
+  illustrative report can never be mistaken for live research.
+- **Staggered reveal** — one `.reveal` class keyframes `fade-up`, with order supplied
+  per element as `--i` (index) or `--d` (explicit delay). Sections, bullets, stat cells
+  and footnotes all reuse it, so sequencing is data, not bespoke CSS per component.
+- **`ReportSkeleton`** — a ghost of the real document shown during the 9–17s run.
+  A wait behind one progress line reads as a hang; the same wait behind the shape of
+  the document that is coming reads as work in progress.
+- **Indeterminate progress rail** — the pipeline returns a single response, so the rail
+  animates without claiming a percentage it cannot know.
+- **`prefers-reduced-motion`** collapses every animation and transition to 0.01ms and
+  drops the skeleton shimmer.
+- **Print styles** — research notes get printed. `@page` margins, `.no-print` strips the
+  form, progress rail and sticky bar, animations are forced to their end state, and
+  `.print-break-avoid` keeps sections whole across pages.
+- **Status colour is never alone** — `scripts/validate_palette.js` puts hold↔buy at
+  ΔE 6.0 under protanopia, inside the floor band that is legal *only* with secondary
+  encoding. So `RatingBadge` ships a direction glyph plus the word, and the bull/bear
+  columns are labelled; hue only reinforces.
 
 ---
 

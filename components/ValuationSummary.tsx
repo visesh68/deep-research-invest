@@ -1,3 +1,3 @@
 export default function ValuationSummary({ text }: { text: string }) {
-  return <p className="text-[15px] leading-relaxed text-ink/90">{text}</p>;
+  return <p className="reveal text-[15px] leading-[1.65] text-ink-2">{text}</p>;
 }

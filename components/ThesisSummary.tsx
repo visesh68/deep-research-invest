@@ -1,3 +1,7 @@
 export default function ThesisSummary({ summary }: { summary: string }) {
-  return <p className="text-[17px] leading-relaxed text-ink/90">{summary}</p>;
+  return (
+    <p className="font-serif-display reveal text-[19px] leading-[1.62] text-ink">
+      {summary}
+    </p>
+  );
 }

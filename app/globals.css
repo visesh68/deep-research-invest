@@ -1,25 +1,57 @@
 @import "tailwindcss";
 
 :root {
+  /* Surfaces — light, warm, paper-like. A research note should read as a document. */
   --paper: #faf9f6;
-  --ink: #1a1a1a;
+  --paper-raised: #ffffff;
+  --paper-sunk: #f4f2ec;
+
+  /* Ink */
+  --ink: #14161a;
+  --ink-2: #3d4450;
   --navy: #0b2545;
+  --navy-soft: #1b3c68;
   --muted: #6b7280;
+  --muted-2: #9aa1ab;
+
+  /* Rules */
   --hairline: #e5e1d8;
+  --hairline-strong: #d6d1c4;
+
+  /* Status — validated: contrast >= 3:1, CVD floor band, so every use
+     carries a text label or icon as secondary encoding. Never colour alone. */
   --buy: #1f6f43;
   --buy-bg: #e7f2ec;
   --hold: #9a6b00;
   --hold-bg: #f6eede;
   --sell: #a4293a;
   --sell-bg: #f7e9ea;
+
+  /* Elevation — barely-there on a light ground; depth comes from rules, not shadow. */
+  --shadow-sm: 0 1px 2px rgba(11, 37, 69, 0.04), 0 1px 1px rgba(11, 37, 69, 0.03);
+  --shadow-md: 0 2px 4px rgba(11, 37, 69, 0.05), 0 4px 12px rgba(11, 37, 69, 0.05);
+  --shadow-lg: 0 8px 32px rgba(11, 37, 69, 0.08);
+
+  /* Motion. Restrained on purpose: this is read by people who distrust flourish. */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 160ms;
+  --dur: 260ms;
+  --dur-slow: 520ms;
 }
 
 @theme inline {
   --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-paper-sunk: var(--paper-sunk);
   --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
   --color-navy: var(--navy);
+  --color-navy-soft: var(--navy-soft);
   --color-muted: var(--muted);
+  --color-muted-2: var(--muted-2);
   --color-hairline: var(--hairline);
+  --color-hairline-strong: var(--hairline-strong);
   --color-buy: var(--buy);
   --color-buy-bg: var(--buy-bg);
   --color-hold: var(--hold);
@@ -28,14 +60,126 @@
   --color-sell-bg: var(--sell-bg);
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
 }
 
 body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .font-serif-display {
   font-family: var(--font-serif), Georgia, serif;
+  font-feature-settings: "liga" 1, "kern" 1;
+}
+
+/* Figures in a research note must align in columns. */
+.nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes rule-in {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes shimmer {
+  from { background-position: -180% 0; }
+  to   { background-position: 180% 0; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.45; transform: scale(0.82); }
+}
+
+@keyframes indeterminate {
+  0%   { transform: translateX(-100%) scaleX(0.35); }
+  60%  { transform: translateX(120%) scaleX(0.6); }
+  100% { transform: translateX(320%) scaleX(0.3); }
+}
+
+/* Stagger: set --i on the element, or --d for an explicit delay. */
+.reveal {
+  animation: fade-up var(--dur-slow) var(--ease-out) both;
+  animation-delay: var(--d, calc(var(--i, 0) * 70ms));
+}
+
+.reveal-in {
+  animation: fade-in var(--dur-slow) var(--ease-out) both;
+  animation-delay: var(--d, calc(var(--i, 0) * 70ms));
+}
+
+.rule-in {
+  transform-origin: left;
+  animation: rule-in var(--dur-slow) var(--ease-out) both;
+  animation-delay: var(--d, 0ms);
+}
+
+.skeleton {
+  background-color: var(--paper-sunk);
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.85) 50%,
+    transparent 100%
+  );
+  background-size: 180% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 1.5s var(--ease) infinite;
+  border-radius: 2px;
+}
+
+/* Underline that draws in from the left on hover — quieter than a colour change. */
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--dur) var(--ease-out);
+}
+.link-underline:hover {
+  background-size: 100% 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .skeleton { background-image: none; }
+}
+
+/* ---------- Print ----------
+   Research notes get printed and passed around. Without this the report
+   prints with the form, the progress rail and dead interactive chrome. */
+@media print {
+  @page { margin: 16mm; }
+  body { background: #fff; }
+  .no-print { display: none !important; }
+  .reveal, .reveal-in, .rule-in { animation: none !important; opacity: 1 !important; transform: none !important; }
+  a { text-decoration: none; color: inherit; }
+  .print-break-avoid { break-inside: avoid; }
 }
