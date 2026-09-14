@@ -2,22 +2,33 @@
 
 Ask an investing question, get a cited equity research thesis rendered as a clean research note.
 
-**Live:** https://deep-research-invest.vercel.app (public — no login required)
+**Live:** https://deep-research-invest.vercel.app — **Vercel login required**
 
-> Deployment Protection is disabled so the link can be shared, which means anyone with
-> the URL spends the free-tier Tavily/Groq credits behind it. Rotate both keys after the
-> demo window, and re-enable protection in Project Settings → Deployment Protection if
-> the link stops being needed.
+> Deployment Protection is set to "All Deployments", so the production domain, every
+> preview and the raw deployment URLs all sit behind Vercel SSO. `/api/research`
+> returns 401 to anyone outside the team, which is the point: each run spends roughly
+> 12 Tavily credits against a 1,000/month free tier, so an open URL is a metered
+> resource, not just a demo.
+>
+> To share it without handing out team access, generate a Protection Bypass secret
+> (Project Settings → Deployment Protection) and append it as a query parameter or
+> send it as the `x-vercel-protection-bypass` header. That secret is a credential —
+> anyone holding it can spend the credits.
+>
+> To open it up again: Project Settings → Deployment Protection → Disabled.
 
 ## How it works
 
 ```
 question
+  → cache lookup         repeat question → served instantly, no API calls
   → Groq gpt-oss-20b     identify company/ticker + 4-6 research angles
-  → Tavily × N angles    concurrent web search (Promise.all), time-boxed to 1 year
+  → Tavily × N angles    concurrent search (Promise.allSettled), time-boxed to 1 year
+                         12s per-angle timeout, 1 retry on 429/5xx, survives partial failure
   → dedupe + number      top 18 sources, snippets trimmed to 350 chars
   → Groq gpt-oss-120b    ONE synthesis call → structured thesis JSON
   → React/CSS            deterministic render, no further LLM calls
+  → Langfuse             the finished transcript is replayed as a trace
 ```
 
 A typical run costs ~5,800 tokens and takes 9-17 seconds.
