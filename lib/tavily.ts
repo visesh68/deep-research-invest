@@ -5,9 +5,53 @@ export type TavilyHit = {
   url: string;
   content: string;
   score: number;
+  // Only present on news-topic searches; Tavily omits the field entirely on the
+  // default topic. Undated hits are normal and render without a date suffix.
+  publishedDate?: string;
+};
+
+export type SearchOptions = {
+  topic?: "general" | "news";
+  timeRange?: "day" | "week" | "month" | "year";
 };
 
 const TAVILY_URL = "https://api.tavily.com/search";
+
+/**
+ * Spot prices go stale in days; fundamentals do not.
+ *
+ * A single `time_range: "year"` across every angle let a seven-month-old price
+ * article rank top on relevance and reach synthesis undated, which is how a
+ * February SMA shipped inside a September note as current momentum. Price angles
+ * therefore get a week-wide news search, and only news searches carry
+ * `published_date` at all — on the default topic Tavily omits the field, so the
+ * model has no way to date a quote it is shown.
+ *
+ * Non-price angles keep the original year-wide default topic: news search trades
+ * away the filings, IR pages and profile sites that fundamentals angles depend on,
+ * and those angles already label their figures by quarter from the prose itself.
+ *
+ * Classified in code rather than asked of the planner: the plan's angle `id` is a
+ * free-form string the model picks, and prompt conventions drift between model
+ * versions where a regex does not.
+ */
+const PRICE_ANGLE_RE =
+  /\b(share price|stock price|price target|market cap|valuation snapshot|quote|trading at|SMA|moving average|52[- ]week)\b/i;
+
+export function searchOptionsFor(query: string): SearchOptions {
+  return PRICE_ANGLE_RE.test(query)
+    ? { topic: "news", timeRange: "week" }
+    : { timeRange: "year" };
+}
+
+// Tavily returns RFC-1123 ("Tue, 10 Feb 2026 16:56:14 GMT"). The clock time is
+// noise in a sources block that is already trimmed for tokens, and an ISO date
+// sorts and reads unambiguously.
+function normalizeDate(raw: unknown): string | undefined {
+  if (typeof raw !== "string" || !raw) return undefined;
+  const t = Date.parse(raw);
+  return Number.isNaN(t) ? undefined : new Date(t).toISOString().slice(0, 10);
+}
 
 // One slow angle must not hold the whole run open to the 300s function ceiling.
 const PER_ANGLE_TIMEOUT_MS = 12_000;
@@ -53,6 +97,7 @@ export class ResearchFanoutError extends Error {
 export async function searchAngle(
   query: string,
   signal?: AbortSignal,
+  opts: SearchOptions = { timeRange: "year" },
 ): Promise<TavilyHit[]> {
   const apiKey = process.env.TAVILY_API_KEY;
   if (!apiKey) {
@@ -72,8 +117,10 @@ export async function searchAngle(
       include_answer: false,
       include_raw_content: false,
       // Equity data goes stale fast; without this the model happily cites
-      // two-year-old quarterly figures as current.
-      time_range: "year",
+      // two-year-old quarterly figures as current. Price angles narrow it
+      // further — see searchOptionsFor.
+      time_range: opts.timeRange ?? "year",
+      ...(opts.topic ? { topic: opts.topic } : {}),
     }),
     signal,
   });
@@ -88,12 +135,21 @@ export async function searchAngle(
 
   const json = await res.json();
   const results = Array.isArray(json.results) ? json.results : [];
-  return results.map((r: { title?: string; url?: string; content?: string; score?: number }) => ({
-    title: r.title ?? "Untitled",
-    url: r.url ?? "",
-    content: r.content ?? "",
-    score: typeof r.score === "number" ? r.score : 0,
-  }));
+  return results.map(
+    (r: {
+      title?: string;
+      url?: string;
+      content?: string;
+      score?: number;
+      published_date?: string;
+    }) => ({
+      title: r.title ?? "Untitled",
+      url: r.url ?? "",
+      content: r.content ?? "",
+      score: typeof r.score === "number" ? r.score : 0,
+      publishedDate: normalizeDate(r.published_date),
+    }),
+  );
 }
 
 // A missing key or a malformed request will fail identically on every retry;
@@ -110,11 +166,12 @@ function isRetryable(err: unknown): boolean {
 
 async function searchAngleWithRetry(
   query: string,
+  opts: SearchOptions,
 ): Promise<{ results: TavilyHit[]; attempts: number }> {
   let lastErr: unknown;
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     try {
-      const results = await searchAngle(query, AbortSignal.timeout(PER_ANGLE_TIMEOUT_MS));
+      const results = await searchAngle(query, AbortSignal.timeout(PER_ANGLE_TIMEOUT_MS), opts);
       return { results, attempts: attempt };
     } catch (err) {
       lastErr = err;
@@ -159,7 +216,13 @@ export async function runAllAngles(
     angles.map(async (a) => {
       const started = Date.now();
       const startedAt = new Date(started).toISOString();
-      const cached = angleCache.get(a.query);
+      const opts = searchOptionsFor(a.query);
+      // The options are part of the identity of a search: the same query run
+      // week-wide over news and year-wide over the general topic returns
+      // different hits, so keying on the query alone would serve one under the
+      // other's key for an hour.
+      const cacheKey = `${a.query}|${opts.topic ?? "general"}|${opts.timeRange ?? "year"}`;
+      const cached = angleCache.get(cacheKey);
       if (cached) {
         return {
           angleId: a.id,
@@ -172,10 +235,10 @@ export async function runAllAngles(
         };
       }
       try {
-        const { results, attempts } = await searchAngleWithRetry(a.query);
+        const { results, attempts } = await searchAngleWithRetry(a.query, opts);
         // Only successful searches are cached; a failure must be retried next run,
         // never memoized into an hour of empty results.
-        if (results.length > 0) angleCache.set(a.query, results);
+        if (results.length > 0) angleCache.set(cacheKey, results);
         return { angleId: a.id, query: a.query, startedAt, ms: Date.now() - started, results, attempts };
       } catch (err) {
         throw Object.assign(err as Error, { angleId: a.id, startedAt, ms: Date.now() - started });

@@ -54,7 +54,14 @@ export function mergeAndNumberSources(byAngle: Record<string, TavilyHit[]>): {
     url: h.url,
   }));
   const sourcesBlock = ordered
-    .map((h, i) => `[${i + 1}] ${h.title} — ${h.url}\n${truncate(h.content, SNIPPET_CHARS)}`)
+    .map(
+      (h, i) =>
+        `[${i + 1}] ${h.title} — ${h.url}` +
+        // Undated sources stay unmarked rather than carrying a guessed date: the
+        // absence is itself information the model can act on when dating a figure.
+        (h.publishedDate ? ` (published ${h.publishedDate})` : "") +
+        `\n${truncate(h.content, SNIPPET_CHARS)}`,
+    )
     .join("\n\n");
 
   return { sourcesBlock, sources };
