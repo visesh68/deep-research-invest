@@ -1,7 +1,7 @@
 # Low-Level Design — Thesis (Deep Research for Investors)
 
-> Function-level companion to [HLD.md](./HLD.md). All numbers are measured from the
-> seven runs in `transcripts/`, not estimated. Line references are against commit `a8889c9`.
+> Function-level companion to [HLD.md](./HLD.md). All numbers are measured from real runs
+> in `transcripts/` and from live traces, not estimated. Line references track `main`.
 
 ---
 

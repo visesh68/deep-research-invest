@@ -1,6 +1,6 @@
 # High-Level Design — Thesis (Deep Research for Investors)
 
-> Scope: the whole system as it exists at commit `a8889c9`. Companion document:
+> Scope: the whole system as of the current `main`. Companion document:
 > [LLD.md](./LLD.md) for function-level detail, exact constants and measured numbers.
 
 ## 1. What the system does
