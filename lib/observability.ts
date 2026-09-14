@@ -60,9 +60,13 @@ export function tracingEnabled(): boolean {
   return getClient() !== null;
 }
 
-// Replayed observations carry historical timestamps, so `.update({ endTime })` is
-// used rather than `.end()` — `end()` deliberately forbids an explicit endTime and
-// stamps "now", which would collapse every span onto the moment of emission.
+// Every observation is written as ONE create event carrying both startTime and
+// endTime, rather than the usual create-then-end pair. A replay already knows the
+// full history, so splitting it into two events buys nothing and costs correctness:
+// the SDK batches events without preserving call order, and a create landing after
+// its own update leaves the observation with endTime == startTime — which is exactly
+// how the generations first came back from Langfuse Cloud, showing 0.00s durations
+// next to correctly-timed spans.
 function at(iso: string, offsetMs = 0): Date {
   return new Date(new Date(iso).getTime() + offsetMs);
 }
@@ -94,7 +98,9 @@ export async function emitTrace(t: RunTranscript): Promise<string | null> {
             summary: t.thesis.summary,
             sourceCount: t.thesis.sources.length,
           }
-        : undefined,
+        : t.error
+          ? { error: t.error }
+          : undefined,
       metadata: {
         totalTokens: t.totalTokens,
         totalMs: t.totalMs,
@@ -114,26 +120,23 @@ export async function emitTrace(t: RunTranscript): Promise<string | null> {
     if (t.planCall) {
       const c = t.planCall;
       const s = c.startedAt ? at(c.startedAt) : start;
-      trace
-        .generation({
-          name: "plan",
-          model: c.model,
-          startTime: s,
-          input: [
-            { role: "system", content: c.system },
-            { role: "user", content: c.user },
-          ],
-          modelParameters: { temperature: 0.25, reasoning_effort: "low", response_format: "json_object" },
-        })
-        .update({
-          endTime: at(s.toISOString(), c.ms),
-          output: c.response,
-          usage: {
-            promptTokens: c.usage.prompt_tokens,
-            completionTokens: c.usage.completion_tokens,
-            totalTokens: c.usage.total_tokens,
-          },
-        });
+      trace.generation({
+        name: "plan",
+        model: c.model,
+        startTime: s,
+        endTime: at(s.toISOString(), c.ms),
+        input: [
+          { role: "system", content: c.system },
+          { role: "user", content: c.user },
+        ],
+        modelParameters: { temperature: 0.25, reasoning_effort: "low", response_format: "json_object" },
+        output: c.response,
+        usage: {
+          promptTokens: c.usage.prompt_tokens,
+          completionTokens: c.usage.completion_tokens,
+          totalTokens: c.usage.total_tokens,
+        },
+      });
     }
 
     if (t.tavily.length > 0) {
@@ -141,76 +144,67 @@ export async function emitTrace(t: RunTranscript): Promise<string | null> {
         (min, a) => (a.startedAt && a.startedAt < min ? a.startedAt : min),
         t.tavily[0].startedAt ?? t.startedAt,
       );
+      // Resolve every angle's window up front so the parent span can be written
+      // complete, in one event, like everything else here.
+      const windows = t.tavily.map((angle) => {
+        const s = angle.startedAt ? at(angle.startedAt) : at(first);
+        return { angle, s, e: at(s.toISOString(), angle.ms) };
+      });
+      const lastEnd = windows.reduce((max, w) => (w.e > max ? w.e : max), at(first));
+
       const researchSpan = trace.span({
         name: "research",
         startTime: at(first),
-        input: { angles: t.tavily.map((a) => a.query) },
-      });
-
-      let lastEnd = at(first);
-      for (const angle of t.tavily) {
-        const s = angle.startedAt ? at(angle.startedAt) : at(first);
-        const e = at(s.toISOString(), angle.ms);
-        if (e > lastEnd) lastEnd = e;
-        researchSpan
-          .span({
-            name: `angle:${angle.angleId}`,
-            startTime: s,
-            input: { query: angle.query },
-            // A failed angle is recorded at ERROR level so partial-failure runs are
-            // filterable in the Langfuse UI rather than buried in a green trace.
-            level: angle.error ? "ERROR" : "DEFAULT",
-            statusMessage: angle.error,
-            metadata: { cached: Boolean(angle.cached), attempts: angle.attempts },
-          })
-          .update({
-            endTime: e,
-            output: {
-              resultCount: angle.results.length,
-              results: angle.results.map((r) => ({ title: r.title, url: r.url, score: r.score })),
-            },
-          });
-      }
-
-      researchSpan.update({
         endTime: lastEnd,
+        input: { angles: t.tavily.map((a) => a.query) },
         output: {
           rawHits: t.tavily.reduce((n, a) => n + a.results.length, 0),
           citedSources: t.thesis?.sources.length ?? 0,
           failures: t.researchFailures ?? [],
         },
       });
+
+      for (const { angle, s, e } of windows) {
+        researchSpan.span({
+          name: `angle:${angle.angleId}`,
+          startTime: s,
+          endTime: e,
+          input: { query: angle.query },
+          // A failed angle is recorded at ERROR level so partial-failure runs are
+          // filterable in the Langfuse UI rather than buried in a green trace.
+          level: angle.error ? "ERROR" : "DEFAULT",
+          statusMessage: angle.error,
+          metadata: { cached: Boolean(angle.cached), attempts: angle.attempts },
+          output: {
+            resultCount: angle.results.length,
+            results: angle.results.map((r) => ({ title: r.title, url: r.url, score: r.score })),
+          },
+        });
+      }
     }
 
     if (t.synthesisCall) {
       const c = t.synthesisCall;
       const s = c.startedAt ? at(c.startedAt) : start;
-      trace
-        .generation({
-          name: "synthesis",
-          model: c.model,
-          startTime: s,
-          input: [
-            { role: "system", content: c.system },
-            { role: "user", content: c.user },
-          ],
-          modelParameters: { temperature: 0.25, reasoning_effort: "low", response_format: "json_object" },
-        })
-        .update({
-          endTime: at(s.toISOString(), c.ms),
-          output: c.response,
-          usage: {
-            promptTokens: c.usage.prompt_tokens,
-            completionTokens: c.usage.completion_tokens,
-            totalTokens: c.usage.total_tokens,
-          },
-          level: t.thesisValidation?.success === false ? "ERROR" : "DEFAULT",
-          statusMessage: t.thesisValidation?.success === false ? "Thesis failed schema validation" : undefined,
-        });
-    }
-
-    if (t.error) {
-      trace.update({ output: { error: t.error } });
+      trace.generation({
+        name: "synthesis",
+        model: c.model,
+        startTime: s,
+        endTime: at(s.toISOString(), c.ms),
+        input: [
+          { role: "system", content: c.system },
+          { role: "user", content: c.user },
+        ],
+        modelParameters: { temperature: 0.25, reasoning_effort: "low", response_format: "json_object" },
+        output: c.response,
+        usage: {
+          promptTokens: c.usage.prompt_tokens,
+          completionTokens: c.usage.completion_tokens,
+          totalTokens: c.usage.total_tokens,
+        },
+        level: t.thesisValidation?.success === false ? "ERROR" : "DEFAULT",
+        statusMessage: t.thesisValidation?.success === false ? "Thesis failed schema validation" : undefined,
+      });
     }
 
     // Bounded: a Langfuse outage must never hold a user's research request open.

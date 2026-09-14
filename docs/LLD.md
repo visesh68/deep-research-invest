@@ -407,7 +407,7 @@ for why. Implementation details that are easy to get wrong:
 |---|---|
 | `after()` from `next/server` wraps the call in `route.ts` | Flushing before returning would add its latency to every request; `after` runs post-response and still keeps the function alive |
 | `Promise.race` with `FLUSH_TIMEOUT_MS = 2_500` | `after` work counts against `maxDuration`; an unreachable Langfuse must not eat the budget |
-| `.update({ endTime })`, never `.end()` | `end()` forbids an explicit `endTime` and stamps *now* — on a replay that collapses every span onto the moment of emission |
+| One `create` event per observation, carrying both `startTime` and `endTime` | Two separate bugs sit here. `.end()` forbids an explicit `endTime` and stamps *now*, collapsing a replay onto the emission instant. Splitting into create-then-`.update()` avoids that but the SDK batches events without preserving call order, and a create landing after its own update leaves `endTime == startTime` — which is exactly how the first live traces came back: generations at 0.00s next to correctly-timed spans. A replay knows everything upfront, so one complete event is both simpler and the only order-independent option. |
 | `startedAt` added to `LlmCallLog` / `AngleSearchLog` | A timeline needs wall-clock positions; `ms` durations alone cannot place a span |
 | Client memoized as `null` when unconfigured | One env check for the process, not one per run |
 | Whole body in `try/catch`, returns `null` on failure | Observability must never fail a run that otherwise succeeded |
@@ -422,6 +422,11 @@ for why. Implementation details that are easy to get wrong:
 | Unreachable Langfuse host | No throw, bounded at exactly 2.5s |
 | **Live failure run** (invalid Tavily key) | 502 in 1.6s, then `after()` emitted 18 events — 6 ERROR spans carrying the real 401 text, tags `["error","degraded","COST"]` |
 | **Live success run** (COST, 11.6s) | 10 observations, tags `["ok","COST"]`, metadata `{prompt:3504, completion:2208}`, 7 distinct start times across 6.8s — the parallel fan-out is visible as parallel in the timeline |
+| **Live run against Langfuse Cloud** (AVGO) | Read back through the public API: 9 observations, 6 angle spans correctly nested under `research`, **zero zero-duration observations**, timeline `plan 0.82s → research 4.49s → synthesis 4.33s` against a 9.64s trace latency |
+
+Note when verifying by API: Langfuse Cloud ingestion is asynchronous. A trace fetched
+~5s after a run can return a partial observation list; the same trace at ~25s was
+complete. A missing observation right after a run is lag, not loss.
 
 ---
 

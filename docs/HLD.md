@@ -289,6 +289,10 @@ Three operational details that decide whether this works at all:
 3. **Optional by default.** With no `LANGFUSE_*` keys the module no-ops permanently after
    one check, and the app behaves exactly as before. `LANGFUSE_TRACING=0` disables it even
    when keys are present.
+4. **One event per observation.** Each span and generation is written complete, with both
+   `startTime` and `endTime`, rather than as a create/end pair. The SDK batches events
+   without preserving call order, so a create landing after its own update silently
+   flattens the observation to zero duration.
 
 Langfuse was chosen over LangSmith mainly for fit: a plain TS SDK with no framework
 gravity, open source and self-hostable. The v5 OpenTelemetry SDK (`@langfuse/tracing`)
