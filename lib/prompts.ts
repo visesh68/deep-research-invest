@@ -1,10 +1,48 @@
 import type { ResearchPlan } from "./schema";
 
-export function buildPlanPrompt(question: string) {
-  const today = new Date().toISOString().slice(0, 10);
-  const system = `Today's date is ${today}. You are a financial research planner. Given an investing question, identify the company and stock ticker being asked about, then produce 4-6 short research angles as Tavily-ready search queries. Always make one angle a current share price / valuation snapshot query. Fill the rest from: financials & fundamentals (most recent quarter), competitive positioning, valuation, catalysts, recent news & events, risks — choosing those relevant to the question.
+/**
+ * A search engine reads "2026-09-13" as a literal token, not as "recent" — live runs
+ * produced queries like "Palantir PLTR bear case risks 2026-09-13", where the date
+ * was pure noise diluting the real search terms. Deriving the year and quarter here
+ * and handing those to the model removes the temptation to paste the raw date.
+ */
+export function currentPeriod(now = new Date()) {
+  const year = now.getUTCFullYear();
+  const quarter = Math.floor(now.getUTCMonth() / 3) + 1;
+  // Companies report a quarter after it closes, so the latest *reported* quarter
+  // is the previous one.
+  const reportedQuarter = quarter === 1 ? 4 : quarter - 1;
+  const reportedYear = quarter === 1 ? year - 1 : year;
+  return {
+    today: now.toISOString().slice(0, 10),
+    year,
+    quarter,
+    reportedQuarter,
+    reportedYear,
+  };
+}
 
-Queries must target the most recent available data: include the current year and, where relevant, the latest quarter. Never write a query that anchors on a year more than one year before today.
+/**
+ * Deterministic backstop to the prompt rule above. Prompt instructions drift between
+ * model versions; a regex does not. Any ISO date left in a query collapses to its
+ * year, which is the part that actually carries recency signal.
+ */
+export function stripLiteralDates(query: string): string {
+  return query
+    .replace(/\b(\d{4})-\d{2}-\d{2}\b/g, "$1")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+export function buildPlanPrompt(question: string) {
+  const { today, year, quarter, reportedQuarter, reportedYear } = currentPeriod();
+  const system = `Today's date is ${today} (Q${quarter} ${year}). You are a financial research planner. Given an investing question, identify the company and stock ticker being asked about, then produce 4-6 short research angles as Tavily-ready search queries. Always make one angle a current share price / valuation snapshot query. Fill the rest from: financials & fundamentals (most recent quarter), competitive positioning, valuation, catalysts, recent news & events, risks — choosing those relevant to the question.
+
+Queries must target the most recent available data, but express recency as a YEAR or a QUARTER LABEL only. Never write a full calendar date into a query — a search engine treats "${today}" as a literal token and it only dilutes the real search terms.
+WRONG: "Palantir PLTR bear case risks ${today}"
+RIGHT: "Palantir PLTR bear case risks ${year}"
+RIGHT: "Palantir PLTR Q${reportedQuarter} ${reportedYear} earnings revenue margins"
+Use ${year} for general recency, and Q${reportedQuarter} ${reportedYear} (the most recently reported quarter) for financial-results angles. Never anchor a query on a year before ${year - 1}.
 
 Respond with ONLY valid JSON, no prose, no markdown fences, matching exactly this shape:
 {"company": string, "ticker": string, "exchange": string, "angles": [{"id": string, "query": string}]}

@@ -20,6 +20,7 @@ export type RunTranscript = {
   plan?: ResearchPlan;
   planCall?: LlmCallLog;
   tavily: AngleSearchLog[];
+  researchFailures?: { angleId: string; query: string; error: string }[];
   synthesisCall?: LlmCallLog;
   thesis?: Thesis;
   thesisValidation?: { success: boolean; issues?: unknown };

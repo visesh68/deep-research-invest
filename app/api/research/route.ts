@@ -1,5 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { runPipeline, PipelineError } from "@/lib/pipeline";
+import { createLruCache, questionCacheKey } from "@/lib/cache";
+import type { Thesis } from "@/lib/schema";
+
+// One hour. Equity figures move intraday, so a longer TTL would start serving
+// stale theses as current — which is a correctness problem, not just a stale
+// cache. This bounds the hit rate on purpose.
+const THESIS_TTL_MS = 60 * 60 * 1000;
+const thesisCache = createLruCache<Thesis>({ max: 50, ttlMs: THESIS_TTL_MS });
 
 export const maxDuration = 300;
 export const dynamic = "force-dynamic";
@@ -26,9 +34,23 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ thesis: MOCK_THESIS, mock: true });
   }
 
+  const cacheKey = questionCacheKey(question);
+  const cached = thesisCache.get(cacheKey);
+  if (cached) {
+    return NextResponse.json({
+      thesis: cached.value,
+      cached: true,
+      cachedAgeMs: cached.ageMs,
+    });
+  }
+
   try {
-    const { thesis } = await runPipeline(question);
-    return NextResponse.json({ thesis });
+    const { thesis, warnings } = await runPipeline(question);
+    // A degraded run is not cached: serving a thesis built on half its angles
+    // for the next hour would turn one transient Tavily blip into sustained
+    // low-quality output.
+    if (warnings.length === 0) thesisCache.set(cacheKey, thesis);
+    return NextResponse.json(warnings.length ? { thesis, warnings } : { thesis });
   } catch (err) {
     const stage = err instanceof PipelineError ? err.stage : "unknown";
     console.error(`Research pipeline failed at stage "${stage}":`, err);

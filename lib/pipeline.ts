@@ -1,5 +1,5 @@
 import { callGroq, parseJsonLoose } from "./groq";
-import { buildPlanPrompt, buildSynthesisPrompt } from "./prompts";
+import { buildPlanPrompt, buildSynthesisPrompt, stripLiteralDates } from "./prompts";
 import { ResearchPlanSchema, ThesisSchema, type Thesis } from "./schema";
 import { runAllAngles } from "./tavily";
 import { mergeAndNumberSources } from "./sources";
@@ -20,7 +20,9 @@ export class PipelineError extends Error {
 export async function runPipeline(question: string): Promise<{
   thesis: Thesis;
   transcript: RunTranscript;
+  warnings: string[];
 }> {
+  const warnings: string[] = [];
   const started = Date.now();
   const transcript = createTranscript(question);
 
@@ -53,6 +55,11 @@ export async function runPipeline(question: string): Promise<{
     try {
       const rawPlan = parseJsonLoose(planResult.content);
       plan = ResearchPlanSchema.parse(rawPlan);
+      // Deterministic backstop to the prompt's "no literal dates" rule.
+      plan = {
+        ...plan,
+        angles: plan.angles.map((a) => ({ ...a, query: stripLiteralDates(a.query) })),
+      };
     } catch (err) {
       throw new PipelineError(
         `Failed to parse research plan: ${(err as Error).message}`,
@@ -61,16 +68,29 @@ export async function runPipeline(question: string): Promise<{
     }
     transcript.plan = plan;
 
-    // 2. Parallel research across angles.
-    let byAngle, log;
+    // 2. Parallel research across angles. Partial failure is tolerated:
+    //    runAllAngles only throws when too few angles survive to be credible.
+    let byAngle, log, failures;
     try {
-      ({ byAngle, log } = await runAllAngles(plan.angles));
+      ({ byAngle, log, failures } = await runAllAngles(plan.angles));
     } catch (err) {
       throw new PipelineError(`Research search failed: ${(err as Error).message}`, "research");
     }
     transcript.tavily = log;
+    transcript.researchFailures = failures;
+
+    if (failures.length > 0) {
+      warnings.push(
+        `${failures.length} of ${plan.angles.length} research angles failed; ` +
+          `this thesis is built on the ${plan.angles.length - failures.length} that succeeded.`,
+      );
+      console.warn("Degraded research run:", failures);
+    }
 
     const { sourcesBlock, sources } = mergeAndNumberSources(byAngle);
+    if (sources.length === 0) {
+      throw new PipelineError("No usable sources returned from research.", "research");
+    }
 
     // 3. Single synthesis call producing the final structured thesis.
     const synthesisPrompt = buildSynthesisPrompt(question, plan, sourcesBlock);
@@ -120,7 +140,7 @@ export async function runPipeline(question: string): Promise<{
     transcript.totalMs = Date.now() - started;
     await finalizeTranscript(transcript);
 
-    return { thesis, transcript };
+    return { thesis, transcript, warnings };
   } catch (err) {
     transcript.error = (err as Error).message;
     transcript.totalMs = Date.now() - started;

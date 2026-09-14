@@ -14,6 +14,13 @@ const STAGE_TIMINGS: { at: number; stage: Stage }[] = [
   { at: 20_000, stage: "synthesizing" },
 ];
 
+function formatAge(ms: number): string {
+  const mins = Math.round(ms / 60_000);
+  if (mins < 1) return "moments";
+  if (mins === 1) return "1 minute";
+  return `${mins} minutes`;
+}
+
 export default function Home() {
   const [question, setQuestion] = useState("");
   const [loading, setLoading] = useState(false);
@@ -21,6 +28,8 @@ export default function Home() {
   const [elapsed, setElapsed] = useState(0);
   const [thesis, setThesis] = useState<Thesis | null>(null);
   const [isMock, setIsMock] = useState(false);
+  const [warnings, setWarnings] = useState<string[]>([]);
+  const [cachedAgeMs, setCachedAgeMs] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
   const startedAt = useRef(0);
 
@@ -39,6 +48,8 @@ export default function Home() {
     setLoading(true);
     setError(null);
     setThesis(null);
+    setWarnings([]);
+    setCachedAgeMs(null);
     setStage("planning");
     setElapsed(0);
     startedAt.current = Date.now();
@@ -53,6 +64,8 @@ export default function Home() {
       if (!res.ok) throw new Error(data.error ?? "Research failed.");
       setThesis(data.thesis);
       setIsMock(Boolean(data.mock));
+      setWarnings(Array.isArray(data.warnings) ? data.warnings : []);
+      setCachedAgeMs(data.cached ? (data.cachedAgeMs ?? 0) : null);
     } catch (err) {
       setError((err as Error).message);
     } finally {
@@ -99,6 +112,20 @@ export default function Home() {
               report — the figures and sources below are illustrative, not live research.
             </div>
           )}
+          {cachedAgeMs !== null && (
+            <div className="mb-8 border border-hairline px-4 py-3 text-[14px] text-muted">
+              <strong className="text-navy">Cached result.</strong> This thesis was
+              researched {formatAge(cachedAgeMs)} ago and re-served without new searches.
+            </div>
+          )}
+          {warnings.map((w) => (
+            <div
+              key={w}
+              className="mb-8 border border-hold bg-hold-bg px-4 py-3 text-[14px] text-hold"
+            >
+              <strong>Partial research.</strong> {w}
+            </div>
+          ))}
           <ReportView thesis={thesis} />
         </div>
       )}
